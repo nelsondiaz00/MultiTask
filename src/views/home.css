@@ -131,6 +131,12 @@
   font-size: 48px;
   margin-top: var(--dl-space-space-oneandhalfunits);
   margin-bottom: var(--dl-space-space-oneandhalfunits);
+  animation-name: tada;
+  animation-delay: 1s;
+  animation-duration: 5s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
 }
 .home-link3 {
   display: contents;
@@ -483,7 +489,7 @@
   font-weight: 700;
   padding-top: 130px;
 }
-.home-button {
+.home-link4 {
   left: 0px;
   color: rgb(255, 255, 255);
   right: 0px;
@@ -500,13 +506,14 @@
   border-color: var(--dl-color-multitaskpalette-rojo);
   border-width: 2px;
   animation-delay: 0s;
+  text-decoration: none;
   background-color: var(--dl-color-multitaskpalette-rojo);
   animation-duration: 300ms;
   animation-direction: normal;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-.home-button:hover {
+.home-link4:hover {
   color: var(--dl-color-multitaskpalette-rojo);
   width: 227px;
   height: 46px;
@@ -669,7 +676,7 @@
   font-style: normal;
   font-weight: 400;
 }
-.home-button1 {
+.home-button {
   color: rgb(255, 255, 255);
   width: 200px;
   height: 60px;
@@ -681,7 +688,7 @@
   border-radius: 28px;
   background-color: var(--dl-color-multitaskpalette-rojo);
 }
-.home-button1:hover {
+.home-button:hover {
   color: var(--dl-color-multitaskpalette-rojo);
   border-width: 3px;
   background-color: #fbfbfb;
@@ -820,7 +827,7 @@
   width: 24px;
   height: 24px;
 }
-.home-button2 {
+.home-button1 {
   color: rgb(255, 255, 255);
   width: 200px;
   height: 60px;
@@ -833,7 +840,7 @@
   border-radius: 28px;
   background-color: var(--dl-color-multitaskpalette-rojo);
 }
-.home-button2:hover {
+.home-button1:hover {
   color: var(--dl-color-multitaskpalette-rojo);
   border-width: 3px;
   background-color: #fbfbfb;
@@ -854,7 +861,7 @@
   justify-content: flex-start;
   background-color: var(--dl-color-gray-black);
 }
-.home-link4 {
+.home-link5 {
   top: -47px;
   left: 109px;
   color: rgb(255, 255, 255);
@@ -872,7 +879,7 @@
   border-bottom-left-radius: var(--dl-radius-radius-round);
   border-bottom-right-radius: var(--dl-radius-radius-round);
 }
-.home-link4:hover {
+.home-link5:hover {
   color: var(--dl-color-multitaskpalette-naranja);
   border: none;
   box-shadow: 5px 5px 10px 0px #545454;

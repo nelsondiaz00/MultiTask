@@ -62,18 +62,11 @@
   margin-bottom: var(--dl-space-space-twounits);
   text-decoration: none;
 }
-.inicio-de-sesin-link {
+.inicio-de-sesin-text {
   font-size: 20px;
   align-self: flex-start;
   font-style: normal;
-  transition: 0.3s;
   font-weight: 600;
-  text-decoration: none;
-}
-.inicio-de-sesin-link:hover {
-  font-style: normal;
-  font-weight: 400;
-  text-decoration: underline;
 }
 .inicio-de-sesin-textinput {
   width: 100%;
@@ -81,19 +74,12 @@
   border-width: 0px;
   border-radius: 5px;
 }
-.inicio-de-sesin-link1 {
+.inicio-de-sesin-text1 {
   font-size: 20px;
   align-self: flex-start;
   font-style: normal;
   margin-top: var(--dl-space-space-unit);
-  transition: 0.3s;
   font-weight: 600;
-  text-decoration: none;
-}
-.inicio-de-sesin-link1:hover {
-  font-style: normal;
-  font-weight: 400;
-  text-decoration: underline;
 }
 .inicio-de-sesin-textinput1 {
   width: 100%;
@@ -101,26 +87,32 @@
   border-width: 0px;
   border-radius: 5px;
 }
-.inicio-de-sesin-button {
+.inicio-de-sesin-navlink2 {
   color: rgb(255, 255, 255);
-  width: 200px;
+  width: 196px;
   height: 54px;
-  font-size: 22px;
+  font-size: 24px;
   font-style: normal;
   margin-top: var(--dl-space-space-twounits);
   transition: 0.3s;
   font-weight: 700;
   border-color: var(--dl-color-multitaskpalette-rojo);
+  border-width: 2px;
   border-radius: 20px;
+  animation-delay: 0s;
+  text-decoration: none;
   background-color: var(--dl-color-multitaskpalette-rojo);
+  animation-duration: 300ms;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
 }
-.inicio-de-sesin-button:hover {
+.inicio-de-sesin-navlink2:hover {
   color: var(--dl-color-multitaskpalette-rojo);
+  width: 173px;
+  height: 54px;
+  font-size: 20px;
+  border-color: var(--dl-color-multitaskpalette-rojo);
   border-width: 3px;
-  background-color: #fbfbfb;
-}
-.inicio-de-sesin-text1:hover {
-  color: var(--dl-color-multitaskpalette-rojo);
-  border-width: 3px;
-  background-color: #fbfbfb;
+  background-color: #ffffff;
 }

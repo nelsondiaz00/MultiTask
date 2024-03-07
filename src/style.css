@@ -37,6 +37,8 @@
   --dl-color-multitaskpalette-morado: #571845ff;
   --dl-color-multitaskpalette-naranja: #ff471fff;
   --dl-color-multitaskpalette-amarillo: #ffc300ff;
+  --dl-color-multitaskpalette-amarilloosc: #efd171ff;
+  --dl-color-multitaskpalette-amarilloclar: #ffe283ff;
 }
 .button {
   color: var(--dl-color-gray-black);

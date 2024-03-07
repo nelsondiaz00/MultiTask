@@ -26,32 +26,21 @@ const InicioDeSesin = (props) => {
               className="inicio-de-sesin-image"
             />
           </Link>
-          <a
-            href="#contenedor_nosotros"
-            id="link_nosotros"
-            className="inicio-de-sesin-link"
-          >
+          <span id="link_nosotros" className="inicio-de-sesin-text">
             Correo Electrónico
-          </a>
+          </span>
           <input type="text" className="inicio-de-sesin-textinput input" />
-          <a
-            href="#contenedor_nosotros"
-            id="link_nosotros"
-            className="inicio-de-sesin-link1"
-          >
+          <span id="link_nosotros" className="inicio-de-sesin-text1">
             Contraseña
-          </a>
+          </span>
           <input type="text" className="inicio-de-sesin-textinput1 input" />
-          <button
-            id="botonRegEmp"
-            type="button"
-            className="inicio-de-sesin-button button"
+          <Link
+            to="/admin-1"
+            id="boton_inicioses"
+            className="inicio-de-sesin-navlink2 button"
           >
-            <span>
-              <span className="inicio-de-sesin-text1">Inicia Sesión</span>
-              <br></br>
-            </span>
-          </button>
+            Inicia Sesión
+          </Link>
         </div>
       </div>
     </div>

@@ -44,7 +44,7 @@ const Home = (props) => {
           </a>
           <Link
             to="/inicio-de-sesin"
-            id="botonInicioSesion"
+            id="boton_inicioses"
             className="home-navlink1 button"
           >
             Inicia Sesión
@@ -61,18 +61,7 @@ const Home = (props) => {
               }}
             />
           </h1>
-          <animate-on-reveal
-            animation="tada"
-            duration="5s"
-            delay="1s"
-            direction="normal"
-            easing="ease"
-            iteration="1"
-          >
-            <h1 data-thq-animate-on-reveal="true" className="home-text01">
-              Todo.
-            </h1>
-          </animate-on-reveal>
+          <h1 className="home-text01">Todo.</h1>
         </div>
         <a href="#contenedor_nosotros" className="home-link3">
           <svg viewBox="0 0 1024 1024" className="home-icon">
@@ -185,9 +174,13 @@ const Home = (props) => {
           </div>
         </div>
         <span className="home-text21">¿No encuentras lo que buscas?</span>
-        <button id="botonPostula" type="button" className="home-button button">
+        <a
+          href="#contenedor_registrate"
+          id="botonPostula"
+          className="home-link4 button"
+        >
           Postula tu solicitud
-        </button>
+        </a>
       </div>
       <div id="contenedor_registrate" className="home-container17">
         <span className="home-text22">¡Trabaja con nosotros!</span>
@@ -251,7 +244,7 @@ const Home = (props) => {
               <button
                 id="botonRegEmp"
                 type="button"
-                className="home-button1 button"
+                className="home-button button"
               >
                 Comienza ya
               </button>
@@ -317,7 +310,7 @@ const Home = (props) => {
               <button
                 id="botonRegPost"
                 type="button"
-                className="home-button2 button"
+                className="home-button1 button"
               >
                 Comienza ya
               </button>
@@ -331,7 +324,7 @@ const Home = (props) => {
         </div>
       </div>
       <div className="home-container35">
-        <a href="#banner" className="home-link4 button">
+        <a href="#banner" className="home-link5 button">
           ↑
         </a>
       </div>
