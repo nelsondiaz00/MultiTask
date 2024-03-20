@@ -1,0 +1,431 @@
+.empresa1-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.empresa1-container01 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 136px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empresa1-image {
+  width: 299px;
+  height: 50%;
+  object-fit: cover;
+}
+.empresa1-container02 {
+  gap: var(--dl-space-space-unit);
+  flex: 0 0 auto;
+  width: 843px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.empresa1-navlink {
+  color: rgb(255, 255, 255);
+  width: 61px;
+  height: 58px;
+  display: flex;
+  padding: 0px;
+  font-size: 20px;
+  font-style: normal;
+  transition: 0.3s;
+  align-items: center;
+  font-weight: 700;
+  border-color: var(--dl-color-multitaskpalette-morado);
+  border-width: 2px;
+  border-radius: 27px;
+  flex-direction: row;
+  animation-delay: 0s;
+  justify-content: center;
+  text-decoration: none;
+  background-color: rgb(87, 24, 69);
+  animation-duration: 300ms;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+.empresa1-navlink:hover {
+  color: #571845;
+  width: 173px;
+  height: 58px;
+  border-color: #571845;
+  border-width: 3px;
+  background-color: #ffffff;
+}
+.empresa1-icon {
+  fill: var(--dl-color-gray-white);
+  width: 100%;
+  height: 49px;
+  align-self: center;
+}
+.empresa1-button {
+  color: rgb(255, 255, 255);
+  width: 61px;
+  height: 58px;
+  display: flex;
+  padding: 0px;
+  font-size: 20px;
+  font-style: normal;
+  transition: 0.3s;
+  align-items: center;
+  font-weight: 700;
+  border-color: var(--dl-color-multitaskpalette-morado);
+  border-width: 2px;
+  border-radius: 27px;
+  flex-direction: row;
+  animation-delay: 0s;
+  justify-content: center;
+  background-color: rgb(87, 24, 69);
+  animation-duration: 300ms;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+.empresa1-button:hover {
+  color: #571845;
+  width: 173px;
+  height: 58px;
+  border-color: #571845;
+  border-width: 3px;
+  background-color: #ffffff;
+}
+.empresa1-icon03 {
+  fill: var(--dl-color-gray-white);
+  width: 100%;
+  height: 40px;
+}
+.empresa1-container03 {
+  width: 100%;
+  height: 1049px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-space-space-sixunits);
+  padding-left: 168px;
+  padding-right: 168px;
+  flex-direction: column;
+  padding-bottom: 168px;
+  justify-content: center;
+}
+.empresa1-container04 {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 29px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  background-color: var(--dl-color-multitaskpalette-amarillo);
+}
+.empresa1-container05 {
+  gap: 28px;
+  width: 100%;
+  height: 855px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-threeunits);
+  border-radius: 40px;
+  padding-right: var(--dl-space-space-threeunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-threeunits);
+  justify-content: flex-start;
+  background-color: var(--dl-color-gray-white);
+}
+.empresa1-container06 {
+  gap: 28px;
+  width: 1308px;
+  height: 608px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empresa1-container07 {
+  gap: 28px;
+  flex: 0 0 auto;
+  width: 334px;
+  height: 575px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.empresa1-navlink1 {
+  display: contents;
+}
+.empresa1-container08 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 315px;
+  display: flex;
+  transition: 0.3s;
+  align-items: flex-end;
+  padding-top: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  background-size: cover;
+  justify-content: flex-end;
+  text-decoration: none;
+  background-image: linear-gradient(180deg, rgba(251, 251, 251, 0) 29.00%,rgba(0, 0, 0, 0.51) 99.00%),url('https://img.freepik.com/free-photo/steel-pipes-put-together_1112-903.jpg?w=900&t=st=1708607809~exp=1708608409~hmac=d66e6df87ece010f11c33df6e30864f90a073319211d96e2850a4302a135255c');
+}
+.empresa1-container08:hover {
+  box-shadow: 5px 5px 10px 0px #404040;
+}
+.empresa1-text {
+  color: #ffffff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+.empresa1-text01 {
+  color: #ffffff;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa1-container09 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  transition: 0.3s;
+  align-items: flex-end;
+  padding-top: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  background-size: cover;
+  justify-content: flex-end;
+  background-image: linear-gradient(180deg, rgba(251, 251, 251, 0) 29.00%,rgba(0, 0, 0, 0.51) 99.00%),url('https://img.freepik.com/free-photo/carpenter-working-piece-wood-with-pencil_23-2148679125.jpg?t=st=1708689350~exp=1708692950~hmac=223e3642718d1f192c4f0ffb6bc160c2fa01177588c95025500bcb4729f41f6b&w=900');
+}
+.empresa1-container09:hover {
+  box-shadow: 5px 5px 10px 0px #363636;
+}
+.empresa1-text02 {
+  color: #ffffff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+.empresa1-text03 {
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa1-container10 {
+  gap: 28px;
+  flex: 0 0 auto;
+  width: 612px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.empresa1-container11 {
+  gap: 28px;
+  flex: 0 0 auto;
+  width: 100%;
+  height: 263px;
+  display: flex;
+  align-items: flex-start;
+}
+.empresa1-container12 {
+  width: 265px;
+  height: 100%;
+  display: flex;
+  transition: 0.3s;
+  align-items: flex-end;
+  padding-top: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  background-size: cover;
+  justify-content: flex-end;
+  background-image: linear-gradient(180deg, rgba(251, 251, 251, 0) 29.00%,rgba(0, 0, 0, 0.51) 99.00%),url('https://img.freepik.com/free-photo/handyman-construction-site-process-drilling-wall-with-perforator_169016-12114.jpg?t=st=1708689653~exp=1708693253~hmac=e5de360bd78ae5a6ab5789544581435745f4515631164e6902f623aabf6faf6e&w=900');
+}
+.empresa1-container12:hover {
+  box-shadow: 5px 5px 10px 0px #363636;
+}
+.empresa1-text04 {
+  color: #ffffff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+.empresa1-text05 {
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa1-container13 {
+  width: 319px;
+  height: 100%;
+  display: flex;
+  transition: 0.3s;
+  align-items: flex-end;
+  padding-top: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  background-size: cover;
+  justify-content: flex-end;
+  background-image: linear-gradient(180deg, rgba(251, 251, 251, 0) 29.00%,rgba(0, 0, 0, 0.51) 99.00%),url('https://img.freepik.com/free-photo/supply-chain-representation-with-forklift-high-angle_23-2149853164.jpg?t=st=1708688774~exp=1708692374~hmac=fd9946f5435ae3b6b9fbab9f4c83f95d8a02d079477b19c4a221532306ca3289&w=900');
+}
+.empresa1-container13:hover {
+  box-shadow: 5px 5px 10px 0px #363636;
+}
+.empresa1-text08 {
+  color: #ffffff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+.empresa1-text09 {
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa1-container14 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  transition: 0.3s;
+  align-items: flex-end;
+  padding-top: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  background-size: cover;
+  justify-content: flex-end;
+  background-image: linear-gradient(180deg, rgba(251, 251, 251, 0) 29.00%,rgba(0, 0, 0, 0.51) 99.00%),url('https://img.freepik.com/free-photo/male-electrician-works-switchboard-with-electrical-connecting-cable_169016-15204.jpg?t=st=1708689515~exp=1708693115~hmac=bf3f8038d662ef047558bbf3e9151121138db13a749ce32b5dee760a21011c15&w=900');
+}
+.empresa1-container14:hover {
+  box-shadow: 5px 5px 10px 0px #363636;
+}
+.empresa1-text12 {
+  color: #ffffff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+.empresa1-text13 {
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa1-container15 {
+  gap: 28px;
+  flex: 0 0 auto;
+  width: 309px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.empresa1-container16 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: 0.3s;
+  align-items: flex-end;
+  padding-top: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  background-size: cover;
+  justify-content: flex-end;
+  background-image: linear-gradient(180deg, rgba(251, 251, 251, 0) 29.00%,rgba(0, 0, 0, 0.51) 99.00%),url('https://img.freepik.com/free-photo/people-collage-design_23-2148888271.jpg?t=st=1708689707~exp=1708693307~hmac=def6ad3026189e7102c5cb94d203ccfe633d09f746b2a59a36c4aff44d95616c&w=1060');
+}
+.empresa1-container16:hover {
+  box-shadow: 5px 5px 10px 0px #404040;
+}
+.empresa1-text14 {
+  color: #ffffff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+}
+.empresa1-text15 {
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa1-container17 {
+  gap: var(--dl-space-space-threeunits);
+  flex: 0 0 auto;
+  width: 1310px;
+  height: 166px;
+  display: flex;
+  transition: 0.3s;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dl-color-multitaskpalette-rojo);
+}
+.empresa1-container17:hover {
+  box-shadow: 5px 5px 10px 0px #404040;
+}
+.empresa1-icon06 {
+  fill: var(--dl-color-gray-white);
+  width: var(--dl-size-size-medium);
+  height: var(--dl-size-size-medium);
+}
+.empresa1-container18 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 727px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.empresa1-text18 {
+  color: var(--dl-color-gray-white);
+  font-size: 36px;
+}
+.empresa1-text19 {
+  color: var(--dl-color-gray-white);
+  font-size: 24px;
+}
+.empresa1-button1 {
+  color: var(--dl-color-multitaskpalette-rojo);
+  width: 185px;
+  height: 60px;
+  font-size: 20px;
+  font-style: normal;
+  transition: 0.3s;
+  font-weight: 600;
+  border-width: 0px;
+  border-radius: 0px;
+}
+.empresa1-button1:hover {
+  color: var(--dl-color-multitaskpalette-rojo);
+  width: 185px;
+  border: none;
+  height: 60px;
+  font-size: 20px;
+  border-color: var(--dl-color-gray-white);
+  border-width: 0px;
+  border-radius: 25px;
+  background-color: var(--dl-color-gray-white);
+}

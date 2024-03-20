@@ -48,16 +48,18 @@ const Admin3 = (props) => {
                 Usuario - Empleado
               </Link>
               <span className="admin3-text02">Crear usuario</span>
-              <span className="admin3-text03">Informes</span>
+              <Link to="/admin-4" className="admin3-navlink3">
+                Informes
+              </Link>
             </div>
-            <div className="admin3-container07">
-              <span className="admin3-text04">
-                <span className="admin3-text05">Crear usuario</span>
+            <div id="contenedor_principal" className="admin3-container07">
+              <span className="admin3-text03">
+                <span className="admin3-text04">Crear usuario</span>
                 <br></br>
               </span>
               <div className="admin3-container08">
                 <div id="contenedor_nombres" className="admin3-container09">
-                  <span className="admin3-text07">Nombres</span>
+                  <span className="admin3-text06">Nombres</span>
                   <input
                     type="text"
                     id="input_nombres"
@@ -65,7 +67,7 @@ const Admin3 = (props) => {
                   />
                 </div>
                 <div id="contenedor_apellidos" className="admin3-container10">
-                  <span className="admin3-text08">
+                  <span className="admin3-text07">
                     <span>Apellidos</span>
                     <br></br>
                   </span>
@@ -76,7 +78,7 @@ const Admin3 = (props) => {
                   />
                 </div>
                 <div id="contenedor_tipdoc" className="admin3-container11">
-                  <span className="admin3-text11">
+                  <span className="admin3-text10">
                     <span>Tipo de documento</span>
                     <br></br>
                   </span>
@@ -91,7 +93,7 @@ const Admin3 = (props) => {
                   </select>
                 </div>
                 <div id="contenedor_numdoc" className="admin3-container12">
-                  <span className="admin3-text14">
+                  <span className="admin3-text13">
                     <span>Número de documento</span>
                     <br></br>
                   </span>
@@ -104,7 +106,7 @@ const Admin3 = (props) => {
               </div>
               <div className="admin3-container13">
                 <div id="contenedor_direccion" className="admin3-container14">
-                  <span className="admin3-text17">Dirección</span>
+                  <span className="admin3-text16">Dirección</span>
                   <input
                     type="text"
                     id="input_direccion"
@@ -112,7 +114,7 @@ const Admin3 = (props) => {
                   />
                 </div>
                 <div id="contenedor_username" className="admin3-container15">
-                  <span className="admin3-text18">
+                  <span className="admin3-text17">
                     <span>Nombre de usuario</span>
                     <br></br>
                   </span>
@@ -123,7 +125,7 @@ const Admin3 = (props) => {
                   />
                 </div>
                 <div id="contenedor_correo" className="admin3-container16">
-                  <span className="admin3-text21">
+                  <span className="admin3-text20">
                     <span>Correo electrónico</span>
                     <br></br>
                   </span>
@@ -136,7 +138,7 @@ const Admin3 = (props) => {
               </div>
               <div className="admin3-container17">
                 <div id="contenedor_numero" className="admin3-container18">
-                  <span className="admin3-text24">Número celular</span>
+                  <span className="admin3-text23">Número celular</span>
                   <input
                     type="text"
                     id="input_numero"
@@ -144,7 +146,7 @@ const Admin3 = (props) => {
                   />
                 </div>
                 <div id="contenedor_cumple" className="admin3-container19">
-                  <span className="admin3-text25">
+                  <span className="admin3-text24">
                     <span>Fecha de nacimiento</span>
                     <br></br>
                   </span>
@@ -155,7 +157,7 @@ const Admin3 = (props) => {
                   />
                 </div>
                 <div id="contenedor_genero" className="admin3-container20">
-                  <span className="admin3-text28">
+                  <span className="admin3-text27">
                     <span>Género</span>
                     <br></br>
                   </span>
@@ -173,7 +175,7 @@ const Admin3 = (props) => {
                   </select>
                 </div>
                 <div id="contenedor_tipocuenta" className="admin3-container21">
-                  <span className="admin3-text31">
+                  <span className="admin3-text30">
                     <span>Tipo de cuenta</span>
                     <br></br>
                   </span>
