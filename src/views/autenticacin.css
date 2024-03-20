@@ -24,6 +24,7 @@
   background-repeat: top left,top lefttop lefttop;
   background-position: top lefttop lefttop,bottom;
 }
+
 .autenticacin-navlink {
   display: contents;
 }
@@ -36,6 +37,7 @@
   position: absolute;
   text-decoration: none;
 }
+
 .autenticacin-container2 {
   gap: 0;
   flex: 0 0 auto;
@@ -55,6 +57,7 @@
 .autenticacin-navlink1 {
   display: contents;
 }
+
 .autenticacin-image {
   width: 347px;
   height: 79px;
