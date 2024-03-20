@@ -1,0 +1,899 @@
+.empresa2-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.empresa2-container01 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 136px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empresa2-image {
+  width: 299px;
+  height: 50%;
+  object-fit: cover;
+}
+.empresa2-container02 {
+  gap: var(--dl-space-space-unit);
+  flex: 0 0 auto;
+  width: 843px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.empresa2-navlink {
+  color: rgb(255, 255, 255);
+  width: 61px;
+  height: 58px;
+  display: flex;
+  padding: 0px;
+  font-size: 20px;
+  font-style: normal;
+  transition: 0.3s;
+  align-items: center;
+  font-weight: 700;
+  border-color: var(--dl-color-multitaskpalette-morado);
+  border-width: 2px;
+  border-radius: 27px;
+  flex-direction: row;
+  animation-delay: 0s;
+  justify-content: center;
+  text-decoration: none;
+  background-color: rgb(87, 24, 69);
+  animation-duration: 300ms;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+.empresa2-navlink:hover {
+  color: #571845;
+  width: 173px;
+  height: 58px;
+  border-color: #571845;
+  border-width: 3px;
+  background-color: #ffffff;
+}
+.empresa2-icon {
+  fill: var(--dl-color-gray-white);
+  width: 100%;
+  height: 49px;
+  align-self: center;
+}
+.empresa2-button {
+  color: rgb(255, 255, 255);
+  width: 61px;
+  height: 58px;
+  display: flex;
+  padding: 0px;
+  font-size: 20px;
+  font-style: normal;
+  transition: 0.3s;
+  align-items: center;
+  font-weight: 700;
+  border-color: var(--dl-color-multitaskpalette-morado);
+  border-width: 2px;
+  border-radius: 27px;
+  flex-direction: row;
+  animation-delay: 0s;
+  justify-content: center;
+  background-color: rgb(87, 24, 69);
+  animation-duration: 300ms;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+.empresa2-button:hover {
+  color: #571845;
+  width: 173px;
+  height: 58px;
+  border-color: #571845;
+  border-width: 3px;
+  background-color: #ffffff;
+}
+.empresa2-icon03 {
+  fill: var(--dl-color-gray-white);
+  width: 100%;
+  height: 40px;
+}
+.empresa2-container03 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 329px;
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  padding-right: 640px;
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-twounits);
+  background-size: cover;
+  justify-content: flex-end;
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0.00%,rgba(0, 0, 0, 0.59) 100.00%),url('https://img.freepik.com/free-photo/steel-pipes-put-together_1112-903.jpg?w=900&t=st=1708607809~exp=1708608409~hmac=d66e6df87ece010f11c33df6e30864f90a073319211d96e2850a4302a135255c');
+}
+.empresa2-navlink1 {
+  display: contents;
+}
+.empresa2-icon06 {
+  top: 0px;
+  fill: #ffffff;
+  left: 0px;
+  width: 70px;
+  height: 70px;
+  opacity: 0.8;
+  position: absolute;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.empresa2-icon06:hover {
+  width: 80px;
+  height: 80px;
+  opacity: 1;
+}
+.empresa2-text {
+  color: #ffffff;
+  font-size: 48px;
+  align-self: flex-end;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-text01 {
+  color: rgb(255, 255, 255);
+  font-size: 96px;
+  align-self: flex-end;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-container04 {
+  width: 100%;
+  height: 2003px;
+  display: flex;
+  position: relative;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.empresa2-container05 {
+  gap: var(--dl-space-space-halfunit);
+  width: 100%;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dl-color-multitaskpalette-amarillo);
+}
+.empresa2-textinput {
+  width: 588px;
+  border-width: 0px;
+  border-radius: 22px;
+}
+.empresa2-icon08 {
+  fill: var(--dl-color-gray-white);
+  width: 41px;
+  height: 33px;
+}
+.empresa2-container06 {
+  gap: var(--dl-space-space-unit);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-threeunits);
+  padding-left: 167px;
+  padding-right: 167px;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+.empresa2-container07 {
+  gap: var(--dl-space-space-threeunits);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.empresa2-container08 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 350px;
+  height: 189px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-multitaskpalette-gris);
+  border-width: 2px;
+  padding-left: var(--dl-space-space-unit);
+  border-radius: 20px;
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.empresa2-container08:hover {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+}
+.empresa2-text02 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-icon10 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: 52px;
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon10:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-icon12 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: var(--dl-space-space-unit);
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon12:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-container09 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 350px;
+  height: 189px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-multitaskpalette-gris);
+  border-width: 2px;
+  padding-left: var(--dl-space-space-unit);
+  border-radius: 20px;
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.empresa2-container09:hover {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+}
+.empresa2-text04 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-icon14 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: 52px;
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon14:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-icon16 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: var(--dl-space-space-unit);
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon16:hover {
+  fill: #f15984;
+  width: 30px;
+  border-color: var(--dl-color-multitaskpalette-rojo);
+}
+.empresa2-container10 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 350px;
+  height: 189px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-multitaskpalette-gris);
+  border-width: 2px;
+  padding-left: var(--dl-space-space-unit);
+  border-radius: 20px;
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.empresa2-container10:hover {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+}
+.empresa2-text06 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-icon18 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: 52px;
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon18:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-icon20 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: var(--dl-space-space-unit);
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon20:hover {
+  fill: #f15984;
+  width: 30px;
+  border-color: var(--dl-color-multitaskpalette-rojo);
+}
+.empresa2-container11 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 350px;
+  height: 189px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-multitaskpalette-gris);
+  border-width: 2px;
+  padding-left: var(--dl-space-space-unit);
+  border-radius: 20px;
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.empresa2-container11:hover {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+}
+.empresa2-text08 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-icon22 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: 52px;
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon22:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-icon24 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: var(--dl-space-space-unit);
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon24:hover {
+  fill: #f15984;
+  width: 30px;
+  border-color: var(--dl-color-multitaskpalette-rojo);
+}
+.empresa2-container12 {
+  gap: var(--dl-space-space-unit);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-threeunits);
+  padding-left: 167px;
+  padding-right: 167px;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+.empresa2-container13 {
+  gap: var(--dl-space-space-threeunits);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.empresa2-container14 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 350px;
+  height: 189px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-multitaskpalette-gris);
+  border-width: 2px;
+  padding-left: var(--dl-space-space-unit);
+  border-radius: 20px;
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.empresa2-container14:hover {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+}
+.empresa2-text10 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-icon26 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: 52px;
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon26:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-icon28 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: var(--dl-space-space-unit);
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon28:hover {
+  fill: #f15984;
+  width: 30px;
+  border-color: var(--dl-color-multitaskpalette-rojo);
+}
+.empresa2-container15 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 350px;
+  height: 189px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-multitaskpalette-gris);
+  border-width: 2px;
+  padding-left: var(--dl-space-space-unit);
+  border-radius: 20px;
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.empresa2-container15:hover {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+}
+.empresa2-text12 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-icon30 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: 52px;
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon30:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-icon32 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: var(--dl-space-space-unit);
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon32:hover {
+  fill: #f15984;
+  width: 30px;
+  border-color: var(--dl-color-multitaskpalette-rojo);
+}
+.empresa2-container16 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 350px;
+  height: 189px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-multitaskpalette-gris);
+  border-width: 2px;
+  padding-left: var(--dl-space-space-unit);
+  border-radius: 20px;
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.empresa2-container16:hover {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+}
+.empresa2-text14 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-icon34 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: 52px;
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon34:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-icon36 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: var(--dl-space-space-unit);
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon36:hover {
+  fill: #f15984;
+  width: 30px;
+  border-color: var(--dl-color-multitaskpalette-rojo);
+}
+.empresa2-container17 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 350px;
+  height: 189px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-multitaskpalette-gris);
+  border-width: 2px;
+  padding-left: var(--dl-space-space-unit);
+  border-radius: 20px;
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.empresa2-container17:hover {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+}
+.empresa2-text16 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-icon38 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: 52px;
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon38:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-icon40 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: var(--dl-space-space-unit);
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon40:hover {
+  fill: #f15984;
+  width: 30px;
+  border-color: var(--dl-color-multitaskpalette-rojo);
+}
+.empresa2-container18 {
+  gap: var(--dl-space-space-unit);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-threeunits);
+  padding-left: 167px;
+  padding-right: 167px;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+.empresa2-container19 {
+  gap: var(--dl-space-space-threeunits);
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.empresa2-container20 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 350px;
+  height: 189px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-multitaskpalette-gris);
+  border-width: 2px;
+  padding-left: var(--dl-space-space-unit);
+  border-radius: 20px;
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.empresa2-container20:hover {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+}
+.empresa2-text18 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-icon42 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: 52px;
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon42:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-icon44 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: var(--dl-space-space-unit);
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon44:hover {
+  fill: #f15984;
+  width: 30px;
+  border-color: var(--dl-color-multitaskpalette-rojo);
+}
+.empresa2-container21 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 350px;
+  height: 189px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-multitaskpalette-gris);
+  border-width: 2px;
+  padding-left: var(--dl-space-space-unit);
+  border-radius: 20px;
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.empresa2-container21:hover {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+}
+.empresa2-text20 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-icon46 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: 52px;
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon46:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-icon48 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: var(--dl-space-space-unit);
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon48:hover {
+  fill: #f15984;
+  width: 30px;
+  border-color: var(--dl-color-multitaskpalette-rojo);
+}
+.empresa2-container22 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 350px;
+  height: 189px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-multitaskpalette-gris);
+  border-width: 2px;
+  padding-left: var(--dl-space-space-unit);
+  border-radius: 20px;
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.empresa2-container22:hover {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+}
+.empresa2-text22 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-icon50 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: 52px;
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon50:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-icon52 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: var(--dl-space-space-unit);
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon52:hover {
+  fill: #f15984;
+  width: 30px;
+  border-color: var(--dl-color-multitaskpalette-rojo);
+}
+.empresa2-container23 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 350px;
+  height: 189px;
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-multitaskpalette-gris);
+  border-width: 2px;
+  padding-left: var(--dl-space-space-unit);
+  border-radius: 20px;
+  padding-right: var(--dl-space-space-unit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-unit);
+  justify-content: flex-start;
+  background-color: #ffffff;
+}
+.empresa2-container23:hover {
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
+}
+.empresa2-text24 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa2-icon54 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: 52px;
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon54:hover {
+  fill: #f15984;
+  width: 30px;
+}
+.empresa2-icon56 {
+  fill: var(--dl-color-multitaskpalette-rojo);
+  right: var(--dl-space-space-unit);
+  width: 30px;
+  bottom: var(--dl-space-space-unit);
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.empresa2-icon56:hover {
+  fill: #f15984;
+  width: 30px;
+  border-color: var(--dl-color-multitaskpalette-rojo);
+}

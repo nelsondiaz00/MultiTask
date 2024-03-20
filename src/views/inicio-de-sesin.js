@@ -29,17 +29,27 @@ const InicioDeSesin = (props) => {
           <span id="link_nosotros" className="inicio-de-sesin-text">
             Correo Electrónico
           </span>
-          <input type="text" className="inicio-de-sesin-textinput input" />
+          <input
+            type="email"
+            id="input_correo"
+            required="true"
+            className="inicio-de-sesin-textinput input"
+          />
           <span id="link_nosotros" className="inicio-de-sesin-text1">
             Contraseña
           </span>
-          <input type="text" className="inicio-de-sesin-textinput1 input" />
+          <input
+            type="password"
+            id="input_contrasena"
+            required="true"
+            className="inicio-de-sesin-textinput1 input"
+          />
           <Link
-            to="/admin-1"
+            to="/autenticacin"
             id="boton_inicioses"
             className="inicio-de-sesin-navlink2 button"
           >
-            Inicia Sesión
+            Autentica
           </Link>
         </div>
       </div>

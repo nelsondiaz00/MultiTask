@@ -71,18 +71,7 @@ const Home = (props) => {
       </div>
       <div id="contenedor_nosotros" className="home-container05">
         <div className="home-container06">
-          <animate-on-reveal
-            animation="fadeInUp"
-            duration="600ms"
-            delay="0s"
-            direction="normal"
-            easing="ease"
-            iteration="1"
-          >
-            <span data-thq-animate-on-reveal="true" className="home-text02">
-              QUIÉNES SOMOS
-            </span>
-          </animate-on-reveal>
+          <span className="home-text02">QUIÉNES SOMOS</span>
           <span className="home-text03">
             En MultiTask, entendemos que cada obra de construcción es única.
           </span>

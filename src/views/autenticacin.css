@@ -1,4 +1,4 @@
-.inicio-de-sesin-container {
+.autenticacin-container {
   width: 100%;
   display: flex;
   overflow: auto;
@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.inicio-de-sesin-container1 {
+.autenticacin-container1 {
   width: 100%;
   height: 1019px;
   display: flex;
@@ -24,10 +24,10 @@
   background-repeat: top left,top lefttop lefttop;
   background-position: top lefttop lefttop,bottom;
 }
-.inicio-de-sesin-navlink {
+.autenticacin-navlink {
   display: contents;
 }
-.inicio-de-sesin-icon {
+.autenticacin-icon {
   top: 0px;
   fill: #ffffff;
   left: 0px;
@@ -36,8 +36,8 @@
   position: absolute;
   text-decoration: none;
 }
-.inicio-de-sesin-container2 {
-  gap: var(--dl-space-space-halfunit);
+.autenticacin-container2 {
+  gap: 0;
   flex: 0 0 auto;
   width: 510px;
   height: 456px;
@@ -52,49 +52,55 @@
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.70);
 }
-.inicio-de-sesin-navlink1 {
+.autenticacin-navlink1 {
   display: contents;
 }
-.inicio-de-sesin-image {
+.autenticacin-image {
   width: 347px;
   height: 79px;
   object-fit: cover;
   margin-bottom: var(--dl-space-space-twounits);
   text-decoration: none;
 }
-.inicio-de-sesin-text {
+.autenticacin-text {
   font-size: 20px;
   align-self: flex-start;
-  font-style: normal;
   font-weight: 600;
+  margin-bottom: var(--dl-space-space-halfunit);
 }
-.inicio-de-sesin-textinput {
+.autenticacin-text1 {
+  font-weight: 400;
+}
+.autenticacin-text2 {
+  font-style: normal;
+}
+.autenticacin-text5 {
+  font-style: normal;
+  font-weight: 400;
+}
+.autenticacin-textinput {
   width: 100%;
+  height: var(--dl-size-size-small);
+  font-size: 22px;
   border-color: #ffffff;
   border-width: 0px;
   border-radius: 5px;
 }
-.inicio-de-sesin-text1 {
-  font-size: 20px;
+.autenticacin-text7 {
+  font-size: 16px;
   align-self: flex-start;
   font-style: normal;
-  margin-top: var(--dl-space-space-unit);
-  font-weight: 600;
+  margin-top: var(--dl-space-space-halfunit);
+  font-weight: 400;
 }
-.inicio-de-sesin-textinput1 {
-  width: 100%;
-  border-color: #ffffff;
-  border-width: 0px;
-  border-radius: 5px;
-}
-.inicio-de-sesin-navlink2 {
+.autenticacin-navlink2 {
   color: rgb(255, 255, 255);
   width: 196px;
   height: 54px;
   font-size: 24px;
   align-self: center;
   font-style: normal;
-  margin-top: var(--dl-space-space-twounits);
+  margin-top: 28px;
   text-align: center;
   transition: 0.3s;
   font-weight: 700;
@@ -109,7 +115,7 @@
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
-.inicio-de-sesin-navlink2:hover {
+.autenticacin-navlink2:hover {
   color: var(--dl-color-multitaskpalette-rojo);
   width: 173px;
   height: 54px;

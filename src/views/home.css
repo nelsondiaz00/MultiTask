@@ -72,19 +72,18 @@
   width: 173px;
   height: 46px;
   font-size: 20px;
+  align-self: center;
   font-style: normal;
+  text-align: center;
   transition: 0.3s;
   font-weight: 700;
+  padding-top: 10px;
   border-color: var(--dl-color-multitaskpalette-morado);
   border-width: 2px;
   border-radius: 27px;
-  animation-delay: 0s;
+  padding-bottom: 0.7rem;
   text-decoration: none;
   background-color: rgb(87, 24, 69);
-  animation-duration: 300ms;
-  animation-direction: normal;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
 }
 .home-navlink1:hover {
   color: #571845;
@@ -180,6 +179,12 @@
 .home-text02 {
   color: #C70039;
   font-size: 20px;
+  animation-name: fadeInUp;
+  animation-delay: 0s;
+  animation-duration: 600ms;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
 }
 .home-text03 {
   color: rgb(255, 255, 255);
@@ -870,6 +875,7 @@
   margin: auto;
   position: absolute;
   font-size: 40px;
+  text-align: center;
   transition: 0.3s;
   border-width: 0px;
   text-decoration: none;

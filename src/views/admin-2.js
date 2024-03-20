@@ -48,11 +48,13 @@ const Admin2 = (props) => {
               <Link to="/admin-3" className="admin2-navlink2">
                 Crear usuario
               </Link>
-              <span className="admin2-text3">Informes</span>
+              <Link to="/admin-4" className="admin2-navlink3">
+                Informes
+              </Link>
             </div>
-            <div className="admin2-container7">
-              <span className="admin2-text4">
-                <span className="admin2-text5">Usuario - Empleado</span>
+            <div id="contenedor_principal" className="admin2-container7">
+              <span className="admin2-text3">
+                <span className="admin2-text4">Usuario - Empleado</span>
                 <br></br>
               </span>
               <div className="admin2-container8"></div>
