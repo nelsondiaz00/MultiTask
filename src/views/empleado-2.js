@@ -9,7 +9,7 @@ const Empleado2 = (props) => {
   return (
     <div className="empleado2-container">
       <Helmet>
-        <title>Empleado-2 - MultiTask</title>
+        <title>MultiTask</title>
         <meta property="og:title" content="Empleado-2 - MultiTask" />
       </Helmet>
       <div id="banner" className="empleado2-container1">
