@@ -31,7 +31,7 @@ useEffect(() => {
   return (
     <div className="autenticacin-container">
       <Helmet>
-        <title>Autenticacin - MultiTask</title>
+        <title>MultiTask</title>
         <meta property="og:title" content="Autenticacin - MultiTask" />
       </Helmet>
       <div id="contenedor_inicio" className="autenticacin-container1">

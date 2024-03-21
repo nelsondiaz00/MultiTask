@@ -24,18 +24,24 @@
   background-repeat: top left,top lefttop lefttop;
   background-position: top lefttop lefttop,bottom;
 }
+
 .autenticacin-navlink {
   display: contents;
 }
 .autenticacin-icon {
   top: 0px;
-  fill: #ffffff;
+  fill: #ffffffbe;
   left: 0px;
   width: 80px;
   height: 80px;
   position: absolute;
   text-decoration: none;
 }
+
+.autenticacin-icon:hover{
+  fill: #ffffff;
+}
+
 .autenticacin-container2 {
   gap: 0;
   flex: 0 0 auto;
@@ -55,6 +61,7 @@
 .autenticacin-navlink1 {
   display: contents;
 }
+
 .autenticacin-image {
   width: 347px;
   height: 79px;
@@ -104,6 +111,7 @@
   text-align: center;
   transition: 0.3s;
   font-weight: 700;
+  padding-top: 10px;
   border-color: var(--dl-color-multitaskpalette-rojo);
   border-width: 2px;
   border-radius: 20px;
@@ -120,7 +128,8 @@
   width: 173px;
   height: 54px;
   font-size: 20px;
+  padding-top: 14px;
   border-color: var(--dl-color-multitaskpalette-rojo);
-  border-width: 3px;
+  border-width: 2px;
   background-color: #ffffff;
 }

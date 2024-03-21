@@ -29,13 +29,18 @@
 }
 .inicio-de-sesin-icon {
   top: 0px;
-  fill: #ffffff;
+  fill: #ffffffbe;
   left: 0px;
   width: 80px;
   height: 80px;
   position: absolute;
   text-decoration: none;
 }
+
+.inicio-de-sesin-icon:hover{
+  fill: #ffffff;
+}
+
 .inicio-de-sesin-container2 {
   gap: var(--dl-space-space-halfunit);
   flex: 0 0 auto;
@@ -95,6 +100,8 @@
   align-self: center;
   font-style: normal;
   margin-top: var(--dl-space-space-twounits);
+  padding-top: 10px;
+  align-items: center;
   text-align: center;
   transition: 0.3s;
   font-weight: 700;
@@ -113,8 +120,9 @@
   color: var(--dl-color-multitaskpalette-rojo);
   width: 173px;
   height: 54px;
+  padding-top: 14px;
   font-size: 20px;
   border-color: var(--dl-color-multitaskpalette-rojo);
-  border-width: 3px;
+  border-width: 2px;
   background-color: #ffffff;
 }

@@ -89,8 +89,12 @@
   color: #571845;
   width: 173px;
   height: 46px;
+  align-self: center;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 0.7rem;
   border-color: #571845;
-  border-width: 3px;
+  border-width: 2px;
   background-color: #ffffff;
 }
 .home-container03 {
@@ -211,42 +215,50 @@
   height: 795px;
   display: flex;
   position: relative;
-  transition: 0.3s;
+  transition: 0.s;
   align-items: center;
-  padding-top: 80px;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-top: 99px;
+  padding-left: 100px;
+  padding-right: 100px;
   flex-direction: column;
   padding-bottom: 80px;
   background-size: cover;
   justify-content: center;
   background-image: url('https://img.freepik.com/free-photo/professional-female-driver-operating-forklift-vehicle_23-2150248783.jpg?w=900&t=st=1708604787~exp=1708605387~hmac=a049376a8dced30567192481204dda984f92dd0c53bed96efb0b010658f1d749');
 }
-.home-container07:hover {
+
+.home-container07:hover{
   background-image: linear-gradient(90deg, rgba(113, 2, 19, 0.3) 0.00%,rgb(172, 7, 49) 100.00%),url('https://img.freepik.com/free-photo/professional-female-driver-operating-forklift-vehicle_23-2150248783.jpg?w=900&t=st=1708604787~exp=1708605387~hmac=a049376a8dced30567192481204dda984f92dd0c53bed96efb0b010658f1d749');
 }
+
+.home-container07:hover .home-text05{
+  opacity:100;
+}
+
+.home-container07:hover .home-text06{
+  opacity:100;
+}
+
 .home-text05 {
   color: #ffffff;
-  opacity: 0;
-  font-size: 24px;
+  opacity:0;
+  font-size: 20px;
+  text-align: right;
   font-style: normal;
-  transition: 0.3s;
+  transition: 0.6s;
   font-weight: 400;
 }
-.home-text05:focus {
-  opacity: 1;
-}
+
 .home-text06 {
   color: rgb(255, 255, 255);
-  opacity: 0;
-  font-size: 24px;
+  opacity:0;
+  font-size: 20px;
+  text-align: right;
   font-style: normal;
-  transition: 0.3s;
+  transition: 0.6s;
   font-weight: 400;
 }
-.home-text06:focus {
-  opacity: 1;
-}
+
 .home-container08 {
   flex: 0 0 auto;
   width: 100%;
@@ -523,7 +535,7 @@
   width: 227px;
   height: 46px;
   border-color: var(--dl-color-multitaskpalette-rojo);
-  border-width: 3px;
+  border-width: 2px;
   background-color: #ffffff;
 }
 .home-container17 {
@@ -689,13 +701,14 @@
   font-style: normal;
   transition: 0.3s;
   font-weight: 700;
+  border-width: 2px;
   border-color: var(--dl-color-multitaskpalette-rojo);
   border-radius: 28px;
   background-color: var(--dl-color-multitaskpalette-rojo);
 }
 .home-button:hover {
   color: var(--dl-color-multitaskpalette-rojo);
-  border-width: 3px;
+  border-width: 2px;
   background-color: #fbfbfb;
 }
 .home-container27 {
@@ -842,12 +855,13 @@
   transition: 0.3s;
   font-weight: 700;
   border-color: var(--dl-color-multitaskpalette-rojo);
+  border-width: 2px;
   border-radius: 28px;
   background-color: var(--dl-color-multitaskpalette-rojo);
 }
 .home-button1:hover {
   color: var(--dl-color-multitaskpalette-rojo);
-  border-width: 3px;
+  border-width: 2px;
   background-color: #fbfbfb;
 }
 .home-image8 {
@@ -876,6 +890,7 @@
   position: absolute;
   font-size: 40px;
   text-align: center;
+  padding-top: 22px;
   transition: 0.3s;
   border-width: 0px;
   text-decoration: none;
