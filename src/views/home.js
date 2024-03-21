@@ -9,7 +9,7 @@ const Home = (props) => {
   return (
     <div id="contenedor_registro" className="home-container">
       <Helmet>
-        <title>MultiTask</title>
+        <title>MultiTask!</title>
         <meta property="og:title" content="MultiTask" />
       </Helmet>
       <div id="banner" className="home-container01">
