@@ -9,7 +9,7 @@ const InicioDeSesin = (props) => {
   return (
     <div className="inicio-de-sesin-container">
       <Helmet>
-        <title>Inicio-de-sesin - MultiTask</title>
+        <title>MultiTask</title>
         <meta property="og:title" content="Inicio-de-sesin - MultiTask" />
       </Helmet>
       <div id="contenedor_inicio" className="inicio-de-sesin-container1">

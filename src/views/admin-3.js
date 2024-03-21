@@ -9,7 +9,7 @@ const Admin3 = (props) => {
   return (
     <div className="admin3-container">
       <Helmet>
-        <title>Admin-3 - MultiTask</title>
+        <title>MultiTask</title>
         <meta property="og:title" content="Admin-3 - MultiTask" />
       </Helmet>
       <div id="banner" className="admin3-container01">
@@ -168,10 +168,7 @@ const Admin3 = (props) => {
                   >
                     <option value="Option 1">Masculino</option>
                     <option value="Option 1">Femenino</option>
-                    <option value="Option 1">Homosexual</option>
                     <option value="Option 2">Prefiero no decir</option>
-                    <option value="Option 2">No binario</option>
-                    <option value="Option 2">Lesbiana</option>
                   </select>
                 </div>
                 <div id="contenedor_tipocuenta" className="admin3-container21">

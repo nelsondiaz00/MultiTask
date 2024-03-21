@@ -30,12 +30,16 @@
 }
 .autenticacin-icon {
   top: 0px;
-  fill: #ffffff;
+  fill: #ffffffbe;
   left: 0px;
   width: 80px;
   height: 80px;
   position: absolute;
   text-decoration: none;
+}
+
+.autenticacin-icon:hover{
+  fill: #ffffff;
 }
 
 .autenticacin-container2 {
