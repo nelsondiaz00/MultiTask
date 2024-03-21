@@ -8,7 +8,7 @@ const EmpresaPerfil = (props) => {
   return (
     <div className="empresa-perfil-container">
       <Helmet>
-        <title>Empresa-Perfil - MultiTask</title>
+        <title>MultiTask</title>
         <meta property="og:title" content="Empresa-Perfil - MultiTask" />
       </Helmet>
     </div>

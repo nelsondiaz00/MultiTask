@@ -466,6 +466,6 @@
   content: "hola";
   font-size: 20px;
   border-color: var(--dl-color-multitaskpalette-rojo);
-  border-width: 3px;
+  border-width: 2px;
   background-color: #ffffff;
 }
