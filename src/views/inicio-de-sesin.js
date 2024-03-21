@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { finalValidation } from '../controller/autentication.js';
 import { Helmet } from 'react-helmet'
+import { useHistory } from 'react-router-dom';
+
 
 import './inicio-de-sesin.css'
 
 const InicioDeSesin = (props) => {
+  const history = useHistory();
   return (
     <div className="inicio-de-sesin-container">
       <Helmet>
@@ -48,11 +51,13 @@ const InicioDeSesin = (props) => {
             to="/autenticacin"
             id="boton_inicioses"
             className="inicio-de-sesin-navlink2 button"
-          >
+            onClick={(event) => finalValidation(event, history)}
+            >
             Autentica
           </Link>
         </div>
       </div>
+      <script src="/src/controller/autenticacion.js"></script>
     </div>
   )
 }
