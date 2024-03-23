@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { putInfo } from '../controller/load-data-control'
 import { Link } from 'react-router-dom'
-
 import { Helmet } from 'react-helmet'
 
 import './empleado-1.css'
+import { updateProfile } from '../controller/update-profile-control';
 
 const Empleado1 = (props) => {
+  const [validationResult, setValidationResult] = useState(null);
+
+  useEffect(() => {
+    const fetchLoadData = async () => {
+      try {
+        const result = await putInfo();
+        setValidationResult(result);
+      } catch (error) {
+        console.error('Error al cargar datos', error);
+      }
+    };
+  
+    fetchLoadData();
+  }, []);
   return (
     <div className="empleado1-container">
       <Helmet>
@@ -34,7 +49,7 @@ const Empleado1 = (props) => {
       <div id="contenedor_main" className="empleado1-container03">
         <div id="contendor_main2" className="empleado1-container04">
           <span id="correo_usuario" className="empleado1-text">
-            nelsonyair@gmail.com
+          {`${localStorage.getItem('correo')}`}
           </span>
           <span id="tipo_usuario" className="empleado1-text01">
             Empleado
@@ -193,6 +208,7 @@ const Empleado1 = (props) => {
                   id="boton_guardar"
                   type="button"
                   className="empleado1-button button"
+                  onClick={() => updateProfile()}
                 >
                   Guardar cambios
                 </button>

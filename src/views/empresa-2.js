@@ -1,11 +1,55 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import React, { useEffect, useState, useRef } from 'react';
 
 import { Helmet } from 'react-helmet'
 
 import './empresa-2.css'
+import { getServices } from '../controller/load-data-control'
 
 const Empresa2 = (props) => {
+  const [validationResult, setValidationResult] = useState(null);
+  const originalDataRef = useRef(null);
+
+  useEffect(() => {
+    const fetchLoadData = async () => {
+      try {
+        const data = await getServices('Metales');
+        setValidationResult(data);
+        originalDataRef.current = data; // Almacena los datos originales
+      } catch (error) {
+        console.error('Error al cargar datos', error);
+      }
+    };
+
+    fetchLoadData();
+  }, []);
+
+  const buscar = (terminoBusqueda) => {
+    try {
+      if (originalDataRef.current !== null) {
+        const resultadosFiltrados = originalDataRef.current.filter(service => {
+          return service.titulo.toLowerCase().includes(terminoBusqueda.toLowerCase());
+        });
+        setValidationResult([...resultadosFiltrados]); // Hacer una copia de los resultados filtrados
+      }
+    } catch (error) {
+      console.error('Error al realizar la búsqueda', error);
+    }
+  };
+
+  const handleInputChange = (event) => {
+    const valorInput = event.target.value;
+
+    if (valorInput.trim() === '') {
+      // Si el valor del input está vacío, restaura los datos originales
+      setValidationResult(originalDataRef.current);
+    } else {
+      // Si hay un valor en el input, realiza la búsqueda normalmente
+      buscar(valorInput);
+    }
+  };
+  
+
   return (
     <div className="empresa2-container">
       <Helmet>
@@ -54,181 +98,32 @@ const Empresa2 = (props) => {
         <div className="empresa2-container05">
           <input
             type="text"
+            id="input_BarraBusqueda"
             placeholder="¡Busca lo que necesitas!"
             className="empresa2-textinput input"
+            onChange={handleInputChange}
           />
           <svg viewBox="0 0 1024 1024" className="empresa2-icon08">
             <path d="M992.262 871.396l-242.552-206.294c-25.074-22.566-51.89-32.926-73.552-31.926 57.256-67.068 91.842-154.078 91.842-249.176 0-212.078-171.922-384-384-384-212.076 0-384 171.922-384 384s171.922 384 384 384c95.098 0 182.108-34.586 249.176-91.844-1 21.662 9.36 48.478 31.926 73.552l206.294 242.552c35.322 39.246 93.022 42.554 128.22 7.356s31.892-92.898-7.354-128.22zM384 640c-141.384 0-256-114.616-256-256s114.616-256 256-256 256 114.616 256 256-114.614 256-256 256z"></path>
           </svg>
         </div>
         <div className="empresa2-container06">
-          <div className="empresa2-container07">
-            <div id="tarjeta_trabajo" className="empresa2-container08">
-              <span className="empresa2-text02">Título del trabajo</span>
-              <span>
-                Corta descripción del cargo, de la persona, de la experiencia,
-                etc, etc
-              </span>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon10">
-                <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-              </svg>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon12">
-                <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-              </svg>
-            </div>
-            <div id="tarjeta_trabajo" className="empresa2-container09">
-              <span className="empresa2-text04">Título del trabajo</span>
-              <span>
-                Corta descripción del cargo, de la persona, de la experiencia,
-                etc, etc
-              </span>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon14">
-                <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-              </svg>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon16">
-                <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-              </svg>
-            </div>
-            <div id="tarjeta_trabajo" className="empresa2-container10">
-              <span className="empresa2-text06">Título del trabajo</span>
-              <span>
-                Corta descripción del cargo, de la persona, de la experiencia,
-                etc, etc
-              </span>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon18">
-                <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-              </svg>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon20">
-                <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-              </svg>
-            </div>
-            <div id="tarjeta_trabajo" className="empresa2-container11">
-              <span className="empresa2-text08">Título del trabajo</span>
-              <span>
-                Corta descripción del cargo, de la persona, de la experiencia,
-                etc, etc
-              </span>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon22">
-                <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-              </svg>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon24">
-                <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-              </svg>
-            </div>
+          <div className="empresa2-container07" id="services-container">
+             {validationResult && validationResult.map((service, index) => (
+          <div key={index} className="empresa2-container08">
+            <span className="empresa2-text02">{service.titulo}</span>
+            <span>{service.descripcion}</span>
+            <svg viewBox="0 0 1024 1024" className="empresa2-icon10">
+              <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
+            </svg>
+            <svg viewBox="0 0 1024 1024" className="empresa2-icon12">
+              <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
+            </svg>
           </div>
-        </div>
-        <div className="empresa2-container12">
-          <div className="empresa2-container13">
-            <div id="tarjeta_trabajo" className="empresa2-container14">
-              <span className="empresa2-text10">Título del trabajo</span>
-              <span>
-                Corta descripción del cargo, de la persona, de la experiencia,
-                etc, etc
-              </span>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon26">
-                <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-              </svg>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon28">
-                <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-              </svg>
-            </div>
-            <div id="tarjeta_trabajo" className="empresa2-container15">
-              <span className="empresa2-text12">Título del trabajo</span>
-              <span>
-                Corta descripción del cargo, de la persona, de la experiencia,
-                etc, etc
-              </span>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon30">
-                <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-              </svg>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon32">
-                <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-              </svg>
-            </div>
-            <div id="tarjeta_trabajo" className="empresa2-container16">
-              <span className="empresa2-text14">Título del trabajo</span>
-              <span>
-                Corta descripción del cargo, de la persona, de la experiencia,
-                etc, etc
-              </span>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon34">
-                <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-              </svg>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon36">
-                <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-              </svg>
-            </div>
-            <div id="tarjeta_trabajo" className="empresa2-container17">
-              <span className="empresa2-text16">Título del trabajo</span>
-              <span>
-                Corta descripción del cargo, de la persona, de la experiencia,
-                etc, etc
-              </span>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon38">
-                <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-              </svg>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon40">
-                <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div className="empresa2-container18">
-          <div className="empresa2-container19">
-            <div id="tarjeta_trabajo" className="empresa2-container20">
-              <span className="empresa2-text18">Título del trabajo</span>
-              <span>
-                Corta descripción del cargo, de la persona, de la experiencia,
-                etc, etc
-              </span>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon42">
-                <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-              </svg>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon44">
-                <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-              </svg>
-            </div>
-            <div id="tarjeta_trabajo" className="empresa2-container21">
-              <span className="empresa2-text20">Título del trabajo</span>
-              <span>
-                Corta descripción del cargo, de la persona, de la experiencia,
-                etc, etc
-              </span>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon46">
-                <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-              </svg>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon48">
-                <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-              </svg>
-            </div>
-            <div id="tarjeta_trabajo" className="empresa2-container22">
-              <span className="empresa2-text22">Título del trabajo</span>
-              <span>
-                Corta descripción del cargo, de la persona, de la experiencia,
-                etc, etc
-              </span>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon50">
-                <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-              </svg>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon52">
-                <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-              </svg>
-            </div>
-            <div id="tarjeta_trabajo" className="empresa2-container23">
-              <span className="empresa2-text24">Título del trabajo</span>
-              <span>
-                Corta descripción del cargo, de la persona, de la experiencia,
-                etc, etc
-              </span>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon54">
-                <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-              </svg>
-              <svg viewBox="0 0 1024 1024" className="empresa2-icon56">
-                <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
+       ))}
+  </div>
+</div>
+
       </div>
     </div>
   )

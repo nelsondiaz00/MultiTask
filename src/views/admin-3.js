@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import './admin-3.css'
+import { registerUser } from '../controller/create-user-control'
 
 const Admin3 = (props) => {
   return (
@@ -34,8 +35,7 @@ const Admin3 = (props) => {
       <div id="contenedor_main" className="admin3-container03">
         <div id="contendor_main2" className="admin3-container04">
           <span id="correo_usuario" className="admin3-text">
-            annasofiasarmiento@gmail.com
-          </span>
+          {`${localStorage.getItem('correo')}`}          </span>
           <span id="tipo_usuario" className="admin3-text01">
             Administrador
           </span>
@@ -167,8 +167,8 @@ const Admin3 = (props) => {
                     className="admin3-select1"
                   >
                     <option value="Option 1">Masculino</option>
-                    <option value="Option 1">Femenino</option>
-                    <option value="Option 2">Prefiero no decir</option>
+                    <option value="Option 2">Femenino</option>
+                    <option value="Option 3">Prefiero no decir</option>
                   </select>
                 </div>
                 <div id="contenedor_tipocuenta" className="admin3-container21">
@@ -177,14 +177,15 @@ const Admin3 = (props) => {
                     <br></br>
                   </span>
                   <select id="input_tipocuenta" className="admin3-select2">
-                    <option value="Option 2">Administrador</option>
-                    <option value="Option 3">Empleado</option>
+                    <option value="admin">Administrador</option>
+                    <option value="empleado">Empleado</option>
                   </select>
                 </div>
                 <button
                   id="boton_guardar"
                   type="button"
                   className="admin3-button button"
+                  onClick={registerUser}
                 >
                   Crear usuario
                 </button>

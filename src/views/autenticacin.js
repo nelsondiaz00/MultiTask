@@ -1,11 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+// import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { finalValidation } from '../controller/code-email-process'
+import { sendEmail } from '../controller/code-email-process'
 import { Helmet } from 'react-helmet'
+import { useHistory } from 'react-router-dom';
 
 import './autenticacin.css'
 
 const Autenticacin = (props) => {
+  const history = useHistory();
+  
+  const [validationResult, setValidationResult] = useState(null);
+
+useEffect(() => {
+  const fetchValidationResult = async () => {
+    try {
+      const result = await sendEmail();
+      setValidationResult(result);
+    } catch (error) {
+      console.error('Error al enviar el correo electrónico:', error);
+      // Puedes manejar el error aquí si es necesario
+    }
+  };
+
+  fetchValidationResult();
+}, []);
+
+
   return (
     <div className="autenticacin-container">
       <Helmet>
@@ -31,7 +53,7 @@ const Autenticacin = (props) => {
             <span className="autenticacin-text1">Te enviamos un código a</span>
             <span className="autenticacin-text2">
               {' '}
-              correoicreíbledelusuario@gmail.com
+              {`${localStorage.getItem('correo')}`}
             </span>
             <br></br>
             <br></br>
@@ -42,7 +64,7 @@ const Autenticacin = (props) => {
           </span>
           <input
             type="text"
-            id="input_correo"
+            id="input_codigo"
             required="true"
             className="autenticacin-textinput input"
           />
@@ -53,6 +75,8 @@ const Autenticacin = (props) => {
             to="/admin-1"
             id="boton_inicioses"
             className="autenticacin-navlink2 button"
+            onClick={(event) => finalValidation(event, history, validationResult)}
+
           >
             Inicia Sesión
           </Link>
