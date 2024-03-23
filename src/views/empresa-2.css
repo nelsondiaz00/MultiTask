@@ -218,6 +218,30 @@
   justify-content: flex-start;
   background-color: #ffffff;
 }
+#services-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.empresa2-container08 {
+  flex-basis: 20%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+
+@media screen and (max-width: 1024px) {
+  .empresa2-container08 {
+    flex-basis: 50%; /* Two columns per row on screens smaller than 1024px */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .empresa2-container08 {
+    flex-basis: 100%; /* Single column per row on screens smaller than 768px */
+  }
+}
 .empresa2-container08:hover {
   box-shadow: 5px 5px 10px 0px #d4d4d4;
 }
