@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import './admin-3.css'
+import { registerUser } from '../controller/create-user-control'
 
 const Admin3 = (props) => {
   return (
@@ -34,8 +35,7 @@ const Admin3 = (props) => {
       <div id="contenedor_main" className="admin3-container03">
         <div id="contendor_main2" className="admin3-container04">
           <span id="correo_usuario" className="admin3-text">
-            annasofiasarmiento@gmail.com
-          </span>
+          {`${localStorage.getItem('correo')}`}          </span>
           <span id="tipo_usuario" className="admin3-text01">
             Administrador
           </span>
@@ -185,6 +185,7 @@ const Admin3 = (props) => {
                   id="boton_guardar"
                   type="button"
                   className="admin3-button button"
+                  onClick={registerUser}
                 >
                   Crear usuario
                 </button>

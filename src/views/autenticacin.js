@@ -53,7 +53,7 @@ useEffect(() => {
             <span className="autenticacin-text1">Te enviamos un código a</span>
             <span className="autenticacin-text2">
               {' '}
-              correoicreíbledelusuario@gmail.com
+              {`${localStorage.getItem('correo')}`}
             </span>
             <br></br>
             <br></br>
