@@ -1,11 +1,27 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-
+import React, { useEffect, useState } from 'react';
+import { putInfo } from '../controller/load-data-control'
 import { Helmet } from 'react-helmet'
+import { registerUser } from '../controller/create-user-control'
+
 
 import './admin-1.css'
 
 const Admin1 = (props) => {
+  const [validationResult, setValidationResult] = useState(null);
+
+  useEffect(() => {
+    const fetchLoadData = async () => {
+      try {
+        const result = await putInfo();
+        setValidationResult(result);
+      } catch (error) {
+        console.error('Error al cargar datos', error);
+      }
+    };
+  
+    fetchLoadData();
+  }, []);
   return (
     <div className="admin1-container">
       <Helmet>
@@ -36,8 +52,8 @@ const Admin1 = (props) => {
       <div id="contenedor_main" className="admin1-container03">
         <div id="contendor_main2" className="admin1-container04">
           <span id="correo_usuario" className="admin1-text">
-            annasofiasarmiento@gmail.com
-          </span>
+          {`${localStorage.getItem('correo')}`}
+                    </span>
           <span id="tipo_usuario" className="admin1-text01">
             Administrador
           </span>
@@ -185,7 +201,7 @@ const Admin1 = (props) => {
                   id="boton_guardar"
                   type="button"
                   className="admin1-button button"
-                >
+                  >
                   Guardar cambios
                 </button>
               </div>

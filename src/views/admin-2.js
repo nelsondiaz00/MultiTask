@@ -34,8 +34,7 @@ const Admin2 = (props) => {
       <div id="contenedor_main" className="admin2-container3">
         <div id="contendor_main2" className="admin2-container4">
           <span id="correo_usuario" className="admin2-text">
-            annasofiasarmiento@gmail.com
-          </span>
+          {`${localStorage.getItem('correo')}`}          </span>
           <span id="tipo_usuario" className="admin2-text1">
             Administrador
           </span>

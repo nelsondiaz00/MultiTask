@@ -34,7 +34,7 @@ const Empleado3 = (props) => {
       <div id="contenedor_main" className="empleado3-container3">
         <div id="contendor_main2" className="empleado3-container4">
           <span id="correo_usuario" className="empleado3-text">
-            nelsonyair@gmail.com
+          {`${localStorage.getItem('correo')}`}
           </span>
           <span id="tipo_usuario" className="empleado3-text1">
             Empleado
