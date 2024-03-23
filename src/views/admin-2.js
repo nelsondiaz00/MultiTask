@@ -1,11 +1,26 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
 
 import { Helmet } from 'react-helmet'
 
 import './admin-2.css'
+import { getEmployees } from '../controller/load-data-control'
 
 const Admin2 = (props) => {
+  const [usuarios, setUsuarios] = useState([]);
+
+  useEffect(() => {
+    const fetchEmployees = async () => {
+      try {
+        const data = await getEmployees();
+        setUsuarios(data);
+      } catch (error) {
+        console.error('Error al obtener los empleados:', error);
+      }
+    };
+
+    fetchEmployees();
+  }, []);
   return (
     <div className="admin2-container">
       <Helmet>
@@ -56,7 +71,38 @@ const Admin2 = (props) => {
                 <span className="admin2-text4">Usuario - Empleado</span>
                 <br></br>
               </span>
-              <div className="admin2-container8"></div>
+              <div className="admin2-container8">
+
+              <table>
+              <colgroup>
+                <col span="1" style={{ width: '20%' }} />
+                <col span="1" style={{ width: '20%' }} />
+                <col span="1" style={{ width: '20%' }} />
+                <col span="1" style={{ width: '40%' }} />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombres</th>
+                  <th>Apellidos</th>
+                  <th>Documento</th>
+                  <th>Dirección</th>
+                </tr>
+              </thead>
+              <tbody>
+                {usuarios.map(usuarios => (
+                  <tr key={usuarios.id}>
+                    <td>{usuarios.id}</td>
+                    <td>{usuarios.nombres}</td>
+                    <td>{usuarios.apellidos}</td>
+                    <td>{usuarios.documento}</td>
+                    <td>{usuarios.direccion}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+
+              </div>
             </div>
           </div>
         </div>

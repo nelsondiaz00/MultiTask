@@ -167,8 +167,8 @@ const Admin3 = (props) => {
                     className="admin3-select1"
                   >
                     <option value="Option 1">Masculino</option>
-                    <option value="Option 1">Femenino</option>
-                    <option value="Option 2">Prefiero no decir</option>
+                    <option value="Option 2">Femenino</option>
+                    <option value="Option 3">Prefiero no decir</option>
                   </select>
                 </div>
                 <div id="contenedor_tipocuenta" className="admin3-container21">
@@ -177,8 +177,8 @@ const Admin3 = (props) => {
                     <br></br>
                   </span>
                   <select id="input_tipocuenta" className="admin3-select2">
-                    <option value="Option 2">Administrador</option>
-                    <option value="Option 3">Empleado</option>
+                    <option value="admin">Administrador</option>
+                    <option value="empleado">Empleado</option>
                   </select>
                 </div>
                 <button

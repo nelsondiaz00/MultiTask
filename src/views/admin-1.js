@@ -2,10 +2,8 @@ import { Link } from 'react-router-dom'
 import React, { useEffect, useState } from 'react';
 import { putInfo } from '../controller/load-data-control'
 import { Helmet } from 'react-helmet'
-import { registerUser } from '../controller/create-user-control'
-
-
 import './admin-1.css'
+import { updateProfile } from '../controller/update-profile-control';
 
 const Admin1 = (props) => {
   const [validationResult, setValidationResult] = useState(null);
@@ -13,8 +11,8 @@ const Admin1 = (props) => {
   useEffect(() => {
     const fetchLoadData = async () => {
       try {
-        const result = await putInfo();
-        setValidationResult(result);
+        const data = await putInfo();
+        setValidationResult(data);
       } catch (error) {
         console.error('Error al cargar datos', error);
       }
@@ -201,6 +199,7 @@ const Admin1 = (props) => {
                   id="boton_guardar"
                   type="button"
                   className="admin1-button button"
+                  onClick={() => updateProfile()}
                   >
                   Guardar cambios
                 </button>

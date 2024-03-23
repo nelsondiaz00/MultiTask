@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import './empleado-1.css'
+import { updateProfile } from '../controller/update-profile-control';
 
 const Empleado1 = (props) => {
   const [validationResult, setValidationResult] = useState(null);
@@ -207,6 +208,7 @@ const Empleado1 = (props) => {
                   id="boton_guardar"
                   type="button"
                   className="empleado1-button button"
+                  onClick={() => updateProfile()}
                 >
                   Guardar cambios
                 </button>
