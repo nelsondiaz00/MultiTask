@@ -146,6 +146,7 @@ const Empleado1 = (props) => {
                   </span>
                   <input
                     type="text"
+                    disabled="true"
                     id="input_username"
                     className="empleado1-textinput4 input"
                   />
@@ -156,9 +157,20 @@ const Empleado1 = (props) => {
                     <br></br>
                   </span>
                   <input
-                    type="text"
+                    type="email"
                     id="input_correo"
                     className="empleado1-textinput5 input"
+                  />
+                </div>
+                <div id="contenedor_contrasena" className="admin1-container16">
+                  <span className="admin1-text20">
+                    <span>Contraseña</span>
+                    <br></br>
+                  </span>
+                  <input
+                    type="password"
+                    id="input_contraseña"
+                    className="empleado1-contrasena input"
                   />
                 </div>
               </div>
@@ -166,7 +178,7 @@ const Empleado1 = (props) => {
                 <div id="contenedor_numero" className="empleado1-container18">
                   <span className="empleado1-text24">Número celular</span>
                   <input
-                    type="text"
+                    type="tel"
                     id="input_numero"
                     className="empleado1-textinput6 input"
                   />
@@ -177,7 +189,7 @@ const Empleado1 = (props) => {
                     <br></br>
                   </span>
                   <input
-                    type="text"
+                    type="date"
                     id="input_cumple"
                     value="01/01/05"
                     disabled="true"

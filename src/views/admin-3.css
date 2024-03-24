@@ -304,7 +304,7 @@
   font-size: 20px;
 }
 .admin3-textinput3 {
-  width: 575px;
+  width: 415px;
   height: 29px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -343,10 +343,16 @@
   font-size: 20px;
 }
 .admin3-textinput5 {
-  width: 414px;
+  width: 320px;
   height: 29px;
   padding-left: 0.5rem;
   border-radius: var(--dl-radius-radius-radius4);
+  padding-right: 0.5rem;
+}
+.admin3-contrasena {
+  width: 210px;
+  height: 29px;
+  padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 .admin3-container17 {

@@ -314,11 +314,20 @@
   font-size: 20px;
 }
 .admin1-textinput3 {
-  width: 575px;
+  width: 415px;
   height: 29px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+
+.admin1-contrasena {
+  width: 210px;
+  height: 29px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+
 .admin1-container15 {
   gap: var(--dl-space-space-halfunit);
   flex: 0 0 auto;
@@ -333,6 +342,7 @@
   font-size: 20px;
 }
 .admin1-textinput4 {
+  color: var(--dl-color-gray-700);
   width: 277px;
   height: 29px;
   padding-left: 0.5rem;
@@ -353,7 +363,7 @@
   font-size: 20px;
 }
 .admin1-textinput5 {
-  width: 414px;
+  width: 320px;
   height: 29px;
   padding-left: 0.5rem;
   border-radius: var(--dl-radius-radius-radius4);

@@ -41,14 +41,14 @@ export async function registerUser() {
         if (response.ok) {
             const data = await response.json();
             // Después de crear el objeto user
-            /*nombre.value = "";
+            nombre.value = "";
             apellidos.value = "";
             cedula.value = "";
             correo.value = "";
             direccion.value = "";
             telefono.value = "";
             nUsuario.value = "";
-            fechaCumple.value = "";*/
+            fechaCumple.value = "";
             alert("Usuario creado exitosamente")
             return data;
         } else {

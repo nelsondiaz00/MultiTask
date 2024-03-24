@@ -98,9 +98,10 @@ const Admin3 = (props) => {
                     <br></br>
                   </span>
                   <input
-                    type="text"
+                    type="tel"
                     id="input_numdoc"
                     className="admin3-textinput2 input"
+                    required
                   />
                 </div>
               </div>
@@ -130,9 +131,22 @@ const Admin3 = (props) => {
                     <br></br>
                   </span>
                   <input
-                    type="text"
+                    type="email"
                     id="input_correo"
                     className="admin3-textinput5 input"
+                    required
+                    placeholder='supercorreo@mail.com'
+                  />
+                </div>
+                <div id="contenedor_contrasena" className="admin1-container16">
+                  <span className="admin1-text20">
+                    <span>Contraseña</span>
+                    <br></br>
+                  </span>
+                  <input
+                    type="password"
+                    id="input_contraseña"
+                    className="admin3-contrasena input"
                   />
                 </div>
               </div>
@@ -140,9 +154,12 @@ const Admin3 = (props) => {
                 <div id="contenedor_numero" className="admin3-container18">
                   <span className="admin3-text23">Número celular</span>
                   <input
-                    type="text"
+                    type="tel"
                     id="input_numero"
+                    pattern="[0-9]{10}"
+                    maxLength={10}
                     className="admin3-textinput6 input"
+                    placeholder='3XX XXXXXXX'
                   />
                 </div>
                 <div id="contenedor_cumple" className="admin3-container19">
@@ -151,7 +168,8 @@ const Admin3 = (props) => {
                     <br></br>
                   </span>
                   <input
-                    type="text"
+                    type="date" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])
+                    "
                     id="input_cumple"
                     className="admin3-textinput7 input"
                   />
