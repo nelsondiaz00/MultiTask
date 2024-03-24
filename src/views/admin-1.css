@@ -52,6 +52,21 @@
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
+.admin1-text02 {
+  cursor: pointer;
+}
+.admin1-navlink2 {
+  cursor: pointer;
+}
+
+.admin1-navlink1 {
+  cursor: pointer;
+}
+
+.admin1-navlink3 {
+  cursor: pointer;
+}
+
 .admin1-navlink:hover {
   color: #571845;
   width: 210px;
@@ -351,6 +366,18 @@
 }
 .admin1-text20 {
   font-size: 20px;
+}
+
+.admin1-text2 {
+  width: 276px;
+  font-size: 20px;
+  align-self: center;
+  text-align: center;
+  padding-top: var(--dl-space-space-halfunit);
+  padding-left: var(--dl-space-space-halfunit);
+  padding-right: var(--dl-space-space-halfunit);
+  padding-bottom: var(--dl-space-space-halfunit);
+  background-color: var(--dl-color-multitaskpalette-amarilloclar);
 }
 .admin1-textinput5 {
   width: 414px;
