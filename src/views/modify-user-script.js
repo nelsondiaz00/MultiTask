@@ -69,7 +69,7 @@ const ModificarInfoPersona = () => {
             <br></br>
           </span>
           <input
-            type="text"
+            type="tel"
             id="input_numdoc"
             value="1076684566"
             disabled="true"
@@ -93,6 +93,7 @@ const ModificarInfoPersona = () => {
           </span>
           <input
             type="text"
+            disabled="true"
             id="input_username"
             className="admin1-textinput4 input"
           />
@@ -103,9 +104,20 @@ const ModificarInfoPersona = () => {
             <br></br>
           </span>
           <input
-            type="text"
+            type="email"
             id="input_correo"
             className="admin1-textinput5 input"
+          />
+        </div>
+        <div id="contenedor_contrasena" className="admin1-container16">
+          <span className="admin1-text20">
+            <span>Contraseña</span>
+            <br></br>
+          </span>
+          <input
+            type="password"
+            id="input_contraseña"
+            className="admin1-contrasena input"
           />
         </div>
       </div>
@@ -113,7 +125,9 @@ const ModificarInfoPersona = () => {
         <div id="contenedor_numero" className="admin1-container18">
           <span className="admin1-text23">Número celular</span>
           <input
-            type="text"
+            type="tel"
+            maxLength={10}
+            placeholder='3XX XXXXXXX'
             id="input_numero"
             className="admin1-textinput6 input"
           />
@@ -124,7 +138,7 @@ const ModificarInfoPersona = () => {
             <br></br>
           </span>
           <input
-            type="text"
+            type="date"
             id="input_cumple"
             value="01/01/05"
             disabled="true"
@@ -157,7 +171,7 @@ const ModificarInfoPersona = () => {
           Guardar cambios
         </button>
       </div>
-    </div>
+      </div>
   );
 };
 
