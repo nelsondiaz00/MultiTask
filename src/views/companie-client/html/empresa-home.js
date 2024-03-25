@@ -1,11 +1,46 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet'
 
-import './empresa-1.css'
+import '../css/empresa-home.css'
 
 const Empresa1 = (props) => {
+
+  const handleClick = (className) => {
+    let url;
+    let sector;
+    switch (className) {
+      case 'empresa1-text01':
+        sector = 'Metales';
+        url = getComputedStyle(document.querySelector('.empresa1-container08')).getPropertyValue('background-image')
+        break;
+      case 'empresa1-text03':
+        sector = 'Maderas';
+        url = getComputedStyle(document.querySelector('.empresa1-container09')).getPropertyValue('background-image')
+        break;
+      case 'empresa1-text05':
+        sector = 'Materiales';
+        url = getComputedStyle(document.querySelector('.empresa1-container12')).getPropertyValue('background-image')
+        break;
+      case 'empresa1-text09':
+        sector = 'Transporte';
+        url = getComputedStyle(document.querySelector('.empresa1-container13')).getPropertyValue('background-image')
+        break;
+      case 'empresa1-text13':
+        sector = 'Ferretería y eléctrica';
+        url = getComputedStyle(document.querySelector('.empresa1-container14')).getPropertyValue('background-image')
+        break;
+      case 'empresa1-text15':
+        sector = 'Otros';
+        url = getComputedStyle(document.querySelector('.empresa1-container16')).getPropertyValue('background-image')
+        break;
+      default:
+        alert('Elección incorrecta');
+    }
+    localStorage.setItem('selectedSector', sector);
+    localStorage.setItem('url', url);
+  };
+  
   return (
     <div className="empresa1-container">
       <Helmet>
@@ -20,7 +55,7 @@ const Empresa1 = (props) => {
         />
         <div id="barra" className="empresa1-container02">
           <Link
-            to="/inicio-de-sesin"
+            to="/"
             id="botonCerrarSesion"
             className="empresa1-navlink button"
           >
@@ -46,47 +81,58 @@ const Empresa1 = (props) => {
         <div id="contendor_main" className="empresa1-container05">
           <div className="empresa1-container06">
             <div id="contenedor_1" className="empresa1-container07">
-              <Link to="/empresa-2" className="empresa1-navlink1">
-                <div className="empresa1-container08">
+              <Link to="/empresa-sector" className="empresa1-navlink1">
+                <div className="empresa1-container08" onClick={() => handleClick('empresa1-text01')}>
                   <span className="empresa1-text">Sector</span>
                   <span className="empresa1-text01">Metales</span>
                 </div>
               </Link>
-              <div className="empresa1-container09">
-                <span className="empresa1-text02">Sector</span>
-                <span className="empresa1-text03">Maderas</span>
-              </div>
+              <Link to="/empresa-sector" className="empresa1-navlink1">
+                <div className="empresa1-container09" onClick={() => handleClick('empresa1-text03')}>
+                  <span className="empresa1-text02">Sector</span>
+                  <span className="empresa1-text03">Maderas</span>
+                </div>
+              </Link>
             </div>
             <div id="contenedor_2" className="empresa1-container10">
               <div className="empresa1-container11">
-                <div className="empresa1-container12">
-                  <span className="empresa1-text04">Sector</span>
-                  <span className="empresa1-text05">
-                    <span>Materiales</span>
-                    <br></br>
-                  </span>
-                </div>
-                <div className="empresa1-container13">
+                <Link to="/empresa-sector" className="empresa1-navlink1">
+                  <div className="empresa1-container12" onClick={() => handleClick('empresa1-text05')}>
+                    <span className="empresa1-text04">Sector</span>
+                    <span className="empresa1-text05">
+                      <span>Materiales</span>
+                      <br></br>
+                    </span>
+                  </div>
+                </Link>
+                <Link to="/empresa-sector" className="empresa1-navlink1">
+                <div className="empresa1-container13" onClick={() => handleClick('empresa1-text09')}>
                   <span className="empresa1-text08">Sector</span>
                   <span className="empresa1-text09">
                     <span>Transporte</span>
                     <br></br>
                   </span>
                 </div>
+                </Link>
+
               </div>
-              <div className="empresa1-container14">
+              <Link to="/empresa-sector" className="empresa1-navlink1">
+              <div className="empresa1-container14" onClick={() => handleClick('empresa1-text13')}>
                 <span className="empresa1-text12">Sector</span>
                 <span className="empresa1-text13">Ferretería y eléctrica</span>
               </div>
+              </Link>
             </div>
             <div id="contenedor_3" className="empresa1-container15">
-              <div className="empresa1-container16">
+            <Link to="/empresa-sector" className="empresa1-navlink1">
+              <div className="empresa1-container16" onClick={() => handleClick('empresa1-text15')}>
                 <span className="empresa1-text14">Sector</span>
                 <span className="empresa1-text15">
                   <span>Otros</span>
                   <br></br>
                 </span>
               </div>
+            </Link>
             </div>
           </div>
           <div id="contenedor_4" className="empresa1-container17">

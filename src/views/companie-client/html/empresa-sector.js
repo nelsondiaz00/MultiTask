@@ -3,17 +3,31 @@ import React, { useEffect, useState, useRef } from 'react';
 
 import { Helmet } from 'react-helmet'
 
-import './empresa-2.css'
-import { getServices } from '../controller/load-data-control'
+import '../css/empresa-sector.css'
+import { getServices } from '../../../controller/load-data-control'
 
 const Empresa2 = (props) => {
+  const [selectedSector, setSelectedSector] = useState('');
+
+  useEffect(() => {
+    const storedSector = localStorage.getItem('selectedSector');
+    setSelectedSector(storedSector);
+
+    const storedBackgroundImage = localStorage.getItem('url');
+    const container = document.querySelector('.empresa2-container03');
+    container.style.backgroundImage = storedBackgroundImage;
+
+  }, []);
+  
   const [validationResult, setValidationResult] = useState(null);
   const originalDataRef = useRef(null);
 
   useEffect(() => {
     const fetchLoadData = async () => {
       try {
-        const data = await getServices('Metales');
+        const storedSector = localStorage.getItem('selectedSector');
+        console.log(storedSector.toString())
+        const data = await getServices(storedSector.toString());
         setValidationResult(data);
         originalDataRef.current = data; // Almacena los datos originales
       } catch (error) {
@@ -49,7 +63,6 @@ const Empresa2 = (props) => {
     }
   };
   
-
   return (
     <div className="empresa2-container">
       <Helmet>
@@ -86,13 +99,13 @@ const Empresa2 = (props) => {
         </div>
       </div>
       <div className="empresa2-container03">
-        <Link to="/empresa-1" className="empresa2-navlink1">
+        <Link to="/empresa-home" className="empresa2-navlink1">
           <svg viewBox="0 0 1024 1024" className="empresa2-icon06">
             <path d="M725.333 469.333h-323.669l97.835-97.835c16.683-16.683 16.683-43.648 0-60.331s-43.648-16.683-60.331 0l-200.832 200.832 200.832 200.832c8.32 8.32 19.243 12.501 30.165 12.501s21.845-4.181 30.165-12.501c16.683-16.683 16.683-43.648 0-60.331l-97.835-97.835h323.669c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667z"></path>
           </svg>
         </Link>
         <span className="empresa2-text">Sector</span>
-        <span className="empresa2-text01">Metales</span>
+        <span className="empresa2-text01">{selectedSector}</span>
       </div>
       <div id="contenedor_main" className="empresa2-container04">
         <div className="empresa2-container05">

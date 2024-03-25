@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import './admin-1.css';
-import Admin3 from './create-user-script'; 
-import ModificarInfoPersona from './modify-user-script';
-import ViewEmployees from './view-employee-script.js'
-import ReportView from './report-script.js';
+import '../css/admin-home.css';
+import Admin3 from '../../scripts/create-user-script.js'; 
+import ModificarInfoPersona from '../../scripts/modify-user-script.js';
+import ViewEmployees from '../../scripts/view-employee-script.js'
+import ReportView from '../../scripts/report-script.js';
 
 
 const Admin1 = (props) => {
@@ -42,7 +42,7 @@ const Admin1 = (props) => {
         />
         <div id="barra" className="admin1-container02">
           <Link
-            to="/inicio-de-sesin"
+            to="/"
             id="botonCerrarSesion"
             className="admin1-navlink button"
           >

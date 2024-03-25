@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 // import React from 'react'
 import { Link } from 'react-router-dom'
-import { finalValidation } from '../controller/code-email-process'
-import { sendEmail } from '../controller/code-email-process'
+import { finalValidation } from '../../../../controller/code-email-process'
+import { sendEmail } from '../../../../controller/code-email-process'
 import { Helmet } from 'react-helmet'
 import { useHistory } from 'react-router-dom';
 
-import './autenticacin.css'
+import '../css/autenticacin.css'
 
 const Autenticacin = (props) => {
   const history = useHistory();
@@ -72,11 +72,9 @@ useEffect(() => {
             Confiamos en tí, solo es para confirmar :)
           </span>
           <Link
-            to="/admin-1"
             id="boton_inicioses"
             className="autenticacin-navlink2 button"
             onClick={(event) => finalValidation(event, history, validationResult)}
-
           >
             Inicia Sesión
           </Link>

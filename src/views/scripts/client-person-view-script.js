@@ -1,5 +1,5 @@
 import React from 'react'
-import './empleado-3.css'
+import '../employee/css/empleado-3.css'
 
 const Empleado3 = (props) => {
   return (

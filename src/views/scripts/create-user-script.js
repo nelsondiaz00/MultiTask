@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
-import './admin-3.css'
-import { registerUser } from '../controller/create-user-control'
+import '../admin/css/admin-3.css'
+import { registerUser } from '../../controller/create-user-control'
 
 const Admin3 = (props) => {
     return (

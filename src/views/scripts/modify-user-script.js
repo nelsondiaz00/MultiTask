@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom'
 import React, { useEffect, useState } from 'react';
-import { putInfo } from '../controller/load-data-control'
+import { putInfo } from '../../controller/load-data-control'
 import { Helmet } from 'react-helmet'
-import './admin-1.css'
-import { updateProfile } from '../controller/update-profile-control';
+import '../admin/css/admin-home.css'
+import { updateProfile } from '../../controller/update-profile-control';
 
 const ModificarInfoPersona = () => {
 
   useEffect(() => {
     const fetchLoadData = async () => {
       try {
-        const data = await putInfo();
-        setValidationResult(data);
+        await putInfo();
+
       } catch (error) {
         console.error('Error al cargar datos', error);
       }
