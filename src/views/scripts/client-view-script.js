@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { Helmet } from 'react-helmet'
 
-import './empleado-2.css'
+import '../employee/css/empleado-2.css'
 
 const Empleado2 = (props) => {
   return (

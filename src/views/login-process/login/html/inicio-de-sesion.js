@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { finalValidation } from '../controller/autentication.js';
+import { finalValidation } from '../../../../controller/autentication-control.js';
 import { Helmet } from 'react-helmet'
 import { useHistory } from 'react-router-dom';
 
 
-import './inicio-de-sesin.css'
+import '../css/inicio-de-sesion.css'
 
 const InicioDeSesin = (props) => {
   const history = useHistory();
@@ -48,7 +48,6 @@ const InicioDeSesin = (props) => {
             className="inicio-de-sesin-textinput1 input"
           />
           <Link
-            to="/autenticacin"
             id="boton_inicioses"
             className="inicio-de-sesin-navlink2 button"
             onClick={(event) => finalValidation(event, history)}

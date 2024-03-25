@@ -114,8 +114,9 @@
   padding-bottom: var(--dl-space-space-twounits);
   background-size: cover;
   justify-content: flex-end;
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0.00%,rgba(0, 0, 0, 0.59) 100.00%),url('https://img.freepik.com/free-photo/steel-pipes-put-together_1112-903.jpg?w=900&t=st=1708607809~exp=1708608409~hmac=d66e6df87ece010f11c33df6e30864f90a073319211d96e2850a4302a135255c');
 }
+
+
 .empresa2-navlink1 {
   display: contents;
 }

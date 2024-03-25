@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { putInfo } from '../controller/load-data-control'
+import { putInfo } from '../../../controller/load-data-control'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
-import './empleado-1.css'
-import { updateProfile } from '../controller/update-profile-control';
-import ModificarInfoPersona from './modify-user-script';
-import Empleado2 from './client-view-script';
-import Empleado3 from './client-person-view-script';
+import '../css/empleado-home.css'
+import { updateProfile } from '../../../controller/update-profile-control';
+import ModificarInfoPersona from '../../scripts/modify-user-script';
+import Empleado2 from '../../scripts/client-view-script';
+import Empleado3 from '../../scripts/client-person-view-script';
 
 const Empleado1 = (props) => {
   const [activeItemId, setActiveItemId] = useState(null);
@@ -42,7 +42,7 @@ const Empleado1 = (props) => {
         />
         <div id="barra" className="empleado1-container02">
           <Link
-            to="/inicio-de-sesin"
+            to="/"
             id="botonCerrarSesion"
             className="empleado1-navlink button"
           >

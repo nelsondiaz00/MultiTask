@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { Helmet } from 'react-helmet'
 
-import './home.css'
+import '../css/home.css'
 
 const Home = (props) => {
   return (
@@ -43,7 +43,7 @@ const Home = (props) => {
             Regístrate
           </a>
           <Link
-            to="/inicio-de-sesin"
+            to="/inicio-de-sesion"
             id="boton_inicioses"
             className="home-navlink1 button"
           >

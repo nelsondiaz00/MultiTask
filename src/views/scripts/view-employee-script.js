@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './admin-2.css'
+import '../admin/css/admin-2.css'
 import { DataGrid } from '@mui/x-data-grid';
-import { getEmployees } from '../controller/load-data-control'
+import { getEmployees } from '../../controller/load-data-control'
 
 const ViewEmployees = (props) => {
     const [usuarios, setUsuarios] = useState([]);

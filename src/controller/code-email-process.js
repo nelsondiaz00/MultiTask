@@ -34,7 +34,7 @@ export async function finalValidation(event, history, code) {
         if (codeInput === code) {
             const dataFinal = await getUser()
             console.log(dataFinal.tipoUsuario)
-            history.push(`/${dataFinal.tipoUsuario}-1`);
+            history.push(`/${dataFinal.tipoUsuario}-home`);
         } else {
             alert('El código ingresado es incorrecto. Por favor, verifica tus datos.'); 
         }

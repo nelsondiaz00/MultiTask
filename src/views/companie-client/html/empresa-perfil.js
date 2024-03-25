@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Helmet } from 'react-helmet'
 
-import './empresa-perfil.css'
+import '../css/empresa-perfil.css'
 
 const EmpresaPerfil = (props) => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import './admin-4.css'
+import '../admin/css/admin-4.css'
 
 const ReportView = (props) => {
     return  (
