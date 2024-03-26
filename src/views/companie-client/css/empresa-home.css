@@ -34,8 +34,9 @@
   height: 58px;
   display: flex;
   padding: 0px;
-  font-size: 20px;
+  font-size: 0px;
   font-style: normal;
+  white-space: nowrap;
   transition: 0.3s;
   align-items: center;
   font-weight: 700;
@@ -47,23 +48,30 @@
   justify-content: center;
   text-decoration: none;
   background-color: rgb(87, 24, 69);
-  animation-duration: 300ms;
+  animation-duration: 1000ms;
   animation-direction: normal;
   animation-iteration-count: 1;
   animation-timing-function: ease;
 }
 .empresa1-navlink:hover {
   color: #571845;
-  width: 173px;
+  width: 150px;
   height: 58px;
+  font-size: 20px;
+  white-space: nowrap;
   border-color: #571845;
-  border-width: 3px;
+  border-width: 2px;
   background-color: #ffffff;
 }
+
+.empresa1-navlink:hover .empresa1-icon{
+  display:none;
+}
+
 .empresa1-icon {
   fill: var(--dl-color-gray-white);
   width: 100%;
-  height: 49px;
+  height: 40px;
   align-self: center;
 }
 .empresa1-button {
@@ -72,7 +80,8 @@
   height: 58px;
   display: flex;
   padding: 0px;
-  font-size: 20px;
+  font-size: 0px;
+  white-space: nowrap;
   font-style: normal;
   transition: 0.3s;
   align-items: center;
@@ -93,11 +102,17 @@
   color: #571845;
   width: 173px;
   height: 58px;
+  font-size: 20px;
   border-color: #571845;
-  border-width: 3px;
+  border-width: 2px;
   background-color: #ffffff;
 }
-.empresa1-icon03 {
+
+.empresa1-button:hover .empresa1-icon3{
+  display:none;
+}
+
+.empresa1-icon3 {
   fill: var(--dl-color-gray-white);
   width: 100%;
   height: 40px;
@@ -284,7 +299,7 @@
   padding-bottom: var(--dl-space-space-unit);
   background-size: cover;
   justify-content: flex-end;
-  background-image: linear-gradient(180deg, rgba(251, 251, 251, 0) 29.00%,rgba(0, 0, 0, 0.51) 99.00%),url('https://img.freepik.com/free-photo/supply-chain-representation-with-forklift-high-angle_23-2149853164.jpg?t=st=1708688774~exp=1708692374~hmac=fd9946f5435ae3b6b9fbab9f4c83f95d8a02d079477b19c4a221532306ca3289&w=900');
+  background-image: linear-gradient(180deg, rgba(251, 251, 251, 0) 29.00%,rgba(0, 0, 0, 0.51) 99.00%),url('https://img.freepik.com/foto-gratis/excavadora-pesada-excavar-luz-diurna_23-2149194828.jpg?t=st=1711413671~exp=1711417271~hmac=089ecc2e1dfa3a6ac9e59667f078495f8fe736fe8fe46c15963aa7c84e3fd888&w=1060');
 }
 .empresa1-container13:hover {
   box-shadow: 5px 5px 10px 0px #363636;
