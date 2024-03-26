@@ -128,7 +128,7 @@ const Home = (props) => {
           <div id="sectorTransporte" className="home-container13">
             <img
               alt="image"
-              src="https://img.freepik.com/free-photo/supply-chain-representation-with-forklift-high-angle_23-2149853164.jpg?t=st=1708688774~exp=1708692374~hmac=fd9946f5435ae3b6b9fbab9f4c83f95d8a02d079477b19c4a221532306ca3289&amp;w=900"
+              src="https://img.freepik.com/foto-gratis/excavadora-pesada-excavar-luz-diurna_23-2149194828.jpg?t=st=1711413671~exp=1711417271~hmac=089ecc2e1dfa3a6ac9e59667f078495f8fe736fe8fe46c15963aa7c84e3fd888&w=1380"
               className="home-image3"
             />
             <span className="home-text13">Sector</span>
