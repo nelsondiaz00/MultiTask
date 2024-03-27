@@ -1,3 +1,7 @@
+.empresa-perfil-navlink {
+  display: contents;
+}
+
 .empresa-perfil-container {
   width: 100%;
   display: flex;
@@ -5,4 +9,197 @@
   min-height: 100vh;
   align-items: center;
   flex-direction: column;
+}
+.empresa-perfil-container01 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 136px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empresa-perfil-image {
+  width: 299px;
+  height: 50%;
+  object-fit: cover;
+}
+.empresa-perfil-container02 {
+  gap: var(--dl-space-space-unit);
+  flex: 0 0 auto;
+  width: 843px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.empresa-perfil-navlink2 {
+  color: rgb(255, 255, 255);
+  width: 61px;
+  height: 58px;
+  display: flex;
+  padding: 0px;
+  font-size: 0px;
+  font-style: normal;
+  transition: 0.3s;
+  align-items: center;
+  font-weight: 700;
+  border-color: var(--dl-color-multitaskpalette-morado);
+  border-width: 2px;
+  border-radius: 27px;
+  flex-direction: row;
+  animation-delay: 0s;
+  justify-content: center;
+  text-decoration: none;
+  background-color: rgb(87, 24, 69);
+  animation-duration: 300ms;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+.empresa-perfil-navlink2:hover {
+  color: #571845;
+  width: 173px;
+  font-size: 20px;
+  height: 58px;
+  border-color: #571845;
+  border-width: 2px;
+  background-color: #ffffff;
+}
+
+.empresa-perfil-navlink2:hover .empresa-perfil-icon{
+  display:none;
+}
+
+.empresa-perfil-icon {
+  fill: var(--dl-color-gray-white);
+  width: 30px;
+  height: 30px;
+  align-self: center;
+}
+.empresa-perfil-icon3 {
+  width: 24px;
+  height: 24px;
+}
+.empresa-perfil-container03 {
+  width: 100%;
+  height: 1349px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-space-space-sixunits);
+  padding-left: 168px;
+  padding-right: 168px;
+  flex-direction: column;
+  padding-bottom: 168px;
+  justify-content: flex-start;
+}
+.empresa-perfil-container04 {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 29px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  background-color: var(--dl-color-multitaskpalette-amarillo);
+}
+.empresa-perfil-container05 {
+  gap: 40px;
+  width: 100%;
+  height: 1193px;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-threeunits);
+  border-radius: 40px;
+  padding-right: var(--dl-space-space-threeunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-threeunits);
+  justify-content: flex-start;
+  background-color: var(--dl-color-gray-white);
+}
+.empresa-perfil-container06 {
+  gap: var(--dl-space-space-fourunits);
+  flex: 0 0 auto;
+  width: 1187px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.empresa-perfil-image1 {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: var(--dl-radius-radius-round);
+}
+.empresa-perfil-container07 {
+  flex: 0 0 auto;
+  width: 786px;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.empresa-perfil-container08 {
+  gap: var(--dl-space-space-unit);
+  width: 786px;
+  height: 100%;
+  display: flex;
+  align-self: flex-start;
+  margin-top: var(--dl-space-space-twounits);
+  align-items: flex-start;
+  margin-bottom: var(--dl-space-space-twounits);
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.empresa-perfil-text {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+}
+.empresa-perfil-text1 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+}
+.empresa-perfil-text2 {
+  font-size: 24px;
+}
+.empresa-perfil-text3 {
+  font-size: 24px;
+}
+.empresa-perfil-text4 {
+  font-size: 24px;
+}
+.empresa-perfil-container09 {
+  width: 1187px;
+  height: 650px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+
+.tab{
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: capitalize;
+  width: auto;
+  height: auto;
+}
+
+.tab:hover{
+  font-size: 24px;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.tab:focus{
+  color: rgb(87, 24, 69);
+  font-size: 24px;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: 700;
 }

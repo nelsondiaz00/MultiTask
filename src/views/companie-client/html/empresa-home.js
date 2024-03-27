@@ -55,7 +55,7 @@ const Empresa1 = (props) => {
         />
         <div id="barra" className="empresa1-container02">
           <Link
-            to="/"
+            to="/empresa-perfil"
             id="botonPerfil"
             className="empresa1-navlink button"
           > Perfil
