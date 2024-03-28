@@ -17,7 +17,7 @@ const EmpresaPerfil = (props) => {
         <meta property="og:title" content="Empresa-perfil - MultiTask" />
       </Helmet>
       <div id="banner" className="empresa-perfil-container01">
-      <Link to="/empresa-home" className="empresa-perfil-navlink">
+      <Link to="/empresa-inicio" className="empresa-perfil-navlink">
         <img
           alt="image"
           src="/external/multitask%20-%20logo.svg"
