@@ -99,7 +99,7 @@ const Empresa2 = (props) => {
         </div>
       </div>
       <div className="empresa2-container03">
-        <Link to="/empresa-home" className="empresa2-navlink1">
+        <Link to="/empresa-inicio" className="empresa2-navlink1">
           <svg viewBox="0 0 1024 1024" className="empresa2-icon06">
             <path d="M725.333 469.333h-323.669l97.835-97.835c16.683-16.683 16.683-43.648 0-60.331s-43.648-16.683-60.331 0l-200.832 200.832 200.832 200.832c8.32 8.32 19.243 12.501 30.165 12.501s21.845-4.181 30.165-12.501c16.683-16.683 16.683-43.648 0-60.331l-97.835-97.835h323.669c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667z"></path>
           </svg>

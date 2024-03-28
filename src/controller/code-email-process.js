@@ -34,7 +34,7 @@ export async function finalValidation(event, history, code) {
         if (codeInput === code) {
             const dataFinal = await getUser()
             console.log(dataFinal.tipoUsuario)
-            history.push(`/${dataFinal.tipoUsuario}-home`);
+            history.push(`/${dataFinal.tipoUsuario.toLowerCase()}-inicio`);
         } else {
             alert('El código ingresado es incorrecto. Por favor, verifica tus datos.'); 
         }
@@ -42,6 +42,7 @@ export async function finalValidation(event, history, code) {
         alert('La validación falló. Por favor, verifica tus datos.'); 
     }
 }
+
 
 export async function getUser() {
     const emailInput = localStorage.getItem('correo');

@@ -1,10 +1,64 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet'
 import '../admin/css/admin-3.css'
 import { registerUser } from '../../controller/create-user-control'
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Admin3 = (props) => {
+
+  const [open, setOpen] = React.useState(false);
+  const [result, setResult] = useState(null);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  const action = (
+    <React.Fragment>
+      <Button color="secondary" size="small" onClick={handleClose} style={{ color: 'yellow' }}>
+        UNDO
+      </Button>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+        style={{ fontFamily: 'Comic Sans MS, Comic Sans, sans-serif' }}
+        >
+        <CloseIcon fontSize="large" />
+      </IconButton>
+    </React.Fragment>
+  );
+  
+  useEffect(() => {
+    const handleInput = (event) => {
+      event.target.value = event.target.value.replace(/[^0-9]/g, '');
+    };
+
+    const inputNumDoc = document.getElementById('input_numdoc');
+    inputNumDoc.addEventListener('input', handleInput);
+
+    const inputNumero = document.getElementById('input_numero');
+    inputNumero.addEventListener('input', handleInput);
+
+    return () => {
+      inputNumDoc.removeEventListener('input', handleInput);
+      inputNumero.removeEventListener('input', handleInput);
+    };
+  }, []);
+
+
     return (
       <div id="contenedor_principal" className="admin3-container07">
       <span className="admin3-text03">
@@ -41,9 +95,9 @@ const Admin3 = (props) => {
             required="true"
             className="admin3-select"
           >
-            <option value="Option 1">C.C</option>
-            <option value="Option 2">C.E</option>
-            <option value="Option 2">Pasaporte</option>
+            <option value="C.C">C.C</option>
+            <option value="C.E">C.E</option>
+            <option value="Pasaporte">Pasaporte</option>
           </select>
         </div>
         <div id="contenedor_numdoc" className="admin3-container12">
@@ -52,9 +106,10 @@ const Admin3 = (props) => {
             <br></br>
           </span>
           <input
-            type="tel"
+            type="text"
             id="input_numdoc"
             className="admin3-textinput2 input"
+            pattern="[0-9]+"
             required
           />
         </div>
@@ -138,9 +193,9 @@ const Admin3 = (props) => {
             required="true"
             className="admin3-select1"
           >
-            <option value="Option 1">Masculino</option>
-            <option value="Option 2">Femenino</option>
-            <option value="Option 3">Prefiero no decir</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Prefiero no decir">Prefiero no decir</option>
           </select>
         </div>
         <div id="contenedor_tipocuenta" className="admin3-container21">
@@ -149,18 +204,37 @@ const Admin3 = (props) => {
             <br></br>
           </span>
           <select id="input_tipocuenta" className="admin3-select2">
-            <option value="admin">Administrador</option>
-            <option value="empleado">Empleado</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Empleado">Empleado</option>
           </select>
         </div>
         <button
           id="boton_guardar"
           type="button"
           className="admin3-button button"
-          onClick={registerUser}
+          onClick={async () => {
+            const result = await registerUser();
+            setResult(result);
+            if (result) {
+              handleClick();
+            }
+          }}
         >
           Crear usuario
         </button>
+        <Snackbar
+          open={open}
+          autoHideDuration={6000}
+          onClose={handleClose}
+          message={
+            result === 200 ? "Usuario creado exitosamente" :
+            result === 404 ? "Rellene todos los campos" :
+            result === 401 ? "Email registrado, cambialo" :
+            result === 400 ? "Error de red" :
+            "Error de red"
+          }          
+          action={action}
+        />
       </div>
     </div>
     );
