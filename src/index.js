@@ -23,11 +23,11 @@ const App = () => {
     <Router>
       <Switch>
         <Route component={Autenticacin} exact path="/inicio-de-sesion/autenticacion" />
-        <Route component={Empresa1} exact path="/empresa-home" />
+        <Route component={Empresa1} exact path="/empresa-inicio" />
         <Route component={Empresa2} exact path="/empresa-sector" />
-        <Route component={Empleado1} exact path="/empleado-home" />
+        <Route component={Empleado1} exact path="/empleado-inicio" />
         <Route component={EmpresaPerfil} exact path="/empresa-perfil" />
-        <Route component={Admin1} exact path="/admin-home" />
+        <Route component={Admin1} exact path="/administrador-inicio" />
         <Route component={Home} exact path="/" />
         <Route component={InicioDeSesin} exact path="/inicio-de-sesion" />
         <Route component={NotFound} path="**" />

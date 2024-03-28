@@ -1,11 +1,46 @@
 import { Link } from 'react-router-dom'
-import React, { useEffect, useState } from 'react';
 import { putInfo } from '../../controller/load-data-control'
 import { Helmet } from 'react-helmet'
 import '../admin/css/admin-home.css'
 import { updateProfile } from '../../controller/update-profile-control';
+import React, { useState, useEffect } from 'react';
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 const ModificarInfoPersona = () => {
+  const [result, setResult] = useState(null);
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  const action = (
+    <React.Fragment>
+      <Button color="secondary" size="small" onClick={handleClose} style={{ color: 'yellow' }}>
+        UNDO
+      </Button>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+        style={{ fontFamily: 'Comic Sans MS, Comic Sans, sans-serif' }}
+        >
+        <CloseIcon fontSize="large" />
+      </IconButton>
+    </React.Fragment>
+  );
 
   useEffect(() => {
     const fetchLoadData = async () => {
@@ -18,6 +53,18 @@ const ModificarInfoPersona = () => {
     };
   
     fetchLoadData();
+  }, []);
+
+  useEffect(() => {
+    const handleInput = (event) => {
+      event.target.value = event.target.value.replace(/[^0-9]/g, '');
+    };
+    const inputNumero = document.getElementById('input_numero');
+    inputNumero.addEventListener('input', handleInput);
+
+    return () => {
+      inputNumero.removeEventListener('input', handleInput);
+    };
   }, []);
 
   return (
@@ -59,8 +106,10 @@ const ModificarInfoPersona = () => {
             required="true"
             className="admin1-select"
           >
-            <option value="Option 1">C.C</option>
-            <option value="Option 2">C.E</option>
+            <option value="C.C">C.C</option>
+            <option value="C.E">C.E</option>
+            <option value="Pasaporte">Pasaporte</option>
+
           </select>
         </div>
         <div id="contenedor_numdoc" className="admin1-container12">
@@ -71,7 +120,6 @@ const ModificarInfoPersona = () => {
           <input
             type="tel"
             id="input_numdoc"
-            value="1076684566"
             disabled="true"
             className="admin1-textinput2 input"
           />
@@ -93,9 +141,8 @@ const ModificarInfoPersona = () => {
           </span>
           <input
             type="text"
-            disabled="true"
             id="input_username"
-            className="admin1-textinput4 input"
+            className="admin1-textinput5 input"
           />
         </div>
         <div id="contenedor_correo" className="admin1-container16">
@@ -105,8 +152,9 @@ const ModificarInfoPersona = () => {
           </span>
           <input
             type="email"
+            disabled="true"
             id="input_correo"
-            className="admin1-textinput5 input"
+            className="admin1-textinput4 input"
           />
         </div>
         <div id="contenedor_contrasena" className="admin1-container16">
@@ -140,7 +188,6 @@ const ModificarInfoPersona = () => {
           <input
             type="date"
             id="input_cumple"
-            value="01/01/05"
             disabled="true"
             className="admin1-textinput7 input"
           />
@@ -156,9 +203,9 @@ const ModificarInfoPersona = () => {
             required="true"
             className="admin1-select1"
           >
-            <option value="Option 1">Masculino</option>
-            <option value="Option 1">Femenino</option>
-            <option value="Option 2">Prefiero no decir</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Prefiero no decir">Prefiero no decir</option>
             <option value="Option 2">No binario</option>
           </select>
         </div>
@@ -166,10 +213,28 @@ const ModificarInfoPersona = () => {
           id="boton_guardar"
           type="button"
           className="admin1-button button"
-          onClick={() => updateProfile()}
+          onClick={async () => {
+            const result = await updateProfile();
+            setResult(result);
+            if (result) {
+              handleClick();
+            }
+          }}
           >
           Guardar cambios
         </button>
+        <Snackbar
+          open={open}
+          autoHideDuration={6000}
+          onClose={handleClose}
+          message={
+            result === 200 ? "Actualizado correctamente" :
+            result === 404 ? "Rellene todos los campos" :
+            result === 400 ? "Error de red" :
+            "Error de red"
+          }          
+          action={action}
+        />
       </div>
       </div>
   );

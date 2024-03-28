@@ -39,12 +39,15 @@ export async function finalValidation(event, history) {
 
         if (passwordInput === passwordFromResponse) {
             OrigenComponente()
-            history.push('/inicio-de-sesion/autenticacion');
+            // history.push('/inicio-de-sesion/autenticacion');
+            return true;
         } else {
             alert('La contraseña es incorrecta. Por favor, verifica tus datos.'); 
+            return false;
         }
     } else {
         alert('La validación falló. Por favor, verifica tus datos.'); 
+        return false;
     }
 }
 
