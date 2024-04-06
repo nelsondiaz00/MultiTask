@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
-
+import { ContenedorEmpresa } from './contenedores-de-modales-home.js'; 
+import { ContenedorPostulado } from './contenedores-de-modales-home.js'; 
 import { Helmet } from 'react-helmet'
 
 import '../css/home.css'
 
 const Home = (props) => {
+  const [mostrarContenedor, setMostrarContenedor] = useState(false);
+  const [mostrarContenedorPost, setMostrarContenedorPost] = useState(false);
+
+  const handleMouseOver = () => {
+    setMostrarContenedor(true)
+
+  };
+
+  const handleMouseOut = () => {
+  };
+
+  const handleMouseOverPost = () => {
+    setMostrarContenedorPost(true)
+
+  };
+
+  const handleMouseOutPost = () => {
+  };
+
   return (
     <div id="contenedor_registro" className="home-container">
       <Helmet>
@@ -175,11 +195,18 @@ const Home = (props) => {
         <span className="home-text22">¡Trabaja con nosotros!</span>
         <div className="home-container18">
           <div id="divEmpresa" className="home-container19">
-            <img
-              alt="image"
-              src="https://img.freepik.com/foto-gratis/grupo-personas-trabajando-plan-negocios-oficina_1303-15861.jpg?w=1380&amp;t=st=1709582205~exp=1709582805~hmac=2b5fdd3a2e598ac6d8d043b159ed6fc3467f7c03a117a3378a7f2756dc35a77e"
-              className="home-image7"
-            />
+          <div className={`contenedor ${mostrarContenedor ? 'volteado' : ''}`}>
+            {!mostrarContenedor && (
+              <div className="imagen-container">
+                <img
+                  alt="image"
+                  src="https://img.freepik.com/foto-gratis/grupo-personas-trabajando-plan-negocios-oficina_1303-15861.jpg?w=1380&amp;t=st=1709582205~exp=1709582805~hmac=2b5fdd3a2e598ac6d8d043b159ed6fc3467f7c03a117a3378a7f2756dc35a77e"
+                  className={mostrarContenedor ? 'imagen-hidden' : 'home-image7'}
+                />
+              </div>
+            )}
+            {mostrarContenedor && <ContenedorEmpresa/>}
+          </div>
             <div className="home-container20">
               <span className="home-text23">
                 <span>
@@ -230,13 +257,14 @@ const Home = (props) => {
                   </span>
                 </div>
               </div>
-              <button
+                <button
                 id="botonRegEmp"
                 type="button"
-                className="home-button button"
+                className={`home-button button ${mostrarContenedor ? 'fade-out' : ''}`}
+                onMouseOver={handleMouseOver}
               >
                 Comienza ya
-              </button>
+              </button>              
             </div>
           </div>
           <div id="divPostulado" className="home-container27">
@@ -299,16 +327,25 @@ const Home = (props) => {
               <button
                 id="botonRegPost"
                 type="button"
-                className="home-button1 button"
+                className={`home-button1 button ${mostrarContenedorPost? 'fade-out' : ''}`}
+                onMouseOver={handleMouseOverPost}
               >
                 Comienza ya
-              </button>
+              </button> 
             </div>
-            <img
-              alt="image"
-              src="https://img.freepik.com/foto-gratis/empresaria-joven-sonriente-que-muestra-contrato-al-socio_1262-18108.jpg?w=1380&amp;t=st=1709582166~exp=1709582766~hmac=b152215d5cb9564621d90fdac374c21c8ebc5ca3710f1645d5f8dd48d079a5c5"
-              className="home-image8"
-            />
+            <div className={`contenedorPost ${mostrarContenedorPost ? 'volteado2' : ''}`}>
+              {!mostrarContenedorPost && (
+                <div className="imagen-container">
+                  <img
+                    alt="image"
+                    src="https://img.freepik.com/foto-gratis/empresaria-joven-sonriente-que-muestra-contrato-al-socio_1262-18108.jpg?w=1380&amp;t=st=1709582166~exp=1709582766~hmac=b152215d5cb9564621d90fdac374c21c8ebc5ca3710f1645d5f8dd48d079a5c5"
+                    className="home-image8"
+                  />
+                </div>
+              )}
+              {mostrarContenedorPost && <ContenedorPostulado/>}
+            </div>
+
           </div>
         </div>
       </div>
