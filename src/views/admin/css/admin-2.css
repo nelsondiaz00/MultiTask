@@ -189,6 +189,7 @@
   flex-direction: column;
   padding-bottom: var(--dl-space-space-twounits);
   justify-content: flex-start;
+  position: relative;
 }
 .admin2-text3 {
   margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -198,9 +199,45 @@
 }
 .admin2-container8 {
   width: 100%;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 296px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+}
+
+.admin2-icon3 {
+  top: var(--dl-space-space-twounits);
+  fill: var(--dl-color-danger-700);
+  right: var(--dl-space-space-twounits);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  transition: 0.3s;
+}
+.admin2-icon3:hover {
+  fill: var(--dl-color-danger-300);
+}
+.admin2-icon5 {
+  top: var(--dl-space-space-twounits);
+  fill: var(--dl-color-success-500);
+  right: var(--dl-space-space-sixunits);
+  width: 22px;
+  height: 24px;
+  position: absolute;
+  transition: 0.3s;
+}
+.admin2-icon5:hover {
+  fill: var(--dl-color-success-300);
+}
+.admin2-icon7 {
+  top: var(--dl-space-space-twounits);
+  fill: var(--dl-color-primary-300);
+  right: var(--dl-space-space-fourunits);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  transition: 0.3s;
+}
+.admin2-icon7:hover {
+  fill: var(--dl-color-primary-100);
 }
