@@ -216,6 +216,8 @@
 }
 .admin2-icon3:hover {
   fill: var(--dl-color-danger-300);
+  width: 28px;
+  height: 28px;
 }
 .admin2-icon5 {
   top: var(--dl-space-space-twounits);
@@ -228,6 +230,8 @@
 }
 .admin2-icon5:hover {
   fill: var(--dl-color-success-300);
+  width: 28px;
+  height: 28px;
 }
 .admin2-icon7 {
   top: var(--dl-space-space-twounits);
@@ -240,4 +244,6 @@
 }
 .admin2-icon7:hover {
   fill: var(--dl-color-primary-100);
+  width: 28px;
+  height: 28px;
 }
