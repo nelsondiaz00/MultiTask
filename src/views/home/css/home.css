@@ -788,8 +788,8 @@
   font-weight: 700;
 }
 .home-text35 {
-  color: #ffffff;
-  background-color: var(--dl-color-multitaskpalette-naranja);
+  color: var(--dl-color-multitaskpalette-naranja);
+
 }
 .home-container29 {
   gap: var(--dl-space-space-oneandhalfunits);

@@ -134,8 +134,11 @@
     flex-direction: column;
     padding-bottom: var(--dl-space-space-twounits);
     justify-content: flex-start;
-    background-color: var(--dl-color-gray-white);
-    border: 2px solid rgba(255, 71, 31, 1);
+    object-fit: cover;
+    /*border: 2px solid rgba(255, 71, 31, 1);*/
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); 
+    /*filter: blur(1px);*/
+    background-color: #fefefe;
   }
   .contenedores-de-modales-home-text4 {
     font-size: 32px;
@@ -193,23 +196,23 @@
     margin-top: var(--dl-space-space-threeunits);
     transition: 0.3s;
     font-weight: 700;
-    border-color: var(--dl-color-multitaskpalette-rojo);
-    border-width: 2px;
+    border-width: 0px;
     border-radius: 20px;
     animation-delay: 0s;
-    background-color: linear-gradient(to right, #c60a0b, #ffcd00);
+    background: linear-gradient(to right, #ff471f, #ffcd00);
     animation-duration: 300ms;
     animation-direction: normal;
     animation-iteration-count: 1;
     animation-timing-function: ease;
   }
   .contenedores-de-modales-home-button1:hover {
-    color: var(--dl-color-multitaskpalette-rojo);
+    /*color: black;*/
     width: 208px;
     height: 54px;
     font-size: 20px;
-    border-color: var(--dl-color-multitaskpalette-rojo);
-    border-width: 3px;
+    /*border-color: black;*/
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    border-width: 0px;
     background-color: #ffffff;
   }
   

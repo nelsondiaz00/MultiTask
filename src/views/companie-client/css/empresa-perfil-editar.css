@@ -1,0 +1,289 @@
+.contenedores-de-modales-empresa-perfil-container {
+    gap: var(--dl-space-space-twounits);
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    padding-top: var(--dl-space-space-twounits);
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-twounits);
+  }
+  .contenedores-de-modales-empresa-perfil-container01 {
+    gap: var(--dl-space-space-unit);
+    width: 1487px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-oneandhalfunits);
+    /*border: 2px solid black;*/
+    margin-left: -10%;
+  }
+  .contenedores-de-modales-empresa-perfil-container02 {
+    gap: var(--dl-space-space-threeunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .contenedores-de-modales-empresa-perfil-container03 {
+    gap: var(--dl-space-space-threeunits);
+    flex: 0 0 auto;
+    width: auto;
+    height: 80px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .contenedores-de-modales-empresa-perfil-container04 {
+    gap: var(--dl-space-space-halfunit);
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contenedores-de-modales-empresa-perfil-text {
+    font-size: 20px;
+  }
+  .contenedores-de-modales-empresa-perfil-textinput {
+    width: 553px;
+    height: 29px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .contenedores-de-modales-empresa-perfil-container05 {
+    gap: var(--dl-space-space-halfunit);
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contenedores-de-modales-empresa-perfil-text01 {
+    font-size: 20px;
+  }
+  .contenedores-de-modales-empresa-perfil-textinput1 {
+    width: 200px;
+    height: 29px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+  }
+  .contenedores-de-modales-empresa-perfil-container06 {
+    gap: var(--dl-space-space-halfunit);
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contenedores-de-modales-empresa-perfil-text04 {
+    font-size: 20px;
+  }
+  .contenedores-de-modales-empresa-perfil-textinput2 {
+    width: 200px;
+    height: 29px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+  }
+  .contenedores-de-modales-empresa-perfil-container07 {
+    gap: var(--dl-space-space-halfunit);
+    flex: 0 0 auto;
+    width: 379px;
+    height: auto;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contenedores-de-modales-empresa-perfil-text07 {
+    font-size: 20px;
+  }
+  .contenedores-de-modales-empresa-perfil-textinput3 {
+    width: 100%;
+    height: 29px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+  }
+  .contenedores-de-modales-empresa-perfil-container08 {
+    gap: var(--dl-space-space-threeunits);
+    flex: 0 0 auto;
+    width: 1466px;
+    height: 80px;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .contenedores-de-modales-empresa-perfil-container09 {
+    gap: var(--dl-space-space-halfunit);
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contenedores-de-modales-empresa-perfil-text10 {
+    font-size: 20px;
+  }
+  .contenedores-de-modales-empresa-perfil-textinput4 {
+    width: 553px;
+    height: 29px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .contenedores-de-modales-empresa-perfil-container10 {
+    gap: var(--dl-space-space-halfunit);
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contenedores-de-modales-empresa-perfil-text11 {
+    font-size: 20px;
+  }
+  .contenedores-de-modales-empresa-perfil-textinput5 {
+    width: 358px;
+    height: 29px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+  }
+  .contenedores-de-modales-empresa-perfil-button {
+    color: rgb(255, 255, 255);
+    width: 208px;
+    height: 54px;
+    font-size: 20px;
+    font-style: normal;
+    transition: 0.3s;
+    font-weight: 700;
+    margin-left: 250px;
+    border-color: var(--dl-color-multitaskpalette-rojo);
+    border-width: 2px;
+    border-radius: 20px;
+    animation-delay: 0s;
+    background-color: var(--dl-color-multitaskpalette-rojo);
+    animation-duration: 300ms;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+  .contenedores-de-modales-empresa-perfil-button:hover {
+    color: var(--dl-color-multitaskpalette-rojo);
+    width: 208px;
+    height: 54px;
+    font-size: 20px;
+    border-color: var(--dl-color-multitaskpalette-rojo);
+    border-width: 3px;
+    background-color: #ffffff;
+  }
+  .contenedores-de-modales-empresa-perfil-container11 {
+    gap: var(--dl-space-space-halfunit);
+    width: 269px;
+    height: 318px;
+    display: flex;
+    position: relative;
+    transition: 0.3s;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-unit);
+    border-color: var(--dl-color-multitaskpalette-gris);
+    border-width: 2px;
+    padding-left: var(--dl-space-space-unit);
+    border-radius: 20px;
+    padding-right: var(--dl-space-space-unit);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-unit);
+    justify-content: flex-start;
+    background-color: #ffffff;
+  }
+  .contenedores-de-modales-empresa-perfil-container11:hover {
+    box-shadow: 5px 5px 10px 0px #d4d4d4;
+  }
+  .contenedores-de-modales-empresa-perfil-text14 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .contenedores-de-modales-empresa-perfil-icon {
+    fill: var(--dl-color-multitaskpalette-rojo);
+    right: var(--dl-space-space-unit);
+    width: 30px;
+    bottom: var(--dl-space-space-unit);
+    height: 30px;
+    position: absolute;
+    transition: 0.3s;
+  }
+  .contenedores-de-modales-empresa-perfil-icon:hover {
+    fill: #f15984;
+    width: 30px;
+  }
+  .contenedores-de-modales-empresa-perfil-button1 {
+    color: var(--dl-color-multitaskpalette-naranja);
+    width: 131px;
+    height: 34px;
+    transition: 0.3s;
+    border-color: var(--dl-color-multitaskpalette-naranja);
+    border-radius: 20px;
+  }
+  .contenedores-de-modales-empresa-perfil-button1:focus {
+    color: var(--dl-color-gray-white);
+    background-color: var(--dl-color-multitaskpalette-naranja);
+  }
+  .contenedores-de-modales-empresa-perfil-button1:hover {
+    color: var(--dl-color-gray-white);
+    background-color: var(--dl-color-multitaskpalette-naranja);
+  }
+  .contenedores-de-modales-empresa-perfil-button2 {
+    color: var(--dl-color-success-700);
+    width: 131px;
+    height: 34px;
+    transition: 0.3s;
+    border-color: var(--dl-color-success-700);
+    border-radius: 20px;
+  }
+  .contenedores-de-modales-empresa-perfil-button2:focus {
+    color: var(--dl-color-gray-white);
+    background-color: var(--dl-color-success-700);
+  }
+  .contenedores-de-modales-empresa-perfil-button2:hover {
+    color: var(--dl-color-gray-white);
+    background-color: var(--dl-color-success-700);
+  }
+  .contenedores-de-modales-empresa-perfil-container12 {
+    gap: var(--dl-space-space-unit);
+    width: 1487px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-oneandhalfunits);
+    justify-content: center;
+  }
+  @media (max-width: 1600px) {
+    .contenedores-de-modales-empresa-perfil-button2 {
+      color: var(--dl-color-success-700);
+    }
+  }

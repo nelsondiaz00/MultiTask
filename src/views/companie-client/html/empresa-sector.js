@@ -4,10 +4,14 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Helmet } from 'react-helmet'
 
 import '../css/empresa-sector.css'
+import '../css/form-modal.css'
 import { getServices } from '../../../controller/load-data-control'
+import {StartModal, PayProcess} from '../modals/form-modal';
+
 
 const Empresa2 = (props) => {
   const [selectedSector, setSelectedSector] = useState('');
+  const [modalVisible, setModalVisible] = useState(false);
 
   useEffect(() => {
     const storedSector = localStorage.getItem('selectedSector');
@@ -62,7 +66,15 @@ const Empresa2 = (props) => {
       buscar(valorInput);
     }
   };
-  
+
+  const openModal = () => {
+    setModalVisible(true);
+  };
+
+  const closeModal = () => {
+    setModalVisible(false);
+  };
+
   return (
     <div className="empresa2-container">
       <Helmet>
@@ -130,12 +142,14 @@ const Empresa2 = (props) => {
             <svg viewBox="0 0 1024 1024" className="empresa2-icon10">
               <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
             </svg>
-            <svg viewBox="0 0 1024 1024" className="empresa2-icon12">
+            <svg viewBox="0 0 1024 1024" className="empresa2-icon12" onClick={openModal}>
+              
               <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
             </svg>
           </div>
        ))}
-  </div>
+    </div>
+    {modalVisible && <StartModal onCloseModal={closeModal} />}
 </div>
 
       </div>
