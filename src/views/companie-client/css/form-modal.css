@@ -1,0 +1,1071 @@
+.contenedores-de-modales-empresa-container {
+    gap: var(--dl-space-space-unit);
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    padding-top: var(--dl-space-space-twounits);
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-twounits);
+    justify-content: flex-start;
+  }
+  .contenedores-de-modales-empresa-container01 {
+    width: 524px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-oneandhalfunits);
+    justify-content: flex-start;
+  }
+  .contenedores-de-modales-empresa-container02 {
+    gap: var(--dl-space-space-halfunit);
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    border-color: #8c8c8c;
+    border-width: 1px;
+    padding-left: var(--dl-space-space-oneandhalfunits);
+    padding-right: var(--dl-space-space-oneandhalfunits);
+    padding-bottom: var(--dl-space-space-oneandhalfunits);
+    justify-content: flex-start;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+  }
+  .contenedores-de-modales-empresa-icon {
+    fill: var(--dl-color-multitaskpalette-morado);
+    width: 36px;
+    height: 36px;
+  }
+  .contenedores-de-modales-empresa-text {
+    color: var(--dl-color-multitaskpalette-morado);
+    font-size: 32px;
+    font-style: normal;
+    text-align: left;
+    font-weight: 700;
+  }
+  .contenedores-de-modales-empresa-icon02 {
+    top: var(--dl-space-space-oneandhalfunits);
+    right: var(--dl-space-space-unit);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    align-self: flex-start;
+  }
+  .contenedores-de-modales-empresa-container03 {
+    flex: 0 0 auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contenedores-de-modales-empresa-container04 {
+    flex: 0 0 auto;
+    width: 447px;
+    height: 73px;
+    display: flex;
+    align-self: center;
+    transition: 0.3s;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-halfunit);
+    border-color: var(--dl-color-gray-900);
+    border-width: 1px;
+    padding-left: var(--dl-space-space-halfunit);
+    padding-right: var(--dl-space-space-halfunit);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-halfunit);
+    justify-content: center;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+  }
+  .contenedores-de-modales-empresa-container04:hover {
+    border-color: var(--dl-color-gray-900);
+    background-color: #f3f3f3;
+  }
+  .contenedores-de-modales-empresa-container05 {
+    flex: 0 0 auto;
+    width: 447px;
+    height: 73px;
+    display: flex;
+    align-self: center;
+    transition: 0.3s;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-halfunit);
+    border-color: var(--dl-color-gray-900);
+    border-width: 1px;
+    padding-left: var(--dl-space-space-halfunit);
+    padding-right: var(--dl-space-space-halfunit);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-halfunit);
+    justify-content: center;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+  }
+  .contenedores-de-modales-empresa-container05:hover {
+    border-color: var(--dl-color-gray-900);
+    background-color: #f3f3f3;
+  }
+  .contenedores-de-modales-empresa-container06 {
+    flex: 0 0 auto;
+    width: 447px;
+    height: 73px;
+    display: flex;
+    align-self: center;
+    transition: 0.3s;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-halfunit);
+    border-color: var(--dl-color-gray-900);
+    border-width: 1px;
+    padding-left: var(--dl-space-space-halfunit);
+    padding-right: var(--dl-space-space-halfunit);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-halfunit);
+    justify-content: center;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+  }
+  .contenedores-de-modales-empresa-container06:hover {
+    border-color: var(--dl-color-gray-900);
+    background-color: #f3f3f3;
+  }
+  .contenedores-de-modales-empresa-container07 {
+    flex: 0 0 auto;
+    width: 447px;
+    height: 73px;
+    display: flex;
+    align-self: center;
+    transition: 0.3s;
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-halfunit);
+    border-color: var(--dl-color-gray-900);
+    border-width: 1px;
+    padding-left: var(--dl-space-space-halfunit);
+    padding-right: var(--dl-space-space-halfunit);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-halfunit);
+    justify-content: center;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+  }
+  .contenedores-de-modales-empresa-container07:hover {
+    border-color: var(--dl-color-gray-900);
+    background-color: #f3f3f3;
+  }
+  .contenedores-de-modales-empresa-container08 {
+    flex: 0 0 auto;
+    width: 1096px;
+    height: 579px;
+    display: flex;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    align-items: flex-start;
+    border-radius: 40px;
+    flex-direction: column;
+    background-color: white;
+  }
+  .contenedores-de-modales-empresa-container09 {
+    gap: var(--dl-space-space-halfunit);
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: var(--dl-space-space-twounits);
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: var(--dl-space-space-twounits);
+    padding-bottom: var(--dl-space-space-oneandhalfunits);
+    justify-content: flex-start;
+    background-image: linear-gradient(90deg, rgb(240, 45, 45) 0.00%,rgb(255, 195, 0) 100.00%);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .contenedores-de-modales-empresa-text07 {
+    color: var(--dl-color-gray-white);
+    font-size: 24px;
+    font-style: normal;
+    text-align: left;
+    font-weight: 500;
+  }
+  .contenedores-de-modales-empresa-icon04 {
+    top: var(--dl-space-space-unit);
+    fill: var(--dl-color-gray-white);
+    right: 28px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    align-self: flex-start;
+    cursor: pointer;
+  }
+  .contenedores-de-modales-empresa-container10 {
+    gap: var(--dl-space-space-twounits);
+    width: 100%;
+    height: 507px;
+    display: flex;
+    align-items: center;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+    padding-bottom: var(--dl-space-space-oneandhalfunits);
+    justify-content: flex-start;
+  }
+  .contenedores-de-modales-empresa-container11 {
+    gap: var(--dl-space-space-unit);
+    flex: 0 0 auto;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .contenedores-de-modales-empresa-container12 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text10 {
+    width: 183px;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-textinput {
+    width: 100%;
+    height: 28px;
+    align-self: center;
+    border-width: 0px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+    background-color: #f2f2f2;
+  }
+  .contenedores-de-modales-empresa-container13 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text13 {
+    width: 183px;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-textinput01 {
+    width: 100%;
+    height: 28px;
+    align-self: center;
+    border-width: 0px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+    background-color: #f2f2f2;
+  }
+  .contenedores-de-modales-empresa-container14 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text16 {
+    width: 183px;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-textinput02 {
+    width: 100%;
+    height: 28px;
+    align-self: center;
+    border-width: 0px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+    background-color: #f2f2f2;
+  }
+  .contenedores-de-modales-empresa-container15 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text19 {
+    width: 183px;
+    height: auto;
+    font-size: 16px;
+    align-self: flex-start;
+    text-align: left;
+    padding-top: 3px;
+  }
+  .contenedores-de-modales-empresa-textinput03 {
+    width: 100%;
+    height: 147px;
+    align-self: center;
+    border-width: 0px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+    background-color: #f2f2f2;
+  }
+  .contenedores-de-modales-empresa-container16 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    width: 100%;
+    height: 168px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text22 {
+    width: 183px;
+    height: auto;
+    font-size: 16px;
+    align-self: flex-start;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-textinput04 {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    border-width: 0px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+    background-color: #f2f2f2;
+  }
+  .contenedores-de-modales-empresa-container17 {
+    gap: var(--dl-space-space-unit);
+    flex: 0 0 auto;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .contenedores-de-modales-empresa-container18 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text25 {
+    width: 183px;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-container19 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text28 {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-container20 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text31 {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-textinput05 {
+    width: 300px;
+    height: 28px;
+    align-self: center;
+    border-width: 0px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+    background-color: #f2f2f2;
+  }
+  .contenedores-de-modales-empresa-container21 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text34 {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-textinput06 {
+    width: 300px;
+    height: 28px;
+    align-self: center;
+    border-width: 0px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+    background-color: #f2f2f2;
+  }
+  .contenedores-de-modales-empresa-button {
+    color: rgb(255, 255, 255);
+    right: 0px;
+    width: auto;
+    bottom: 0px;
+    height: 54px;
+    position: absolute;
+    font-size: 20px;
+    align-self: center;
+    font-style: normal;
+    transition: 0.3s;
+    font-weight: 700;
+    border-color: var(--dl-color-multitaskpalette-morado);
+    border-width: 2px;
+    border-radius: 20px;
+    animation-delay: 0s;
+    background-color: var(--dl-color-multitaskpalette-morado);
+    animation-duration: 300ms;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+  .contenedores-de-modales-empresa-button:hover {
+    color: var(--dl-color-multitaskpalette-morado);
+    width: auto;
+    height: 54px;
+    font-size: 20px;
+    border-color: var(--dl-color-multitaskpalette-morado);
+    border-width: 2px;
+    background-color: #ffffff;
+  }
+  .contenedores-de-modales-empresa-container22 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text37 {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-textinput07 {
+    width: 184px;
+    height: 28px;
+    align-self: center;
+    border-width: 0px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+    background-color: #f2f2f2;
+  }
+  .contenedores-de-modales-empresa-container23 {
+    flex: 0 0 auto;
+    width: 1096px;
+    height: 579px;
+    display: flex;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    align-items: flex-start;
+    border-radius: 40px;
+    flex-direction: column;
+    background-color: white;
+  }
+  .contenedores-de-modales-empresa-container24 {
+    gap: var(--dl-space-space-halfunit);
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: var(--dl-space-space-twounits);
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: var(--dl-space-space-twounits);
+    padding-bottom: var(--dl-space-space-oneandhalfunits);
+    justify-content: flex-start;
+    background-image: linear-gradient(90deg, rgb(240, 45, 45) 0.00%,rgb(255, 195, 0) 100.00%);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .contenedores-de-modales-empresa-icon06 {
+    fill: var(--dl-color-gray-white);
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+  }
+  .contenedores-de-modales-empresa-text40 {
+    color: var(--dl-color-gray-white);
+    font-size: 24px;
+    font-style: normal;
+    text-align: left;
+    font-weight: 500;
+  }
+  .contenedores-de-modales-empresa-icon08 {
+    top: var(--dl-space-space-unit);
+    fill: var(--dl-color-gray-white);
+    right: 28px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    align-self: flex-start;
+    cursor: pointer;
+  }
+  .contenedores-de-modales-empresa-container25 {
+    gap: var(--dl-space-space-twounits);
+    width: 100%;
+    height: 507px;
+    display: flex;
+    align-items: center;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+    padding-bottom: var(--dl-space-space-oneandhalfunits);
+    justify-content: flex-start;
+  }
+  .contenedores-de-modales-empresa-container26 {
+    gap: var(--dl-space-space-unit);
+    flex: 0 0 auto;
+    width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contenedores-de-modales-empresa-image {
+    width: 317px;
+    height: 456px;
+    object-fit: cover;
+  }
+  .contenedores-de-modales-empresa-container27 {
+    gap: var(--dl-space-space-unit);
+    flex: 0 0 auto;
+    width: 600px;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .contenedores-de-modales-empresa-container28 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text43 {
+    width: 183px;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    font-style: normal;
+    text-align: left;
+    font-weight: 700;
+  }
+  .contenedores-de-modales-empresa-container29 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text46 {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-text49 {
+    width: var(--dl-size-size-large);
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: right;
+  }
+  .contenedores-de-modales-empresa-container30 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text52 {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: right;
+  }
+  .contenedores-de-modales-empresa-text55 {
+    width: var(--dl-size-size-large);
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: right;
+  }
+  .contenedores-de-modales-empresa-button1 {
+    color: rgb(255, 255, 255);
+    right: 0px;
+    width: auto;
+    bottom: 0px;
+    height: 54px;
+    position: absolute;
+    font-size: 20px;
+    align-self: center;
+    font-style: normal;
+    transition: 0.3s;
+    font-weight: 700;
+    border-color: var(--dl-color-multitaskpalette-morado);
+    border-width: 2px;
+    border-radius: 20px;
+    animation-delay: 0s;
+    background-color: var(--dl-color-multitaskpalette-morado);
+    animation-duration: 300ms;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+  .contenedores-de-modales-empresa-button1:hover {
+    color: var(--dl-color-multitaskpalette-morado);
+    width: auto;
+    height: 54px;
+    font-size: 20px;
+    border-color: var(--dl-color-multitaskpalette-morado);
+    border-width: 2px;
+    background-color: #ffffff;
+  }
+  .contenedores-de-modales-empresa-container31 {
+    flex: 0 0 auto;
+    width: 1096px;
+    height: 579px;
+    display: flex;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    align-items: flex-start;
+    border-radius: 40px;
+    flex-direction: column;
+    background-color: white;
+  }
+  .contenedores-de-modales-empresa-container32 {
+    gap: var(--dl-space-space-halfunit);
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: var(--dl-space-space-twounits);
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: var(--dl-space-space-twounits);
+    padding-bottom: var(--dl-space-space-oneandhalfunits);
+    justify-content: flex-start;
+    background-image: linear-gradient(90deg, rgb(240, 45, 45) 0.00%,rgb(255, 195, 0) 100.00%);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .contenedores-de-modales-empresa-icon10 {
+    fill: var(--dl-color-gray-white);
+    width: 30px;
+    height: 25px;
+  }
+  .contenedores-de-modales-empresa-text58 {
+    color: var(--dl-color-gray-white);
+    font-size: 24px;
+    font-style: normal;
+    text-align: left;
+    font-weight: 500;
+  }
+  .contenedores-de-modales-empresa-icon12 {
+    top: var(--dl-space-space-unit);
+    fill: var(--dl-color-gray-white);
+    right: 28px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    align-self: flex-start;
+    cursor: pointer;
+  }
+  .contenedores-de-modales-empresa-container33 {
+    gap: var(--dl-space-space-twounits);
+    width: 100%;
+    height: 507px;
+    display: flex;
+    align-items: center;
+    padding-top: var(--dl-space-space-oneandhalfunits);
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+    padding-bottom: var(--dl-space-space-oneandhalfunits);
+    justify-content: flex-start;
+  }
+  .contenedores-de-modales-empresa-container34 {
+    gap: var(--dl-space-space-unit);
+    flex: 0 0 auto;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .contenedores-de-modales-empresa-container35 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .contenedores-de-modales-empresa-text61 {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-container36 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .contenedores-de-modales-empresa-text64 {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-container37 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .contenedores-de-modales-empresa-text67 {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-container38 {
+    gap: var(--dl-space-space-unit);
+    flex: 0 0 auto;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .contenedores-de-modales-empresa-container39 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+  }
+  .contenedores-de-modales-empresa-text70 {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    align-self: center;
+    font-style: normal;
+    text-align: left;
+    font-weight: 700;
+  }
+  .contenedores-de-modales-empresa-container40 {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .contenedores-de-modales-empresa-text73 {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-text76 {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-container41 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .contenedores-de-modales-empresa-text79 {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-textinput08 {
+    width: var(--dl-size-size-xlarge);
+    height: 100%;
+    align-self: center;
+    border-width: 0px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+    background-color: #f2f2f2;
+  }
+  .contenedores-de-modales-empresa-container42 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .contenedores-de-modales-empresa-text82 {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-textinput09 {
+    width: var(--dl-size-size-xlarge);
+    height: 100%;
+    align-self: center;
+    border-width: 0px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+    background-color: #f2f2f2;
+  }
+  .contenedores-de-modales-empresa-container43 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .contenedores-de-modales-empresa-text85 {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-textinput10 {
+    width: var(--dl-size-size-xlarge);
+    height: 100%;
+    align-self: center;
+    border-width: 0px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+    background-color: #f2f2f2;
+  }
+  .contenedores-de-modales-empresa-container44 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .contenedores-de-modales-empresa-text88 {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: left;
+  }
+  .contenedores-de-modales-empresa-textinput11 {
+    width: var(--dl-size-size-xlarge);
+    height: 100%;
+    align-self: center;
+    border-width: 0px;
+    padding-left: 0.5rem;
+    border-radius: var(--dl-radius-radius-radius4);
+    padding-right: 0.5rem;
+    background-color: #f2f2f2;
+  }
+  .contenedores-de-modales-empresa-button2 {
+    color: rgb(255, 255, 255);
+    right: 0px;
+    width: auto;
+    bottom: 0px;
+    height: 54px;
+    position: absolute;
+    font-size: 20px;
+    align-self: center;
+    font-style: normal;
+    transition: 0.3s;
+    font-weight: 700;
+    border-color: var(--dl-color-multitaskpalette-morado);
+    border-width: 2px;
+    border-radius: 20px;
+    animation-delay: 0s;
+    background-color: var(--dl-color-multitaskpalette-morado);
+    animation-duration: 300ms;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+  }
+  .contenedores-de-modales-empresa-button2:hover {
+    color: var(--dl-color-multitaskpalette-morado);
+    width: auto;
+    height: 54px;
+    font-size: 20px;
+    border-color: var(--dl-color-multitaskpalette-morado);
+    border-width: 2px;
+    background-color: #ffffff;
+  }
+  
+  .popup-overlay-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semi-transparente */
+    backdrop-filter: blur(5px); /* Aplicar un desenfoque al fondo */
+    z-index: 9998; /* Asegura que la capa esté detrás del popup */
+  }
+  .popup-form {
+    position: fixed; /* Fija el popup en la ventana del navegador */
+    top: 50%; /* Coloca el popup en la mitad vertical de la ventana */
+    left: 50%; /* Coloca el popup en la mitad horizontal de la ventana */
+    transform: translate(-50%, -50%); /* Centra el popup */
+    z-index: 9999; /* Asegura que el popup esté por encima de otros elementos */
+    background-color: transparent; /* Color de fondo del popup */
+    padding: 20px; /* Espaciado interior del popup */
+    border-radius: 10px; /* Radio de borde del popup */
+    /* Añade más estilos según sea necesario */
+    width: 80vw; /* El popup ocupará el 90% del ancho de la ventana */
+    max-width: 1200px; /* Establece un ancho máximo para el popup */
+    max-height: 70vh; /* Establece una altura máxima para el popup */
+    overflow-y: auto;
+    box-shadow: none;
+  }
+
+  .popup-pay-overlay-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px); /* Aplicar un desenfoque al fondo */
+    z-index: 9998; /* Asegura que la capa esté detrás del popup */
+  }
+  .popup-pay-form {
+    position: fixed; /* Fija el popup en la ventana del navegador */
+    top: 50%; /* Coloca el popup en la mitad vertical de la ventana */
+    left: 50%; /* Coloca el popup en la mitad horizontal de la ventana */
+    transform: translate(-50%, -50%); /* Centra el popup */
+    z-index: 9999; /* Asegura que el popup esté por encima de otros elementos */
+    background-color: transparent; /* Color de fondo del popup */
+    padding: 20px; /* Espaciado interior del popup */
+    border-radius: 10px; /* Radio de borde del popup */
+    /* Añade más estilos según sea necesario */
+    width: 80vw; /* El popup ocupará el 90% del ancho de la ventana */
+    max-width: 1200px; /* Establece un ancho máximo para el popup */
+    max-height: 70vh; /* Establece una altura máxima para el popup */
+    overflow-y: auto;
+    box-shadow: none;
+  }

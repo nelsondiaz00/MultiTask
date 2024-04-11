@@ -79,3 +79,31 @@ export async function registerUser() {
         return 500; 
     }
 }
+
+
+export async function deleteEmployee() {
+    console.log("JSON.parse(localStorage.getItem('selectedRows'))[0]")
+    const idRowSelected = localStorage.getItem('idRowSelected');
+    const user = {idUser : idRowSelected};
+    try {
+
+        const response = await fetch(`http://localhost:1234/multitask/employee/delete/${idRowSelected}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(user)
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return false;
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return false;
+    }
+}

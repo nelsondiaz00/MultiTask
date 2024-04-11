@@ -93,7 +93,9 @@ export async function getEmployees() {
                 nombres: usuario.nombre,
                 apellidos: usuario.apellidos,
                 documento: usuario.cedula,
-                direccion: usuario.direccion
+                direccion: usuario.direccion,
+                activo: usuario.activo,
+                belonging: usuario.belonging
             }));
             return usuarios;
         } else {
@@ -159,5 +161,27 @@ export async function getServices(sector) {
     } catch (error) {
         console.error('Error de red:', error);
         return false;
+    }
+}
+
+export async function updatePopUpEdit(id) {
+    try {
+        const response = await fetch(`http://localhost:1234/multitask/employee/${id}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return null; 
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return null; 
     }
 }
