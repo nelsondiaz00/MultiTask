@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import Tabs from '@mui/material/Tabs';
@@ -12,6 +12,8 @@ import { Helmet } from 'react-helmet'
 
 import '../css/empresa-perfil.css'
 import '../css/empresa-perfil-editar.css'
+import { getCompanie, getPostulaciones } from '../../../controller/load-data-control';
+import { updatePostulation, updateProfileCompanie } from '../../../controller/update-profile-control';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -34,36 +36,74 @@ function TabPanel(props) {
 }
 
 const EmpresaPerfil = (props) => {
-  const [value, setValue] = useState(0);
+    const [value, setValue] = useState(0);
 
-  const history = useHistory();
+    const history = useHistory();
 
-  const [showPopup, setShowPopup] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
 
-  const handleCerrarSesion = () => {
-    setShowPopup(true);
-  };
+    const [infoCompanie, setInfoCompanie] = useState(null);
 
-  const handleConfirmar = () => {
-    setShowPopup(true);
-    history.push('/');
-  };
+    const [postulacionesActivas, setPostulacionesActivas] = useState(null);
+
+
+    const handleCerrarSesion = () => {
+      setShowPopup(true);
+    };
+
+    const handleConfirmar = () => {
+      setShowPopup(true);
+      history.push('/');
+    };
+    
+    const handleCancelar = () => {
+      setShowPopup(false);
+    };
+
+    const handleChangeTab = (event, newValue) => {
+      setValue(newValue);
+    };
+
+
+    const onClickChangeButtonOffer = (index) => {
+      const updatedPostulacionesActivas = [...postulacionesActivas];
+      
+      if (index >= 0 && index < updatedPostulacionesActivas.length) {
+        updatedPostulacionesActivas[index] = {
+          ...updatedPostulacionesActivas[index],
+          disponibilidad_oferta: updatedPostulacionesActivas[index].disponibilidad_oferta === 0 ? 1 : 0
+        };
+        setPostulacionesActivas(updatedPostulacionesActivas);
+        updatePostulation(updatedPostulacionesActivas[index].idOferta_Trabajo);
+      
+      }
+    };
+
+    useEffect(() => {
+      const fetchData = async () => {
+        const data = await getCompanie();
+        setInfoCompanie(data);
+        const postulaciones = await getPostulaciones();
+        setPostulacionesActivas(postulaciones);
+      };
+      fetchData();
+    }, []);
+
+    if (!infoCompanie) {
+      return (
+        <div className="spinner-container">
+          <div className="spinner"></div>
+        </div>
+      );
+    };
   
-  const handleCancelar = () => {
-    setShowPopup(false);
-  };
 
-  const handleChangeTab = (event, newValue) => {
-    setValue(newValue);
-  };
-
-  
   return (
     
     <div className="empresa-perfil-container">
       {showPopup && <div className="popup-overlay" />}
       {showPopup && (
-          <div className="popup">
+          <div className="popup3">
             <div className="contenedores-de-modales-de-admin-container02">
               <span className="contenedores-de-modales-de-admin-text">
                 ¿Seguro que desea cerrar sesión?
@@ -71,6 +111,7 @@ const EmpresaPerfil = (props) => {
               <svg
                 viewBox="0 0 1024 1024"
                 className="contenedores-de-modales-de-admin-icon"
+                onClick={handleCancelar}
               >
                 <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
               </svg>
@@ -176,7 +217,8 @@ const EmpresaPerfil = (props) => {
                           type="text"
                           id="input_nombres"
                           className="contenedores-de-modales-empresa-perfil-textinput input"
-                        />
+                          defaultValue={infoCompanie.nombre_Empresa}
+                          />
                       </div>
                       <div
                         id="contenedor_apellidos"
@@ -190,6 +232,8 @@ const EmpresaPerfil = (props) => {
                           type="text"
                           id="input_nit"
                           className="contenedores-de-modales-empresa-perfil-textinput1 input"
+                          value={infoCompanie.nit}
+                          readOnly
                         />
                       </div>
                       <div
@@ -204,6 +248,7 @@ const EmpresaPerfil = (props) => {
                           type="text"
                           id="input_numtel"
                           className="contenedores-de-modales-empresa-perfil-textinput2 input"
+                          defaultValue={infoCompanie.telefono}
                         />
                       </div>
                     </div>
@@ -219,6 +264,8 @@ const EmpresaPerfil = (props) => {
                         type="text"
                         id="input_correo"
                         className="contenedores-de-modales-empresa-perfil-textinput3 input"
+                        value={infoCompanie.correo}
+                        readOnly 
                       />
                     </div>
                   </div>
@@ -234,6 +281,7 @@ const EmpresaPerfil = (props) => {
                         type="text"
                         id="input_direccion"
                         className="contenedores-de-modales-empresa-perfil-textinput4 input"
+                        defaultValue={infoCompanie.direccion}
                       />
                     </div>
                     <div
@@ -248,52 +296,64 @@ const EmpresaPerfil = (props) => {
                         type="password"
                         id="input_contrasena"
                         className="contenedores-de-modales-empresa-perfil-textinput5 input"
+                        defaultValue={infoCompanie.password}
                       />
                     </div>
                     <button
                       id="boton_guardar"
                       type="button"
                       className="contenedores-de-modales-empresa-perfil-button button"
+                      onClick={updateProfileCompanie}
                     >
                       Guardar cambios
                     </button>
                   </div>
+                  <span className="contenedores-de-modales-empresa-perfil-text04">
+                    <span>Información</span>
+                    <br></br>
+                  </span>
+                  <textarea
+                    type="text"
+                    id="input_info"
+                    className="contenedores-de-modales-empresa-perfil-textinput6 input"
+                    defaultValue={infoCompanie.descripcion_publica}
+                  />
                 </div>
               </TabPanel>
               <TabPanel value={value} index={1}>
-              <button
-                id="boton_postenproceso"
-                type="button"
-                className="contenedores-de-modales-empresa-perfil-button1 button"
-              >
-                En proceso
-              </button>
-
-              <button
-                id="boton_postcomplet"
-                type="button"
-                className="contenedores-de-modales-empresa-perfil-button2 button"
-              >
-                Completada
-              </button>
-              <div
-                id="tarjeta_postulacion"
-                className="contenedores-de-modales-empresa-perfil-container11"
-              >
-                <span className="contenedores-de-modales-empresa-perfil-text14">
-                  Título del trabajo
-                </span>
-                <span>
-                  Corta descripción del cargo, de la persona, de la experiencia, etc,
-                  etc
-                </span>
-                <svg
-                  viewBox="0 0 1024 1024"
-                  className="contenedores-de-modales-empresa-perfil-icon"
-                >
-                  <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-                </svg>
-              </div>
+              <div className="empresa2-container07" id="services-container">
+              {postulacionesActivas && postulacionesActivas.map((service, index) => (
+                    <div key={index} className="empresa2-container08">
+                      <span className="empresa2-text02">{service.servicio_nombre}</span>
+                      <span>{service.descripcion_Empleo}</span>
+                      <svg viewBox="0 0 1024 1024" className="empresa2-icon10">
+                        <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
+                      </svg>
+                      {service.disponibilidad_oferta === 0 ? (
+                        <button
+                          id="boton_postcomplet"
+                          type="button"
+                          className="contenedores-de-modales-empresa-perfil-button2 button"
+                          onClick={() => onClickChangeButtonOffer(index, service)}
+                          >
+                          Completada
+                        </button>
+                      ) : (
+                        <button
+                          id="boton_postenproceso"
+                          type="button"
+                          className="contenedores-de-modales-empresa-perfil-button1 button"
+                          onClick={() => onClickChangeButtonOffer(index, service)}
+                          >
+                          En proceso
+                        </button>
+                      )}
+                      <svg viewBox="0 0 1024 1024" className="empresa2-icon12" onClick={() => openModal(service)}>
+                        <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
+                      </svg>
+                </div>
+              ))}
+               </div>
               </TabPanel>
               <TabPanel value={value} index={2}>
                 <div

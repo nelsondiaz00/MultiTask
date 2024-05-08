@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet'
 
 import '../css/empresa-home.css'
+import { getCompanie } from '../../../controller/load-data-control';
 
 const Empresa1 = (props) => {
 
@@ -40,6 +41,16 @@ const Empresa1 = (props) => {
     localStorage.setItem('selectedSector', sector);
     localStorage.setItem('url', url);
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getCompanie();
+      localStorage.setItem('idEmpresa', data.idEmpresa);
+      console.log(data);
+    };
+    fetchData();
+  }, []);
+
   
   return (
     <div className="empresa1-container">
@@ -48,11 +59,13 @@ const Empresa1 = (props) => {
         <meta property="og:title" content="Empresa-1 - MultiTask" />
       </Helmet>
       <div id="banner" className="empresa1-container01">
+      <Link to="/" className="home-navlink">
         <img
           alt="image"
           src="/external/multitask%20-%20logo.svg"
           className="empresa1-image"
         />
+        </Link>
         <div id="barra" className="empresa1-container02">
           <Link
             to="/empresa-perfil"

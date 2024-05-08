@@ -139,7 +139,7 @@ export async function getCompanies() {
 
 export async function getServices(sector) {
     try {
-        const response = await fetch(`http://localhost:1234/multitask/service/${sector}`, {
+        const response = await fetch(`http://localhost:1234/multitask/service/sector/${sector}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -150,7 +150,12 @@ export async function getServices(sector) {
             const data = await response.json();
             const services = data.map(service => ({
                 titulo: service.nombre,
-                descripcion: service.descripcion,
+                descripcion: service.descripcion, 
+                idProfesion: service.idProfesion, 
+                nivelEducacion: service.nivel_De_Educacion,
+                tiempoExperiencia: service.tiempo_Experiencia,
+                sector: service.sector,
+
             }));
             
             return services;
@@ -183,5 +188,236 @@ export async function updatePopUpEdit(id) {
     } catch (error) {
         console.error('Error de red:', error);
         return null; 
+    }
+}
+
+
+export async function getPayMethods() {
+    const emailInput = localStorage.getItem('correo');
+    try {
+        // Realiza la solicitud a la API
+        console.log(emailInput, " EMAIL!")
+        const response = await fetch(`http://localhost:1234/multitask/person/pay-method/${emailInput}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            // console.log(data)
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return false; 
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return false; 
+    }
+}
+
+export async function getCompanie() {
+    const emailInput = localStorage.getItem('correo');
+    try {
+        // Realiza la solicitud a la API
+        console.log(emailInput, " EMAIL!")
+        const response = await fetch(`http://localhost:1234/multitask/companie/${emailInput}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data, "datataatta")
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return false; 
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return false; 
+    }
+}
+
+
+export async function getPostulaciones() {
+    const emailInput = localStorage.getItem('correo');
+    try {
+        // Realiza la solicitud a la API
+        console.log(emailInput, " EMAILlll!")
+        const response = await fetch(`http://localhost:1234/multitask/companie/postulation/${emailInput}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data, "infoninfofno")
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return false; 
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return false; 
+    }
+}
+
+export async function getPostulationByProfession(id) {
+    try {
+        // Realiza la solicitud a la API
+        // console.log(emailInput, " EMAILlll!")
+        const response = await fetch(`http://localhost:1234/multitask/service/profession/${id}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data, "POSTULAAAAATOTOTOT")
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return false; 
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return false; 
+    }
+}
+
+export async function getInfoAspirant(email) {
+    try {
+        // Realiza la solicitud a la API
+        // console.log(emailInput, " EMAILlll!")
+        const response = await fetch(`http://localhost:1234/multitask/aspirant/${email}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data, "POSTULADOOOOOO")
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return false; 
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return false; 
+    }
+}
+
+
+export async function getConfirm(idPostulado, idPostulacion) {
+    try {
+        // Realiza la solicitud a la API
+        // console.log(emailInput, " EMAILlll!")
+        const response = await fetch(`http://localhost:1234/multitask/aspirant/postulation/confirm/${idPostulado}/${idPostulacion}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data, "CONFIRMASAO")
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return false; 
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return false; 
+    }
+}
+
+export async function getCompanieUsers() {
+    try {
+        // Realiza la solicitud a la API
+        // console.log(emailInput, " EMAILlll!")
+        const response = await fetch(`http://localhost:1234/multitask/all/companie`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data, "CONFIRMASAO")
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return false; 
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return false; 
+    }
+}
+
+export async function getAspirantUsers() {
+    try {
+        // Realiza la solicitud a la API
+        // console.log(emailInput, " EMAILlll!")
+        const response = await fetch(`http://localhost:1234/multitask/all/aspirant`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data, "CONFIRMASAO")
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return false; 
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return false; 
+    }
+}
+
+export async function getInterview() {
+    try {
+        // Realiza la solicitud a la API
+        // console.log(emailInput, " EMAILlll!")
+        const response = await fetch(`http://localhost:1234/multitask/all/interview`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data, "CONFIRMASAO")
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return false; 
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return false; 
     }
 }

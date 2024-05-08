@@ -12,11 +12,12 @@ import {StartModal, PayProcess} from '../modals/form-modal';
 const Empresa2 = (props) => {
   const [selectedSector, setSelectedSector] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
+  const [infoSelected, setInfoSelected] = useState('');
 
   useEffect(() => {
     const storedSector = localStorage.getItem('selectedSector');
     setSelectedSector(storedSector);
-
+    
     const storedBackgroundImage = localStorage.getItem('url');
     const container = document.querySelector('.empresa2-container03');
     container.style.backgroundImage = storedBackgroundImage;
@@ -30,10 +31,11 @@ const Empresa2 = (props) => {
     const fetchLoadData = async () => {
       try {
         const storedSector = localStorage.getItem('selectedSector');
-        console.log(storedSector.toString())
         const data = await getServices(storedSector.toString());
         setValidationResult(data);
-        originalDataRef.current = data; // Almacena los datos originales
+        originalDataRef.current = data;
+        
+        // Almacena los datos originales
       } catch (error) {
         console.error('Error al cargar datos', error);
       }
@@ -67,7 +69,9 @@ const Empresa2 = (props) => {
     }
   };
 
-  const openModal = () => {
+  const openModal = (servicio) => {
+    setInfoSelected(servicio)
+    localStorage.setItem('titulo', servicio);
     setModalVisible(true);
   };
 
@@ -82,7 +86,7 @@ const Empresa2 = (props) => {
         <meta property="og:title" content="Empresa-2 - MultiTask" />
       </Helmet>
       <div id="banner" className="empresa2-container01">
-      <Link to="/empresa-home" className="home-navlink">
+      <Link to="/empresa-inicio" className="home-navlink">
         <img
           alt="image"
           src="/external/multitask%20-%20logo.svg"
@@ -136,21 +140,21 @@ const Empresa2 = (props) => {
         <div className="empresa2-container06">
           <div className="empresa2-container07" id="services-container">
              {validationResult && validationResult.map((service, index) => (
-          <div key={index} className="empresa2-container08">
-            <span className="empresa2-text02">{service.titulo}</span>
-            <span>{service.descripcion}</span>
-            <svg viewBox="0 0 1024 1024" className="empresa2-icon10">
-              <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-            </svg>
-            <svg viewBox="0 0 1024 1024" className="empresa2-icon12" onClick={openModal}>
-              
-              <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
-            </svg>
-          </div>
-       ))}
-    </div>
-    {modalVisible && <StartModal onCloseModal={closeModal} />}
-</div>
+              <div key={index} className="empresa2-container08">
+                <span className="empresa2-text02">{service.titulo}</span>
+                <span>{service.descripcion}</span>
+                <svg viewBox="0 0 1024 1024" className="empresa2-icon10">
+                  <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
+                </svg>
+                <svg viewBox="0 0 1024 1024" className="empresa2-icon12" onClick={() => openModal(service)}>
+                  
+                  <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
+                </svg>
+              </div>
+            ))}
+            </div>
+            {modalVisible && <StartModal onCloseModal={closeModal} infoService={infoSelected}/>}
+        </div>
 
       </div>
     </div>

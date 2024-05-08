@@ -1,0 +1,183 @@
+.postulado1-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.postulado1-container1 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 136px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.postulado1-image {
+  width: 299px;
+  height: 50%;
+  object-fit: cover;
+}
+.postulado1-container2 {
+  gap: var(--dl-space-space-unit);
+  flex: 0 0 auto;
+  width: 843px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.postulado1-navlink {
+  color: rgb(255, 255, 255);
+  width: 61px;
+  height: 58px;
+  display: flex;
+  padding: 0px;
+  font-size: 20px;
+  font-style: normal;
+  transition: 0.3s;
+  align-items: center;
+  font-weight: 700;
+  border-color: var(--dl-color-multitaskpalette-morado);
+  border-width: 2px;
+  border-radius: 27px;
+  flex-direction: row;
+  animation-delay: 0s;
+  justify-content: center;
+  text-decoration: none;
+  background-color: rgb(87, 24, 69);
+  animation-duration: 300ms;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+.postulado1-navlink:hover {
+  color: #571845;
+  width: 173px;
+  height: 58px;
+  border-color: #571845;
+  border-width: 3px;
+  background-color: #ffffff;
+}
+.postulado1-icon {
+  fill: var(--dl-color-gray-white);
+  width: 100%;
+  height: 40px;
+  align-self: center;
+}
+.postulado1-button {
+  color: var(--dl-color-gray-white);
+  width: 61px;
+  height: 58px;
+  display: flex;
+  padding: 0px;
+  font-size: 20px;
+  font-style: normal;
+  transition: 0.3s;
+  align-items: center;
+  font-weight: 700;
+  padding-top: 0px;
+  border-width: 0px;
+  border-radius: 27px;
+  flex-direction: row;
+  padding-bottom: 0px;
+  justify-content: center;
+  background-color: var(--dl-color-multitaskpalette-morado);
+}
+.postulado1-button:hover {
+  color: #571845;
+  width: 173px;
+  height: 58px;
+  border-color: #571845;
+  border-width: 3px;
+  background-color: #ffffff;
+}
+.postulado1-icon3 {
+  fill: var(--dl-color-gray-white);
+  width: 100%;
+  height: 40px;
+  
+}
+.postulado1-container3 {
+  width: 100%;
+  height: 944px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-space-space-oneandhalfunits);
+  padding-left: var(--dl-space-space-oneandhalfunits);
+  padding-right: var(--dl-space-space-oneandhalfunits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-oneandhalfunits);
+  background-size: cover;
+  justify-content: center;
+  background-image: radial-gradient(circle at center, rgba(192, 36, 37, 0.57) 0.00%,rgba(240, 203, 53, 0.72) 100.00%),url('https://img.freepik.com/foto-gratis/diseno-collage-personas_23-2148888271.jpg?t=st=1713057892~exp=1713061492~hmac=2284cc59bec7b374a2632e8681844f13d6918911b26528c1b842e7dd7c0ed5ac&w=1380');
+  background-repeat: bottom,top lefttop lefttop;
+  background-position: top lefttop lefttop,bottom;
+}
+.postulado1-container4 {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.postulado1-text {
+  color: var(--dl-color-gray-white);
+  font-size: 48px;
+  align-self: center;
+  margin-top: var(--dl-space-space-halfunit);
+  margin-bottom: var(--dl-space-space-halfunit);
+}
+.postulado1-container5 {
+  gap: var(--dl-space-space-unit);
+  flex: 0 0 auto;
+  width: auto;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative; 
+}
+.postulado1-textinput {
+  width: 588px;
+  border-width: 0px;
+  border-radius: 22px;
+}
+.postulado1-icon5 {
+  fill: var(--dl-color-gray-white);
+  width: 41px;
+  height: 33px;
+ /* background-color: red;*/
+  margin-left: 10px;
+  /*margin-top: 30px;*/
+}
+
+.resultados-container {
+  width: 573px;
+  border-width: 0px;
+  border-radius: 10px;
+  background-color: white;
+  position: absolute; /* Posicionar el contenedor de resultados absolutamente */
+  top: calc(100% - 30px); /* Posicionar justo debajo del input (ajusta según sea necesario) */
+  left: 8px; /* Ajustar según sea necesario para la alineación horizontal */
+  cursor: pointer;
+}
+
+.resultados-container div {
+  padding-left: 20px; 
+  padding-top: 10px; 
+  padding-bottom: 10px;
+  border-radius: 9px;
+  border-style: solid;
+  border-width: 0px; 
+  border-image: linear-gradient(to right, #ccc, #fff) 1;
+}
+
+.resultados-container div:hover {
+  background-color: #d2d2d2; /* Cambia el color del borde a gris oscuro */
+}
