@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet'
 import '../admin/css/admin-3.css'
-import { registerUser } from '../../controller/create-user-control'
+import { registerUser } from '../../controller/create-control'
 import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import IconButton from '@mui/material/IconButton';

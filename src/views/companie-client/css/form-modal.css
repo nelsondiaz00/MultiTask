@@ -340,6 +340,7 @@
     border-radius: var(--dl-radius-radius-radius4);
     padding-right: 0.5rem;
     background-color: #f2f2f2;
+    resize: none;
   }
   .contenedores-de-modales-empresa-container16 {
     gap: var(--dl-space-space-oneandhalfunits);
@@ -365,6 +366,7 @@
     border-radius: var(--dl-radius-radius-radius4);
     padding-right: 0.5rem;
     background-color: #f2f2f2;
+    resize: none;
   }
   .contenedores-de-modales-empresa-container17 {
     gap: var(--dl-space-space-unit);
@@ -402,7 +404,7 @@
     align-items: flex-start;
   }
   .contenedores-de-modales-empresa-text28 {
-    width: auto;
+    width:fit-content;
     height: auto;
     font-size: 16px;
     align-self: center;
@@ -665,6 +667,32 @@
     align-self: center;
     text-align: right;
   }
+
+  .prices {
+    width: 100%;
+  }
+
+  .price-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .subtotal-container {
+    color: grey;
+  }
+
+
+  .price-container > 
+
+  .subtotal {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    align-self: center;
+    text-align: right;
+  }
   .contenedores-de-modales-empresa-text55 {
     width: var(--dl-size-size-large);
     height: auto;
@@ -738,6 +766,7 @@
     fill: var(--dl-color-gray-white);
     width: 30px;
     height: 25px;
+    cursor: pointer;
   }
   .contenedores-de-modales-empresa-text58 {
     color: var(--dl-color-gray-white);
@@ -866,6 +895,19 @@
     align-self: center;
     align-items: center;
     justify-content: center;
+  }
+  .contenedores-opcion-multiple {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex: 0 0 auto;
+    width: 30%;
+    height: 28px;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -50px;
+
   }
   .contenedores-de-modales-empresa-text73 {
     width: auto;
@@ -1016,33 +1058,6 @@
     border-width: 2px;
     background-color: #ffffff;
   }
-  
-  .popup-overlay-form {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semi-transparente */
-    backdrop-filter: blur(5px); /* Aplicar un desenfoque al fondo */
-    z-index: 9998; /* Asegura que la capa esté detrás del popup */
-  }
-  .popup-form {
-    position: fixed; /* Fija el popup en la ventana del navegador */
-    top: 50%; /* Coloca el popup en la mitad vertical de la ventana */
-    left: 50%; /* Coloca el popup en la mitad horizontal de la ventana */
-    transform: translate(-50%, -50%); /* Centra el popup */
-    z-index: 9999; /* Asegura que el popup esté por encima de otros elementos */
-    background-color: transparent; /* Color de fondo del popup */
-    padding: 20px; /* Espaciado interior del popup */
-    border-radius: 10px; /* Radio de borde del popup */
-    /* Añade más estilos según sea necesario */
-    width: 80vw; /* El popup ocupará el 90% del ancho de la ventana */
-    max-width: 1200px; /* Establece un ancho máximo para el popup */
-    max-height: 70vh; /* Establece una altura máxima para el popup */
-    overflow-y: auto;
-    box-shadow: none;
-  }
 
   .popup-pay-overlay-form {
     position: fixed;
@@ -1068,4 +1083,108 @@
     max-height: 70vh; /* Establece una altura máxima para el popup */
     overflow-y: auto;
     box-shadow: none;
+  }
+
+  .contenedores-de-modales-empresa-container45 {
+    gap: 4px;
+    flex: 0 0 auto;
+    width: 405px;
+    height: 288px;
+    display: flex;
+    position: relative;
+    align-self: center;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    align-items: flex-start;
+    padding-top: var(--dl-space-space-twounits);
+    padding-left: var(--dl-space-space-twounits);
+    border-radius: 38px;
+    padding-right: var(--dl-space-space-twounits);
+    flex-direction: column;
+    padding-bottom: var(--dl-space-space-twounits);
+    justify-content: flex-start;
+    background-color: var(--dl-color-gray-white);
+  }
+  .contenedores-de-modales-empresa-text91 {
+    width: var(--dl-size-size-xxlarge);
+    font-size: 24px;
+    align-self: center;
+    font-style: normal;
+    margin-top: var(--dl-space-space-twounits);
+    text-align: center;
+    font-weight: 700;
+    
+  }
+  .contenedores-de-modales-empresa-icon14 {
+    fill: var(--dl-color-success-500);
+    width: var(--dl-size-size-large);
+    height: var(--dl-size-size-large);
+    align-self: center;
+  }
+  .contenedores-de-modales-empresa-icon16 {
+    top: var(--dl-space-space-oneandhalfunits);
+    right: var(--dl-space-space-oneandhalfunits);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    align-self: flex-start;
+    cursor: pointer;
+  }
+
+  .switch {
+    position: relative;
+      display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-image: linear-gradient(90deg, rgb(240, 45, 45) 0.00%,rgb(255, 195, 0) 100.00%);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--dl-color-success-500);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 25px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
   }

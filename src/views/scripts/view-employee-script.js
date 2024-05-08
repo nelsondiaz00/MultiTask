@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../admin/css/admin-2.css'
 import { DataGrid } from '@mui/x-data-grid';
 import { getEmployees, updatePopUpEdit } from '../../controller/load-data-control'
-import { deleteEmployee } from '../../controller/create-user-control';
+import { deleteEmployee } from '../../controller/create-control';
 import { updateProfile, updateProfileTemp } from '../../controller/update-profile-control';
 
 const ViewEmployees = (props) => {
@@ -98,6 +98,8 @@ const ViewEmployees = (props) => {
                 const emailInput = document.getElementById("input_correo");
                 // const passwordInput = document.getElementById("input_contraseña");
                 const phoneInput = document.getElementById("input_numero");
+                const password = document.getElementById("input_contrasena");
+                
     
                 nameInput.value = data.nombre;
                 lastNameInput.value = data.apellidos;
@@ -105,6 +107,7 @@ const ViewEmployees = (props) => {
                 userNameInput.value = data.nUsuario;
                 phoneInput.value = data.telefono;
                 emailInput.value = data.correo;
+                password.value = data.password;
             } else {
                 console.error('No se pudo obtener la información del empleado.');
             }
@@ -234,6 +237,17 @@ const ViewEmployees = (props) => {
                     type="email"
                     id="input_username"
                     className="contenedores-de-modales-de-admin-textinput5 input"
+                    />
+                </div>
+                <div className="contenedores-de-modales-de-admin-container20">
+                    <span className="contenedores-de-modales-de-admin-text17">
+                    <span>Contraseña</span>
+                    <br></br>
+                    </span>
+                    <input
+                    type="email"
+                    id="input_contrasena"
+                    className="contenedores-de-modales-de-admin-textinput6 input"
                     />
                 </div>
                 </div>

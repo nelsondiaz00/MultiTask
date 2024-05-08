@@ -248,14 +248,14 @@
   fill: var(--dl-color-primary-100);
 }
 .contenedores-de-modales-de-admin-icon14 {
-  fill: var(--dl-color-primary-300);
+  fill: var(--dl-color-multitaskpalette-amarillo);
   width: 24px;
   height: 24px;
   transition: 0.3s;
   cursor: pointer;
 }
 .contenedores-de-modales-de-admin-icon14:hover {
-  fill: var(--dl-color-primary-100);
+  fill: rgb(192, 147, 0);
 }
 
 .contenedores-de-modales-de-admin-container06 {
@@ -553,7 +553,7 @@
 .contenedores-de-modales-de-admin-container18 {
   gap: var(--dl-space-space-halfunit);
   flex: 0 0 auto;
-  width: 526px;
+  width: 354px;
   height: auto;
   display: flex;
   align-items: flex-start;
@@ -572,12 +572,11 @@
   border-radius: var(--dl-radius-radius-radius4);
   padding-right: 0.5rem;
   background-color: #f2f2f2;
-  color: gray;
 }
 .contenedores-de-modales-de-admin-container19 {
   gap: var(--dl-space-space-halfunit);
   flex: 0 0 auto;
-  width: 250px;
+  width: 213px;
   height: auto;
   display: flex;
   align-items: flex-start;
@@ -589,6 +588,29 @@
   margin-top: var(--dl-space-space-unit);
 }
 .contenedores-de-modales-de-admin-textinput5 {
+  width: 100%;
+  height: 29px;
+  border-width: 0px;
+  padding-left: 0.5rem;
+  border-radius: var(--dl-radius-radius-radius4);
+  padding-right: 0.5rem;
+  background-color: #f2f2f2;
+}
+.contenedores-de-modales-de-admin-container20 {
+  gap: var(--dl-space-space-halfunit);
+  flex: 0 0 auto;
+  width: 177px;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenedores-de-modales-de-admin-text17 {
+  font-size: 18px;
+  margin-top: var(--dl-space-space-unit);
+}
+.contenedores-de-modales-de-admin-textinput6 {
   width: 100%;
   height: 29px;
   border-width: 0px;
@@ -635,4 +657,40 @@
   position: absolute;
   align-self: flex-start;
   cursor: pointer;
+}
+.contenedores-de-modales-de-admin-icon08 {
+  fill: var(--dl-color-danger-700);
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
+}
+.contenedores-de-modales-de-admin-icon08:hover {
+  fill: var(--dl-color-danger-300);
+}
+.contenedores-de-modales-de-admin-icon10 {
+  fill: var(--dl-color-success-500);
+  width: 22px;
+  height: 24px;
+  transition: 0.3s;
+}
+.contenedores-de-modales-de-admin-icon10:hover {
+  fill: var(--dl-color-success-300);
+}
+.contenedores-de-modales-de-admin-icon12 {
+  fill: var(--dl-color-primary-300);
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
+}
+.contenedores-de-modales-de-admin-icon12:hover {
+  fill: var(--dl-color-primary-100);
+}
+.contenedores-de-modales-de-admin-icon14 {
+  fill: var(--dl-color-primary-300);
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
+}
+.contenedores-de-modales-de-admin-icon14:hover {
+  fill: var(--dl-color-primary-100);
 }

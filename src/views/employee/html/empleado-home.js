@@ -8,6 +8,7 @@ import { updateProfile } from '../../../controller/update-profile-control';
 import ModificarInfoPersona from '../../scripts/modify-user-script';
 import Empleado2 from '../../scripts/client-view-script';
 import Empleado3 from '../../scripts/client-person-view-script';
+import EmpleadoCitas from '../../scripts/meeting-script';
 
 const Empleado1 = (props) => {
   const [activeItemId, setActiveItemId] = useState(null);
@@ -72,11 +73,14 @@ const Empleado1 = (props) => {
               <span id="getCandidate" className={`admin1-navlink2 ${activeItemId === 'getCandidate' ? 'admin1-text2' : ''}`} onClick={() => handleItemClick('getCandidate')}>
                 Cliente - Postulado
               </span>
-              <span className="empleado1-text03">Citas</span>
+              <span id="getMeet" className={`admin1-navlink2 ${activeItemId === 'getMeet' ? 'admin1-text2' : ''}`} onClick={() => handleItemClick('getMeet')}>
+                Citas
+              </span>
             </div>
             {activeItemId === 'modify' && <ModificarInfoPersona />}
             {activeItemId === 'getCompanie' && <Empleado2 />}
             {activeItemId === 'getCandidate' && <Empleado3 />}
+            {activeItemId === 'getMeet' && <EmpleadoCitas />}
 
           </div>
         </div>

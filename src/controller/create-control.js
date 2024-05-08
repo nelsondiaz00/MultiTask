@@ -107,3 +107,36 @@ export async function deleteEmployee() {
         return false;
     }
 }
+
+
+export async function postPostulation(info, infoAspirant) {
+    console.log(infoAspirant, " infoasp")
+    console.log(info, " INFINFONI")
+
+    const user = {
+        idOferta_Trabajo : info.idOferta_Trabajo,
+        POSTULADOS_idPostulado : infoAspirant.idPostulado,
+        fasePostulacion : 1
+    };
+    try {
+
+        const response = await fetch(`http://localhost:1234/multitask/aspirant/postulation`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(user)
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return false;
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return false;
+    }
+}

@@ -31,14 +31,15 @@ export async function finalValidation(event, history) {
     event.preventDefault(); // Evita la acción predeterminada del enlace
 
     const userData = await getUser();
-
+    
     if (userData) {
         const passwordInput = document.getElementById("input_contrasena").value;
 
         const passwordFromResponse = userData.password;
-
+        console.log(userData, " JSKAJASKSAj")
         if (passwordInput === passwordFromResponse) {
             OrigenComponente()
+            localStorage.setItem('idUser', userData.idUsuario);
             // history.push('/inicio-de-sesion/autenticacion');
             return true;
         } else {

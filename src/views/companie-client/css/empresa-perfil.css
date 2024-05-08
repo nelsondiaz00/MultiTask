@@ -221,6 +221,7 @@
   backdrop-filter: blur(5px); /* Aplicar un desenfoque al fondo */
   z-index: 9998; /* Asegura que la capa esté detrás del popup */
 }
+
 .popup {
   position: fixed; /* Fija el popup en la ventana del navegador */
   top: 50%; /* Coloca el popup en la mitad vertical de la ventana */
@@ -231,12 +232,28 @@
   padding: 20px; /* Espaciado interior del popup */
   border-radius: 10px; /* Radio de borde del popup */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra del popup */
-  /* Añade más estilos según sea necesario */
   width: 90vw; /* El popup ocupará el 90% del ancho de la ventana */
   max-width: 600px; /* Establece un ancho máximo para el popup */
   max-height: 95vh; /* Establece una altura máxima para el popup */
   overflow-y: auto;
 }
+
+.popup3 {
+  position: fixed; /* Fija el popup en la ventana del navegador */
+  top: 50%; /* Coloca el popup en la mitad vertical de la ventana */
+  left: 50%; /* Coloca el popup en la mitad horizontal de la ventana */
+  transform: translate(-50%, -50%); /* Centra el popup */
+  z-index: 9999; /* Asegura que el popup esté por encima de otros elementos */
+  background-color: white; /* Color de fondo del popup */
+  padding: 20px; /* Espaciado interior del popup */
+  border-radius: 10px; /* Radio de borde del popup */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra del popup */
+  width: 90vw; /* El popup ocupará el 90% del ancho de la ventana */
+  max-width: 600px; /* Establece un ancho máximo para el popup */
+  max-height: 95vh; /* Establece una altura máxima para el popup */
+  overflow-y: auto;
+}
+
 
 .close {
   position: absolute;
@@ -256,7 +273,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .contenedores-de-modales-de-admin-text {
@@ -268,6 +284,7 @@
   width: 40px;
   height: 40px;
   align-self: flex-start;
+  cursor: pointer;
 }
 .contenedores-de-modales-de-admin-container03 {
   gap: var(--dl-space-space-twounits);
