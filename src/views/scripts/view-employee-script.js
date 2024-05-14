@@ -8,6 +8,7 @@ import { updateProfile, updateProfileTemp } from '../../controller/update-profil
 const ViewEmployees = (props) => {
     const [usuarios, setUsuarios] = useState([]);
     const [selectedRows, setSelectedRows] = useState([]);
+    const [aa, seraaa] = useState([]);
 
     useEffect(() => {
         const fetchEmployees = async () => {
