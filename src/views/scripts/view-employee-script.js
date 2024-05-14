@@ -155,7 +155,6 @@ const ViewEmployees = (props) => {
     };
 
     const usuariosFiltrados = usuarios.filter(usuario => usuario.belonging !== 0);
-
     return (
         <div id="contenedor_principal" className="admin2-container7">
         <span className="admin2-text3">
@@ -176,6 +175,7 @@ const ViewEmployees = (props) => {
         </div>
     </div>
     )
+    
 }
 
 export default ViewEmployees
