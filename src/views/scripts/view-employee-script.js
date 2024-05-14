@@ -155,7 +155,6 @@ const ViewEmployees = (props) => {
     };
 
     const usuariosFiltrados = usuarios.filter(usuario => usuario.belonging !== 0);
-
     return (
         <div id="contenedor_principal" className="admin2-container7">
             {showPopupEditUser && <div className="popup-overlay" />}
@@ -344,6 +343,7 @@ const ViewEmployees = (props) => {
         </div>
     </div>
     )
+    
 }
 
 export default ViewEmployees
