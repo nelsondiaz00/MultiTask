@@ -5,9 +5,12 @@ import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import '../employee/css/empleado-2.css'
 import { getCompanieUsers, getInterview } from '../../controller/load-data-control';
+import { updateInterview } from '../../controller/update-data-control';
 
 const EmpleadoCitas = (props) => {
   const [entrevistas, setEntrevistas] = useState(null);
+  const [selectedRows, setSelectedRows] = useState([]);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     const fetchEmployees = async () => {
@@ -22,13 +25,13 @@ const EmpleadoCitas = (props) => {
 
     fetchEmployees();
   }, []);
-  const handleEliminarUsuario = () => {
+  /*const handleEliminarUsuario = () => {
     if(selectedRows.length > 0){
         setShowPopup(true);
     }
-  };
+  };*/
   const handleMostrar = () => {
-    if(selectedRows.length > 0){
+    if(selectedRows){
         setShowPopup(true);
     }
   };
@@ -62,7 +65,27 @@ const EmpleadoCitas = (props) => {
     } else {
         return null;
     }
-};
+  };
+
+  const handleUpdateProfile = async () => {
+  };
+
+  const [isEstado, setIsEstado] = useState(false);
+
+  const handleCancelarMostrar = () => {
+    setShowPopup(false);
+  };
+
+  const enviar = () => {
+    if(updateInterview(isEstado, selectedRows.idEntrevista)){
+      handleCancelarMostrar();
+
+    }
+  };
+  const handleEstado = () => {
+    setIsEstado(!isEstado);
+  };
+
 
   if (!entrevistas) {
     return (
@@ -72,24 +95,30 @@ const EmpleadoCitas = (props) => {
     );
   }
   const columns = [
-    { field: 'idPostulacion', headerName: 'ID', width: 100 },
+    { field: 'idEntrevista', headerName: 'ID', width: 100 },
     { field: 'titulo_Entrevista', headerName: 'Título', width: 250 },
     { field: 'fecha_Entrevista', headerName: 'Fecha', width: 250 },
     { field: 'idPostulacion', headerName: 'Postulado', width: 250 },
     { field: 'aceptado', headerName: 'Estado', width: 300, renderCell: (params) => getSVG(params.value) },
   ];
-  
+
+  const handleRowSelectionModelChange = (newSelection) => {
+    setSelectedRows(entrevistas[parseInt(newSelection) - 1]);
+    localStorage.setItem('idRowSelected', newSelection);
+    console.log("Datos de la fila seleccionada:", selectedRows);
+  };
+
   console.log(entrevistas, " USUSUARIOS EMPRESA!")
   return (
     <div id="contenedor_principal" className="empleado3-container7">
       <div id="contenedor-iconos" className="icons-container">
-          <svg
+          {/* {<svg
               viewBox="0 0 1024 1024"
               className="contenedores-de-modales-de-admin-icon08"
               onClick={handleEliminarUsuario}
           >
               <path d="M662 170h148v86h-596v-86h148l44-42h212zM342 384v426h340v-426h-340zM256 810v-512h512v512q0 34-26 60t-60 26h-340q-34 0-60-26t-26-60z"></path>
-          </svg>
+          </svg>} */}
           <svg
               viewBox="0 0 1024 1024"
               className="contenedores-de-modales-de-admin-icon10"
@@ -102,6 +131,98 @@ const EmpleadoCitas = (props) => {
         <span className="empleado3-text4">Cliente - Postulado</span>
         <br></br>
       </span>
+
+      {showPopup && <div className="popup-overlay" />}
+      {showPopup && (
+      <div className="popup3"> 
+      <div
+          id="contenedor_editaremp"
+          className="contenedores-de-modales-de-admin-container-popup"
+      >
+          <div className="empleado42-container08">
+                <span className="empleado42-text03">
+                  <span className="empleado42-text04">Atender cita</span>
+                  <br></br>
+                </span>
+                <div className="empleado42-container09">
+                  <div
+                    id="contenedor_asunto"
+                    className="empleado42-container10"
+                  >
+                    <span className="empleado42-text06">Asunto</span>
+                    <input
+                      type="text"
+                      id="input_asunto"
+                      className="empleado42-textinput input"
+                      value={selectedRows.titulo_Entrevista}
+                    />
+                  </div>
+                  <div
+                    id="contenedor_estado"
+                    className="empleado42-container11"
+                  >
+                    <span className="empleado42-text07">Estado</span>
+                      <label class="switch">
+                      <input
+                        type="checkbox"
+                        onChange={handleEstado}
+                      />
+                        <span class="slider round"></span>
+                      </label>
+                  </div>
+                  <button
+                    id="boton_enviar"
+                    type="button"
+                    className="empleado42-button button"
+                    onClick={enviar}
+
+                  >
+                    Enviar
+                  </button>
+                </div>
+                <div className="empleado42-container12">
+                  <div
+                    id="contenedor_descripcion"
+                    className="empleado42-container13"
+                  >
+                    <span className="empleado42-text08">Descripción</span>
+                    <textarea
+                      id="textarea_desc"
+                      className="empleado42-textarea textarea"
+                    ></textarea>
+                  </div>
+                  <div
+                    id="contenedor_cualidades"
+                    className="empleado42-container14"
+                  >
+                    <span className="empleado42-text09">Cualidades</span>
+                    <textarea
+                      id="textarea_cualidades"
+                      className="empleado42-textarea1 textarea"
+                    ></textarea>
+                  </div>
+                  <div
+                    id="contenedor_cualidades"
+                    className="empleado42-container15"
+                  >
+                    <span className="empleado42-text10">Debilidades</span>
+                    <textarea
+                      id="textarea_debilidades"
+                      className="empleado42-textarea2 textarea"
+                    ></textarea>
+                  </div>
+                  <svg
+                    viewBox="0 0 1024 1024"
+                    className="contenedores-de-modales-de-admin-icon06"
+                    onClick={handleCancelarMostrar}
+                >
+                <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
+                </svg>
+                </div>
+              </div>
+      </div>
+      </div>
+      )}
       <div className="admin2-container8">
             <div style={{ height: 294, width: '100%' }}>
                 <DataGrid
@@ -111,6 +232,8 @@ const EmpleadoCitas = (props) => {
                     rowsPerPageOptions={[5, 10, 25]}
                     disableSelectionOnClick
                     getRowId={(row) => row.idEntrevista}
+                    onRowSelectionModelChange={handleRowSelectionModelChange}                
+
                 />
             </div>
       </div>

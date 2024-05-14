@@ -154,7 +154,7 @@ export const RequestInfo = (props) => {
                 type="text"
                 id="input_servicio"
                 className="contenedores-de-modales-empresa-textinput input"
-                value = {infoServiceSelected.titulo}
+                defaultValue = {infoServiceSelected.titulo}
               />
             </div>
             <div className="contenedores-de-modales-empresa-container13">

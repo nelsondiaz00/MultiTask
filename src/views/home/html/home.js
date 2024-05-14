@@ -350,9 +350,51 @@ const Home = (props) => {
         </div>
       </div>
       <div className="home-container35">
+      <div id="footer" className="home-container35">
         <a href="#banner" className="home-link5 button">
           ↑
         </a>
+        <div className="home-container36">
+          <span className="home-text43">
+            Construyendo juntos el éxito: En MultiTask, unimos talento y
+            proyectos para crear un futuro laboral sólido. Descubre cómo podemos
+            impulsar tu visión de construcción.
+          </span>
+          <span className="home-text44">
+            607 645452 - Bucaramanga, Santander, Colombia. Dirección de la
+            oficina
+          </span>
+          <span className="home-text45">
+            2024 - MultiTask: Soluciones laborales temporales
+            multidisciplinarias
+          </span>
+        </div>
+        <div className="home-container37"></div>
+        <div className="home-container38">
+          <div className="home-container39">
+            <span className="home-text46">
+              <span>
+                MultiTask es parte de
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: ' ',
+                  }}
+                />
+              </span>
+              <span className="home-text48">Constructora Alianza S.A.S</span>
+            </span>
+            <span className="home-text49">
+              Con nosotros, tu proyecto se materializará con eficiencia, calidad
+              y éxito.
+            </span>
+          </div>
+          <img
+            alt="image"
+            src="/external/image_2024-04-20_212116578-removebg-preview-200w.png"
+            className="home-image09"
+          />
+        </div>
+      </div>
       </div>
     </div>
   )

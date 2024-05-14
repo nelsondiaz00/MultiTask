@@ -1,0 +1,36 @@
+.comp-postulado-container {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-self: center;
+  align-items: center;
+  padding-top: 6px;
+  border-color: var(--dl-color-gray-900);
+  border-width: 1px;
+  padding-left: var(--dl-space-space-unit);
+  padding-right: var(--dl-space-space-unit);
+  padding-bottom: 6px;
+  justify-content: space-between;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+.comp-postulado-navlink {
+  width: 50%;
+  height: auto;
+  font-size: 16px;
+  align-self: center;
+  text-align: left;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.comp-postulado-navlink:hover {
+  text-decoration: underline;
+}
+.comp-postulado-image {
+  width: var(--dl-size-size-small);
+  height: var(--dl-size-size-small);
+  object-fit: cover;
+  border-radius: var(--dl-radius-radius-round);
+}
