@@ -20,6 +20,7 @@ import NotFound from './views/not-found/html/not-found'
 import Postulado from './views/aspirant/html/postulado-inicio'
 import PostuladoResultados from './views/aspirant/html/postulado-resultados'
 import Postulado3 from './views/aspirant/html/postulado-postulacion'
+import PostuladoPerfil from './views/aspirant/html/postulado-perfil'
 
 const App = () => {
   return (
@@ -36,6 +37,8 @@ const App = () => {
         <Route component={Postulado} exact path="/postulado-inicio" />
         <Route component={PostuladoResultados} exact path="/postulado-resultados" />
         <Route component={Postulado3} exact path="/postulado-postulacion" />
+        <Route component={PostuladoPerfil} exact path="/postulado-perfil" />
+
         <Route component={NotFound} path="**" />
         <Redirect to="**" />
       </Switch>
