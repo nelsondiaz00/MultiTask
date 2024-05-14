@@ -49,7 +49,7 @@ const PostuladoResultados = (props) => {
   return (
     <div className="postulado2-container">
       <Helmet>
-        <title>Postulado-2 - MultiTask</title>
+        <title>MultiTask</title>
         <meta property="og:title" content="Postulado-2 - MultiTask" />
       </Helmet>
       <div id="banner" className="postulado2-container1">
@@ -63,7 +63,7 @@ const PostuladoResultados = (props) => {
             to="/postulado-perfil"
             id="botonCerrarSesion"
             className="postulado2-navlink button"
-          >
+          >Perfil
             <svg viewBox="0 0 1024 1024" className="postulado2-icon">
               <path d="M725.333 384c0-58.923-23.893-112.256-62.464-150.827-38.613-38.613-91.947-62.507-150.869-62.507s-112.256 23.893-150.869 62.507c-38.571 38.571-62.464 91.904-62.464 150.827s23.893 112.256 62.464 150.827c38.613 38.613 91.947 62.507 150.869 62.507s112.256-23.893 150.869-62.507c38.571-38.571 62.464-91.904 62.464-150.827z"></path>
               <path d="M256 810.667c0 42.667 96 85.333 256 85.333 150.101 0 256-42.667 256-85.333 0-85.333-100.437-170.667-256-170.667-160 0-256 85.333-256 170.667z"></path>
@@ -73,7 +73,7 @@ const PostuladoResultados = (props) => {
             id="botonNotificaciones"
             type="button"
             className="postulado2-button button"
-          >
+          > Notificaciones
             <svg viewBox="0 0 1024 1024" className="postulado2-icon3">
               <path d="M618 418v-76h-212v76h118l-118 146v76h212v-76h-118zM768 682l86 86v42h-684v-42l86-86v-212q0-100 51-174t141-96v-30q0-26 18-45t46-19 46 19 18 45v30q90 22 141 96t51 174v212zM512 938q-36 0-61-24t-25-60h172q0 34-26 59t-60 25z"></path>
             </svg>
