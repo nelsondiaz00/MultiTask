@@ -189,6 +189,7 @@
   flex-direction: column;
   padding-bottom: var(--dl-space-space-twounits);
   justify-content: flex-start;
+  position: relative;
 }
 
 .icons-container{
@@ -210,7 +211,6 @@
 }
 .admin2-container8 {
   width: 100%;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: 296px;
   display: flex;
   align-items: flex-start;
