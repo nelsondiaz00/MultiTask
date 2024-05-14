@@ -5,16 +5,16 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import AppComponent from './component';
+import AppComponent from '../../companie-client/html/component';
 
 
 import { Helmet } from 'react-helmet'
 
-import '../css/empresa-perfil.css'
-import '../css/empresa-perfil-editar.css'
-import { getCompanie, getPostulaciones } from '../../../controller/load-data-control';
+import '../../companie-client/css/empresa-perfil.css'
+import '../../companie-client/css/empresa-perfil-editar.css'
+import { getCompanie, getPostulaciones, getPostulado } from '../../../controller/load-data-control';
 import { updatePostulation, updateProfileCompanie } from '../../../controller/update-profile-control';
-import CompPostulado from './comp-postulado';
+import CompPostulado from '../../companie-client/html/comp-postulado';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -36,7 +36,7 @@ function TabPanel(props) {
   );
 }
 
-const EmpresaPerfil = (props) => {
+const PostuladoPerfil = (props) => {
     const [value, setValue] = useState(0);
 
     const history = useHistory();
@@ -84,7 +84,7 @@ const EmpresaPerfil = (props) => {
 
     useEffect(() => {
       const fetchData = async () => {
-        const data = await getCompanie();
+        const data = await getPostulado();
         setInfoCompanie(data);
         const postulaciones = await getPostulaciones();
         setPostulacionesActivas(postulaciones);
@@ -110,6 +110,7 @@ const EmpresaPerfil = (props) => {
       );
     };
   
+    console.log(infoCompanie, " INFO POSTULAJSJSKAJASK")
 
   return (
     
@@ -188,15 +189,15 @@ const EmpresaPerfil = (props) => {
             />
             <div className="empresa-perfil-container07">
               <div className="empresa-perfil-container08">
-                <span className="empresa-perfil-text">{infoCompanie.nombre_Empresa}</span>
-                <span className="empresa-perfil-text1">{infoCompanie.premium === 1 ? 'Premium' : 'Normal'}
+                <span className="empresa-perfil-text">{`${infoCompanie.nombre} ${infoCompanie.apellidos}`}</span>
+                <span className="empresa-perfil-text1">
+                  {infoCompanie.premium === 1 ? 'Premium' : 'Normal'}
                 </span>
                 <span className="empresa-perfil-text2">
                   {infoCompanie.direccion}
                 </span>
                 <span className="empresa-perfil-text3">
-                {infoCompanie.correo}
-
+                  {infoCompanie.correo}
                 </span>
                 <span className="empresa-perfil-text4">{infoCompanie.telefono}</span>
               </div>
@@ -211,7 +212,7 @@ const EmpresaPerfil = (props) => {
                   aria-label="basic tabs example"
               >
                 <Tab label="Editar perfil" />
-                <Tab label="Postulaciones" />
+                {/* <Tab label="Postulaciones" /> */}
               </Tabs>
               <TabPanel value={value} index={0}>
                 <div
@@ -231,7 +232,7 @@ const EmpresaPerfil = (props) => {
                           type="text"
                           id="input_nombres"
                           className="contenedores-de-modales-empresa-perfil-textinput input"
-                          defaultValue={infoCompanie.nombre_Empresa}
+                          defaultValue={`${infoCompanie.nombre} ${infoCompanie.apellidos}`} 
                           />
                       </div>
                       <div
@@ -246,7 +247,7 @@ const EmpresaPerfil = (props) => {
                           type="text"
                           id="input_nit"
                           className="contenedores-de-modales-empresa-perfil-textinput1 input"
-                          value={infoCompanie.nit}
+                          value={infoCompanie.cedula}
                           readOnly
                         />
                       </div>
@@ -322,16 +323,6 @@ const EmpresaPerfil = (props) => {
                       Guardar cambios
                     </button>
                   </div>
-                  <span className="contenedores-de-modales-empresa-perfil-text04">
-                    <span>Información</span>
-                    <br></br>
-                  </span>
-                  <textarea
-                    type="text"
-                    id="input_info"
-                    className="contenedores-de-modales-empresa-perfil-textinput6 input"
-                    defaultValue={infoCompanie.descripcion_publica}
-                  />
                 </div>
               </TabPanel>
               <TabPanel value={value} index={1}>
@@ -376,18 +367,7 @@ const EmpresaPerfil = (props) => {
                {showRenderPost && <RenderPost selectedPostulation={selectedPostulation}  onIconClick={handleCloseModal}/>}
 
               </TabPanel>
-              <TabPanel value={value} index={2}>
-                <div
-                  id="contenedor_notificaciones"
-                  className="contenedores-de-modales-empresa-perfil-container12"
-                >
-                  <AppComponent></AppComponent>
-                  <AppComponent></AppComponent>
-                  <AppComponent></AppComponent>
-                  <AppComponent></AppComponent>
-                  <AppComponent></AppComponent>
-                </div>
-              </TabPanel>
+            
               </Box>
             </Box>
           </div>
@@ -560,5 +540,5 @@ function RenderPost(props) {
   );
 }
 
-export default EmpresaPerfil
+export default PostuladoPerfil
 
