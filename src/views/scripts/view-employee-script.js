@@ -153,7 +153,6 @@ const ViewEmployees = (props) => {
             console.error('Error al updatear empleado', error);
         }
     };
-
     const usuariosFiltrados = usuarios.filter(usuario => usuario.belonging !== 0);
     return (
         <div id="contenedor_principal" className="admin2-container7">
@@ -174,8 +173,7 @@ const ViewEmployees = (props) => {
             </div>
         </div>
     </div>
-    )
-    
+    ) 
 }
 
 export default ViewEmployees
