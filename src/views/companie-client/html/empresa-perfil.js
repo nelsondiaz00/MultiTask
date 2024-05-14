@@ -327,7 +327,9 @@ const EmpresaPerfil = (props) => {
                   <textarea
                     type="text"
                     id="input_info"
-                    className="contenedores-de-modales-empresa-perfil-textinput6 input"
+                    placeholder='Descripción'
+                    
+                    className="textarea"
                     defaultValue={infoCompanie.descripcion_publica}
                   />
                 </div>

@@ -34,7 +34,7 @@
   height: 58px;
   display: flex;
   padding: 0px;
-  font-size: 20px;
+  font-size: 0px;
   font-style: normal;
   transition: 0.3s;
   align-items: center;
@@ -54,11 +54,15 @@
 }
 .postulado2-navlink:hover {
   color: #571845;
-  width: 173px;
+  width: 150px;
   height: 58px;
+  font-size: 20px;
   border-color: #571845;
-  border-width: 3px;
+  border-width: 2px;
   background-color: #ffffff;
+}
+.postulado2-navlink:hover .postulado2-icon {
+  display:none;
 }
 .postulado2-icon {
   fill: var(--dl-color-gray-white);
@@ -66,13 +70,14 @@
   height: 40px;
   align-self: center;
 }
+
 .postulado2-button {
   color: var(--dl-color-gray-white);
   width: 61px;
   height: 58px;
   display: flex;
   padding: 0px;
-  font-size: 20px;
+  font-size: 0px;
   font-style: normal;
   transition: 0.3s;
   align-items: center;
@@ -89,9 +94,16 @@
   color: #571845;
   width: 173px;
   height: 58px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
   border-color: #571845;
-  border-width: 3px;
+  border-width: 2px;
   background-color: #ffffff;
+}
+
+.postulado2-button:hover .postulado2-icon3 {
+  display:none;
 }
 .postulado2-icon3 {
   fill: var(--dl-color-gray-white);
@@ -111,7 +123,6 @@
 .postulado2-container4 {
   gap: var(--dl-space-space-halfunit);
   width: 100%;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
   height: var(--dl-size-size-small);
   display: flex;
   align-items: center;
