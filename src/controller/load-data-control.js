@@ -2,7 +2,7 @@ export async function loadData() {
     const emailInput = localStorage.getItem('correo');
     try {
         // Realiza la solicitud a la API
-        const response = await fetch(`http://localhost:1234/multitask/${emailInput}`, {
+        const response = await fetch(`http://localhost:1234/multitask/person/${emailInput}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -11,7 +11,7 @@ export async function loadData() {
 
         if (response.ok) {
             const data = await response.json();
-            // console.log(data)
+            console.log(data, " Q UE ES ESTOOOOOOOO")
             return data;
         } else {
             console.error('Error al realizar la solicitud:', response.statusText);
@@ -38,9 +38,9 @@ export async function putInfo(){
         const documentType = document.getElementById("input_tipdoc")
         const dateInput = document.getElementById("input_cumple");
         const fechaNacimiento = new Date(data.fecha_nacimiento); // Convertir la cadena de fecha en un objeto Date
-        const formattedDate = fechaNacimiento.toISOString().split('T')[0]; // Obtener la fecha en formato "yyyy-MM-dd"
+        // const formattedDate = fechaNacimiento.toISOString().split('T')[0]; // Obtener la fecha en formato "yyyy-MM-dd"
 
-        // console.log(data)
+        console.log(data, " PQ NO SIRVEEEEEEE")
 
         nameInput.value = data.nombre;
         lastNameInput.value = data.apellidos;
@@ -50,7 +50,7 @@ export async function putInfo(){
         emailInput.value = data.correo;
         passwordInput.value = data.password;
         phoneInput.value = data.telefono;
-        dateInput.value = formattedDate;
+        dateInput.value = fechaNacimiento;
         genderInput.value = data.genero;
         documentType.value = data.tipo_documento;
 

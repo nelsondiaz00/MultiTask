@@ -14,6 +14,7 @@ import '../css/empresa-perfil.css'
 import '../css/empresa-perfil-editar.css'
 import { getCompanie, getPostulaciones } from '../../../controller/load-data-control';
 import { updatePostulation, updateProfileCompanie } from '../../../controller/update-profile-control';
+import CompPostulado from './comp-postulado';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -45,6 +46,8 @@ const EmpresaPerfil = (props) => {
     const [infoCompanie, setInfoCompanie] = useState(null);
 
     const [postulacionesActivas, setPostulacionesActivas] = useState(null);
+
+    const [showRenderPost, setShowRenderPost] = useState(false);
 
 
     const handleCerrarSesion = () => {
@@ -89,6 +92,16 @@ const EmpresaPerfil = (props) => {
       fetchData();
     }, []);
 
+    const handleCloseModal = (value) => {
+      setShowRenderPost(value);
+    };
+    const [selectedPostulation, setSelectedPostulation] = useState(null);
+
+    const handleIconClick = (index) => {
+      setSelectedPostulation(postulacionesActivas[index]);
+      setShowRenderPost(true);
+    };
+    
     if (!infoCompanie) {
       return (
         <div className="spinner-container">
@@ -197,7 +210,6 @@ const EmpresaPerfil = (props) => {
               >
                 <Tab label="Editar perfil" />
                 <Tab label="Postulaciones" />
-                <Tab label="Notificaciones" />
               </Tabs>
               <TabPanel value={value} index={0}>
                 <div
@@ -326,9 +338,9 @@ const EmpresaPerfil = (props) => {
                     <div key={index} className="empresa2-container08">
                       <span className="empresa2-text02">{service.servicio_nombre}</span>
                       <span>{service.descripcion_Empleo}</span>
-                      <svg viewBox="0 0 1024 1024" className="empresa2-icon10">
+                      {/* {<svg viewBox="0 0 1024 1024" className="empresa2-icon10">
                         <path d="M470 384v-86h84v86h-84zM512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 726v-256h84v256h-84z"></path>
-                      </svg>
+                      </svg>} */}
                       {service.disponibilidad_oferta === 0 ? (
                         <button
                           id="boton_postcomplet"
@@ -348,12 +360,19 @@ const EmpresaPerfil = (props) => {
                           En proceso
                         </button>
                       )}
-                      <svg viewBox="0 0 1024 1024" className="empresa2-icon12" onClick={() => openModal(service)}>
+                      <svg
+                        viewBox="0 0 1024 1024"
+                        className="empresa2-icon12"
+                        onClick={() => handleIconClick(index)}
+                      >
                         <path d="M726 554v-84h-172v-172h-84v172h-172v84h172v172h84v-172h172zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
                       </svg>
                 </div>
+                
               ))}
                </div>
+               {showRenderPost && <RenderPost selectedPostulation={selectedPostulation}  onIconClick={handleCloseModal}/>}
+
               </TabPanel>
               <TabPanel value={value} index={2}>
                 <div
@@ -375,6 +394,168 @@ const EmpresaPerfil = (props) => {
     </div>
     
   )
+}
+
+function RenderPost(props) {
+  const [infoPostulation, setInfoPostulation] = useState(null);
+
+  useEffect(() => {
+    setInfoPostulation(props.selectedPostulation)
+    console.log(props.selectedPostulation, " PROPOPSPOPROPS")
+    // Guarda el valor actual de la posición de desplazamiento
+    const scrollY = window.scrollY;
+
+    // Bloquea el desplazamiento del cuerpo
+    document.body.style.overflow = 'hidden';
+
+    // Restaura la posición de desplazamiento cuando el componente se desmonta
+    return () => {
+      document.body.style.overflow = ''; // Restaura el comportamiento predeterminado
+      window.scrollTo(0, scrollY); // Restaura la posición de desplazamiento
+    };
+  }, []);
+  const handleCloseModal = () => {
+    props.onIconClick(false);
+  };
+
+  if (!infoPostulation) {
+    return (
+      <div className="spinner-container">
+        <div className="spinner"></div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="popup-overlay-form"> 
+        <div className="popup-formCenter"> 
+          <div id="contenedor_infopost" className="contenedores-de-modales-empresa-perfil-container13">
+            <div id="contenedor_infopost_lista" className="contenedores-de-modales-empresa-perfil-container14">
+              <span className="contenedores-de-modales-empresa-perfil-text16">
+                Postulados
+              </span>
+              <div className="contenedores-de-modales-empresa-perfil-container15">
+                <CompPostulado>
+
+
+                  
+                </CompPostulado>
+                <CompPostulado></CompPostulado>
+                <CompPostulado></CompPostulado>
+              </div>
+              <button
+                id="boton_seleccionar"
+                type="button"
+                className="contenedores-de-modales-empresa-perfil-button3 button"
+              >
+                Seleccionar
+              </button>
+            </div>
+            <div id="contenedor_infopost_text" className="contenedores-de-modales-empresa-perfil-container16">
+              <div className="contenedores-de-modales-empresa-perfil-container17">
+              <span className="contenedores-de-modales-empresa-perfil-text17">
+                {infoPostulation && infoPostulation.servicio_nombre ? infoPostulation.servicio_nombre : 'null'}
+              </span>
+
+              </div>
+              <span className="contenedores-de-modales-empresa-perfil-text18">
+                <span>Descripción</span>
+                <br></br>
+              </span>
+              <svg viewBox="0 0 1024 1024" className="contenedores-de-modales-empresa-perfil-icon2" onClick={handleCloseModal}>
+                <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
+              </svg>
+              <span className="contenedores-de-modales-empresa-perfil-text21">
+                {infoPostulation && infoPostulation.descripcion_Empleo ? infoPostulation.descripcion_Empleo : 'null'}
+              </span>
+              <span className="contenedores-de-modales-empresa-perfil-text22">
+                <span>Especificaciones</span>
+                <br></br>
+              </span>
+              <span className="contenedores-de-modales-empresa-perfil-text25">
+                {infoPostulation && infoPostulation.especificacion_Empleo ? infoPostulation.especificacion_Empleo : 'null'}
+              </span>
+
+              <div className="contenedores-de-modales-empresa-perfil-container18"></div>
+              <div className="contenedores-de-modales-empresa-perfil-container19">
+                <span className="contenedores-de-modales-empresa-perfil-text26">
+                  <span>Salario</span>
+                  <br></br>
+                </span>
+                <span className="contenedores-de-modales-empresa-perfil-text29">
+                <span>
+                  {infoPostulation && infoPostulation.salario_Oferta ? infoPostulation.salario_Oferta.toLocaleString('es-CO', { style: 'currency', currency: 'COP' }) : 'null'}
+                </span>                  
+                <br></br>
+                </span>
+              </div>
+              <div className="contenedores-de-modales-empresa-perfil-container20">
+                <span className="contenedores-de-modales-empresa-perfil-text32">
+                  <span>Horario</span>
+                  <br></br>
+                </span>
+                <span className="contenedores-de-modales-empresa-perfil-text35">
+                <span>
+                  {infoPostulation && infoPostulation.horario ? infoPostulation.horario : 'null'}
+                </span>
+                  <br></br>
+                </span>
+              </div>
+              <div id="cont_2" className="contenedores-de-modales-empresa-perfil-container21">
+                <div className="contenedores-de-modales-empresa-perfil-container22">
+                  <span className="contenedores-de-modales-empresa-perfil-text38">
+                    <span>Posibilidad de viaje</span>
+                    <br></br>
+                  </span>
+                  <span className="contenedores-de-modales-empresa-perfil-text41">
+                    {infoPostulation && infoPostulation.posibilidad_Viaje === 1 ? 'Sí' : 'No'}
+                    <br></br>
+                  </span>
+                </div>
+                <div className="contenedores-de-modales-empresa-perfil-container23">
+                  <span className="contenedores-de-modales-empresa-perfil-text44">
+                    <span>Cantidad</span>
+                    <br></br>
+                  </span>
+                  <span className="contenedores-de-modales-empresa-perfil-text47">
+                    <span>{infoPostulation && infoPostulation.cantidadRequerida ? infoPostulation.cantidadRequerida : 'null'}</span>
+                    <br></br>
+                  </span>
+                </div>
+                <div className="contenedores-de-modales-empresa-perfil-container24">
+                  <span className="contenedores-de-modales-empresa-perfil-text50">
+                  <span>
+                    Disponibilidad de la postulación ({infoPostulation && infoPostulation.disponibilidad_oferta === 1 ? 'sí' : 'no'})
+                  </span>
+                    <br></br>
+                  </span>
+                </div>
+                <div className="contenedores-de-modales-empresa-perfil-container25">
+                  <span className="contenedores-de-modales-empresa-perfil-text53">
+                    <span>Desde</span>
+                    <br></br>
+                  </span>
+                  <span className="contenedores-de-modales-empresa-perfil-text56">
+                  <span>{infoPostulation && infoPostulation.fecha_Inicio ? infoPostulation.fecha_Inicio : 'null'}</span>
+                    <br></br>
+                  </span>
+                </div>
+                <div className="contenedores-de-modales-empresa-perfil-container26">
+                  <span className="contenedores-de-modales-empresa-perfil-text59">
+                    <span>Hasta</span>
+                    <br></br>
+                  </span>
+                  <span className="contenedores-de-modales-empresa-perfil-text62">
+                  <span>{infoPostulation && infoPostulation.fecha_Final ? infoPostulation.fecha_Final : 'null'}</span>
+                    <br></br>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  );
 }
 
 export default EmpresaPerfil

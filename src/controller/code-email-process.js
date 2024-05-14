@@ -43,6 +43,14 @@ export async function finalValidation(event, history, code) {
     }
 }
 
+export async function finalValidation2(event, history) {
+    event.preventDefault(); // Evita la acción predeterminada del enlace
+    const dataFinal = await getUser()
+    console.log(dataFinal.tipoUsuario)
+    history.push(`/${dataFinal.tipoUsuario.toLowerCase()}-inicio`);
+
+}
+
 
 export async function getUser() {
     const emailInput = localStorage.getItem('correo');

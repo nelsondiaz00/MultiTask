@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react';
 
 import '../css/inicio-de-sesion.css'
 import Authentication from '../../../scripts/authentication-view-script.js';
+import { finalValidation2 } from '../../../../controller/code-email-process.js';
 
 const InicioDeSesin = (props) => {
   const [activeItemId, setActiveItemId] = useState(null);
@@ -22,7 +23,7 @@ const InicioDeSesin = (props) => {
     const validationSuccess = await finalValidation(event, history);
 
     if (validationSuccess) {
-      handleItemClick('authentication');
+      finalValidation2(event, history)
     }
   };
 

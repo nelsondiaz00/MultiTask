@@ -393,6 +393,41 @@
   
 }
 
+.popup3 {
+  position: fixed; /* Fija el popup en la ventana del navegador */
+  top: 50%; /* Coloca el popup en la mitad vertical de la ventana */
+  left: 50%; /* Coloca el popup en la mitad horizontal de la ventana */
+  transform: translate(-50%, -50%); /* Centra el popup */
+  z-index: 9999; /* Asegura que el popup esté por encima de otros elementos */
+  background-color: transparent; /* Color de fondo del popup */
+  padding: 110px; /* Espaciado interior del popup */
+  border-radius: 10px; /* Radio de borde del popup */
+  /* Añade más estilos según sea necesario */
+  width: 1600px; /* El popup ocupará el 90% del ancho de la ventana */
+  max-width: 1600px; /* Establece un ancho máximo para el popup */
+  max-height: 95vh; /* Establece una altura máxima para el popup */
+  overflow-y: auto;
+}
+
+.contenedores-de-modales-de-admin-container-popup {
+  gap: 4px;
+  flex: 0 0 auto;
+  width: 1280px;
+  height: 417px;
+  display: flex;
+  position: relative;
+  align-self: center;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3); 
+    align-items: flex-start;
+  padding-top: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-twounits);
+  border-radius: 38px;
+  padding-right: var(--dl-space-space-twounits);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: flex-start;
+  background-color: var(--dl-color-gray-white);
+}
 
 .contenedores-de-modales-de-admin-container09 {
   gap: 4px;
@@ -413,6 +448,8 @@
   justify-content: flex-start;
   background-color: var(--dl-color-gray-white);
 }
+
+
 .contenedores-de-modales-de-admin-container10 {
   flex: 0 0 auto;
   width: 100%;
