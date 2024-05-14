@@ -244,6 +244,32 @@ export async function getCompanie() {
     }
 }
 
+export async function getPostulado() {
+    const emailInput = localStorage.getItem('correo');
+    try {
+        // Realiza la solicitud a la API
+        console.log(emailInput, " EMAIL!")
+        const response = await fetch(`http://localhost:1234/multitask/aspirant/${emailInput}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data, "datataatta")
+            return data;
+        } else {
+            console.error('Error al realizar la solicitud:', response.statusText);
+            return false; 
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return false; 
+    }
+}
+
 
 export async function getPostulaciones() {
     const emailInput = localStorage.getItem('correo');

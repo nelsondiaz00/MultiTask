@@ -82,7 +82,7 @@ const Postulado = (props) => {
         />
         <div id="barra" className="postulado1-container2">
           <Link
-            to="/"
+            to="/postulado-perfil"
             id="botonCerrarSesion"
             className="postulado1-navlink button"
           >Perfil
