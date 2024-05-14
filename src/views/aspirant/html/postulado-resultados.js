@@ -60,7 +60,7 @@ const PostuladoResultados = (props) => {
         />
         <div id="barra" className="postulado2-container2">
           <Link
-            to="/inicio-de-sesin"
+            to="/postulado-perfil"
             id="botonCerrarSesion"
             className="postulado2-navlink button"
           >
